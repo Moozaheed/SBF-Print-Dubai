@@ -1,0 +1,72 @@
+[
+  {
+    "id": "roll-dxb",
+    "name": "Roll DXB Dubai",
+    "filename": "roll-dxb.jpg",
+    "industry": "Entertainment & Roller Skating Rink Dubai",
+    "image_path": "/clients/roll-dxb.jpg"
+  },
+  {
+    "id": "chibog-restaurant",
+    "name": "Chibog Restaurant",
+    "filename": "chibog-restaurant.jpg",
+    "industry": "Food & Hospitality / F&B",
+    "image_path": "/clients/chibog-restaurant.jpg"
+  },
+  {
+    "id": "flak-pastry",
+    "name": "Flak Pastry",
+    "filename": "flak-pastry.jpg",
+    "industry": "Artisanal Bakery & Confectionery",
+    "image_path": "/clients/flak-pastry.jpg"
+  },
+  {
+    "id": "fruit-talas",
+    "name": "Fruit Talas",
+    "filename": "fruit-talas.jpg",
+    "industry": "Fresh Produce & Organic Food",
+    "image_path": "/clients/fruit-talas.jpg"
+  },
+  {
+    "id": "global-lumber",
+    "name": "Global Lumber",
+    "filename": "global-lumber.jpg",
+    "industry": "Building Materials & Timber Supply",
+    "image_path": "/clients/global-lumber.jpg"
+  },
+  {
+    "id": "jump-n-fun",
+    "name": "Jump N Fun",
+    "filename": "jump-n-fun.jpg",
+    "industry": "Family Entertainment & Trampoline Park",
+    "image_path": "/clients/jump-n-fun.jpg"
+  },
+  {
+    "id": "pro-clean-ac",
+    "name": "Pro Clean AC",
+    "filename": "pro-clean-ac.jpg",
+    "industry": "HVAC & Facility Management Services",
+    "image_path": "/clients/pro-clean-ac.jpg"
+  },
+  {
+    "id": "cafe",
+    "name": "The Cafe",
+    "filename": "cafe.jpg",
+    "industry": "Specialty Coffee & Dining",
+    "image_path": "/clients/cafe.jpg"
+  },
+  {
+    "id": "khalas",
+    "name": "Khalas Dates & Sweets",
+    "filename": "khalas.jpg",
+    "industry": "Gourmet Dates & Confectionery Packaging",
+    "image_path": "/clients/khalas.jpg"
+  },
+  {
+    "id": "mehth",
+    "name": "Mehth Group",
+    "filename": "mehth.jpg",
+    "industry": "Corporate Logistics & General Trading",
+    "image_path": "/clients/mehth.jpg"
+  }
+]

@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Netlify
+.netlify/
+
+# Source content images (large raw files, not needed for deployment)
+content/
+
+# Misc
+.env
+.env.local
+.env*.local
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+Custom Rigid Packaging & Gift Boxes/

@@ -1,0 +1,8489 @@
+export interface PricingPackage {
+  id: string;
+  name: string;
+  price: string;
+  quantity: string;
+  gsm: string;
+  lamination: string;
+  size: string;
+  delivery: string;
+  speedCategory: "Same Day / Express" | "Standard 2-3 Days" | "Luxury Specialty 4-6 Days";
+  isFeatured?: boolean;
+}
+
+export interface ServiceDetail {
+  slug: string;
+  title: string;
+  headline: string;
+  subtitle: string;
+  description: string;
+  heroImage: string;
+  badge: string;
+  pricingPackages: PricingPackage[];
+  samples: string[];
+  features: string[];
+}
+
+export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
+  "outdoor-signboard-3d-letter": {
+    slug: "outdoor-signboard-3d-letter",
+    title: "Outdoor Signboard 3D Letter Dubai",
+    headline: "Outdoor Signboard 3D Letter Printing & Manufacturing in Dubai",
+    subtitle: "Heavy-duty weather-proof 3D acrylic & stainless steel illuminated building letters. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Heavy-duty weather-proof 3D acrylic & stainless steel illuminated building letters. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/outdoor-3d-letters/signboard-1.jpg",
+    badge: "Outdoor 3D",
+    features: [
+      "3-4 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/outdoor-3d-letters/signboard-1.jpg",
+      "/outdoor-3d-letters/signboard-2.jpg",
+      "/outdoor-3d-letters/signboard-3.jpg",
+      "/outdoor-3d-letters/signboard-4.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "outdoor-signboard-3d-letter-standard",
+        name: "Standard Outdoor Signboard 3D Letter",
+        price: "AED 350 / letter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "3-4 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "outdoor-signboard-3d-letter-bulk",
+        name: "Bulk Pack Outdoor Signboard 3D Letter",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "reception-letter": {
+    slug: "reception-letter",
+    title: "Reception Letter Signage Dubai",
+    headline: "Reception Letter Signage Printing & Manufacturing in Dubai",
+    subtitle: "Elegant brushed brass, chrome & acrylic office lobby backdrop letters. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Elegant brushed brass, chrome & acrylic office lobby backdrop letters. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/reception-letter/image-1.jpg",
+    badge: "Executive Lobby",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/reception-letter/image-1.jpg",
+      "/products/reception-letter/image-2.jpg",
+      "/products/reception-letter/image-3.jpg",
+      "/products/reception-letter/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "reception-letter-standard",
+        name: "Standard Reception Letter Signage",
+        price: "AED 250 / set",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "reception-letter-bulk",
+        name: "Bulk Pack Reception Letter Signage",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "office-name-plate": {
+    slug: "office-name-plate",
+    title: "Office Name Plate Dubai",
+    headline: "Office Name Plate Printing & Manufacturing in Dubai",
+    subtitle: "Custom laser-etched aluminum, acrylic & wood door plates for executive cabins. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Custom laser-etched aluminum, acrylic & wood door plates for executive cabins. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/office-name-plate/image-1.jpg",
+    badge: "Laser Etched",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/office-name-plate/image-1.jpg",
+      "/products/office-name-plate/image-2.jpg",
+      "/products/office-name-plate/image-3.jpg",
+      "/products/office-name-plate/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "office-name-plate-standard",
+        name: "Standard Office Name Plate",
+        price: "AED 65 / plate",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "office-name-plate-bulk",
+        name: "Bulk Pack Office Name Plate",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "safety-sign": {
+    slug: "safety-sign",
+    title: "Safety Signage & Boards Dubai",
+    headline: "Safety Signage & Boards Printing & Manufacturing in Dubai",
+    subtitle: "Photoluminescent emergency exit signs, site safety warning boards & hazard signs. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Photoluminescent emergency exit signs, site safety warning boards & hazard signs. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/safety-sign/image-1.jpg",
+    badge: "OSHA Compliant",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/safety-sign/image-1.jpg",
+      "/products/safety-sign/image-2.jpg",
+      "/products/safety-sign/image-3.jpg",
+      "/products/safety-sign/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "safety-sign-standard",
+        name: "Standard Safety Signage & Boards",
+        price: "AED 35 / sign",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "safety-sign-bulk",
+        name: "Bulk Pack Safety Signage & Boards",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "banner-and-festoon": {
+    slug: "banner-and-festoon",
+    title: "Banner and Festoon Dubai",
+    headline: "Banner and Festoon Printing & Manufacturing in Dubai",
+    subtitle: "Heavy PVC vinyl event banners with brass eyelets and festive hanging streamers. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Heavy PVC vinyl event banners with brass eyelets and festive hanging streamers. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/banner-and-festoon/image-1.jpg",
+    badge: "Outdoor Festoon",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/banner-and-festoon/image-1.jpg",
+      "/products/banner-and-festoon/image-2.jpg",
+      "/products/banner-and-festoon/image-3.jpg",
+      "/products/banner-and-festoon/image-4.jpg",
+      "/products/banner-and-festoon/image-5.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "banner-and-festoon-standard",
+        name: "Standard Banner and Festoon",
+        price: "AED 45 / sq meter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "banner-and-festoon-bulk",
+        name: "Bulk Pack Banner and Festoon",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "flex-signboard": {
+    slug: "flex-signboard",
+    title: "Flex Signboard Printing Dubai",
+    headline: "Flex Signboard Printing Printing & Manufacturing in Dubai",
+    subtitle: "Backlit and frontlit flex face shopfront signboards with steel tube framing. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Backlit and frontlit flex face shopfront signboards with steel tube framing. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/flex-signboard/image-1.jpg",
+    badge: "Backlit Shopfront",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/flex-signboard/image-1.jpg",
+      "/products/flex-signboard/image-2.jpg",
+      "/products/flex-signboard/image-3.jpg",
+      "/products/flex-signboard/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "flex-signboard-standard",
+        name: "Standard Flex Signboard Printing",
+        price: "AED 180 / sq meter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "flex-signboard-bulk",
+        name: "Bulk Pack Flex Signboard Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "led-neon": {
+    slug: "led-neon",
+    title: "LED Neon Sign Custom Dubai",
+    headline: "LED Neon Sign Custom Printing & Manufacturing in Dubai",
+    subtitle: "Vibrant silicone LED flex neon signs for cafes, retail shops, events & interior decor. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Vibrant silicone LED flex neon signs for cafes, retail shops, events & interior decor. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/led-neon/image-1.jpg",
+    badge: "Vibrant Neon",
+    features: [
+      "3-4 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/led-neon/image-1.jpg",
+      "/products/led-neon/image-2.jpg",
+      "/products/led-neon/image-3.jpg",
+      "/products/led-neon/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "led-neon-standard",
+        name: "Standard LED Neon Sign Custom",
+        price: "AED 290 / sign",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "3-4 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "led-neon-bulk",
+        name: "Bulk Pack LED Neon Sign Custom",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "acrylic-3d-board": {
+    slug: "acrylic-3d-board",
+    title: "Acrylic 3D Board Dubai",
+    headline: "Acrylic 3D Board Printing & Manufacturing in Dubai",
+    subtitle: "Clear acrylic floating glass panels with 3D raised letters & polished standoffs. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Clear acrylic floating glass panels with 3D raised letters & polished standoffs. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/acrylic-3d-board/image-1.jpg",
+    badge: "Polished Acrylic",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/acrylic-3d-board/image-1.jpg",
+      "/products/acrylic-3d-board/image-2.jpg",
+      "/products/acrylic-3d-board/image-3.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "acrylic-3d-board-standard",
+        name: "Standard Acrylic 3D Board",
+        price: "AED 220 / board",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "acrylic-3d-board-bulk",
+        name: "Bulk Pack Acrylic 3D Board",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "indoor-signage": {
+    slug: "indoor-signage",
+    title: "Indoor Wayfinding Signage Dubai",
+    headline: "Indoor Wayfinding Signage Printing & Manufacturing in Dubai",
+    subtitle: "Directory boards, room numbers, elevator signs & floor directional markers. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Directory boards, room numbers, elevator signs & floor directional markers. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/indoor-signage/image-1.jpg",
+    badge: "Wayfinding",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/indoor-signage/image-1.jpg",
+      "/products/indoor-signage/image-2.jpg",
+      "/products/indoor-signage/image-3.jpg",
+      "/products/indoor-signage/image-4.jpg",
+      "/products/indoor-signage/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "indoor-signage-standard",
+        name: "Standard Indoor Wayfinding Signage",
+        price: "AED 85 / sign",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "indoor-signage-bulk",
+        name: "Bulk Pack Indoor Wayfinding Signage",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pylon-totem-sign": {
+    slug: "pylon-totem-sign",
+    title: "Pylon & Totem Monument Signs Dubai",
+    headline: "Pylon & Totem Monument Signs Printing & Manufacturing in Dubai",
+    subtitle: "Freestanding roadside pylon towers & LED illuminated entrance totem monuments. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Freestanding roadside pylon towers & LED illuminated entrance totem monuments. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/pylon-totem-sign/image-1.jpg",
+    badge: "Heavy Monument",
+    features: [
+      "5-7 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/pylon-totem-sign/image-1.jpg",
+      "/products/pylon-totem-sign/image-2.jpg",
+      "/products/pylon-totem-sign/image-3.jpg",
+      "/products/pylon-totem-sign/image-4.jpg",
+      "/products/pylon-totem-sign/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "pylon-totem-sign-standard",
+        name: "Standard Pylon & Totem Monument Signs",
+        price: "AED 1,200 / unit",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "5-7 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pylon-totem-sign-bulk",
+        name: "Bulk Pack Pylon & Totem Monument Signs",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sticker-on-wall": {
+    slug: "sticker-on-wall",
+    title: "Sticker on Wall / Wall Decals Dubai",
+    headline: "Sticker on Wall / Wall Decals Printing & Manufacturing in Dubai",
+    subtitle: "Custom self-adhesive wall vinyl graphics, corporate quotes & decorative decals. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Custom self-adhesive wall vinyl graphics, corporate quotes & decorative decals. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/sticker-on-wall/image-1.jpg",
+    badge: "Wall Murals",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/sticker-on-wall/image-1.jpg",
+      "/products/sticker-on-wall/image-2.jpg",
+      "/products/sticker-on-wall/image-3.jpg",
+      "/products/sticker-on-wall/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "sticker-on-wall-standard",
+        name: "Standard Sticker on Wall / Wall Decals",
+        price: "AED 55 / sq meter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sticker-on-wall-bulk",
+        name: "Bulk Pack Sticker on Wall / Wall Decals",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "wallpaper": {
+    slug: "wallpaper",
+    title: "Custom Printed Wallpaper Dubai",
+    headline: "Custom Printed Wallpaper Printing & Manufacturing in Dubai",
+    subtitle: "Textured canvas wall coverings & seamless custom pattern wallpaper for interior fit-outs. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Textured canvas wall coverings & seamless custom pattern wallpaper for interior fit-outs. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/wallpaper/image-1.jpg",
+    badge: "Custom Interior",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/wallpaper/image-1.jpg",
+      "/products/wallpaper/image-2.jpg",
+      "/products/wallpaper/image-3.jpg",
+      "/products/wallpaper/image-4.jpg",
+      "/products/wallpaper/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "wallpaper-standard",
+        name: "Standard Custom Printed Wallpaper",
+        price: "AED 75 / sq meter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "wallpaper-bulk",
+        name: "Bulk Pack Custom Printed Wallpaper",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sticker-on-forex-foam-board": {
+    slug: "sticker-on-forex-foam-board",
+    title: "Sticker on Forex & Foam Board Dubai",
+    headline: "Sticker on Forex & Foam Board Printing & Manufacturing in Dubai",
+    subtitle: "High-DPI vinyl mounted on 3mm/5mm rigid Forex PVC foam sheets for event displays. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "High-DPI vinyl mounted on 3mm/5mm rigid Forex PVC foam sheets for event displays. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/sticker-on-forex-foam-board/image-1.jpg",
+    badge: "Rigid Foam Board",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/sticker-on-forex-foam-board/image-1.jpg",
+      "/products/sticker-on-forex-foam-board/image-2.jpg",
+      "/products/sticker-on-forex-foam-board/image-3.jpg",
+      "/products/sticker-on-forex-foam-board/image-4.jpg",
+      "/products/sticker-on-forex-foam-board/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "sticker-on-forex-foam-board-standard",
+        name: "Standard Sticker on Forex & Foam Board",
+        price: "AED 65 / sheet",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sticker-on-forex-foam-board-bulk",
+        name: "Bulk Pack Sticker on Forex & Foam Board",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sticker-on-vehicles": {
+    slug: "sticker-on-vehicles",
+    title: "Vehicle Branding & Car Stickers Dubai",
+    headline: "Vehicle Branding & Car Stickers Printing & Manufacturing in Dubai",
+    subtitle: "RTA-compliant commercial fleet car wrapping, door magnets & van vinyl graphics. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "RTA-compliant commercial fleet car wrapping, door magnets & van vinyl graphics. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/sticker-on-vehicles/image-1.jpg",
+    badge: "RTA Approved",
+    features: [
+      "1-2 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/sticker-on-vehicles/image-1.jpg",
+      "/products/sticker-on-vehicles/image-2.jpg",
+      "/products/sticker-on-vehicles/image-3.jpg",
+      "/products/sticker-on-vehicles/image-4.jpg",
+      "/products/sticker-on-vehicles/image-5.jpg",
+      "/products/sticker-on-vehicles/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "sticker-on-vehicles-standard",
+        name: "Standard Vehicle Branding & Car Stickers",
+        price: "AED 250 / vehicle",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "1-2 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sticker-on-vehicles-bulk",
+        name: "Bulk Pack Vehicle Branding & Car Stickers",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sticker-on-glass": {
+    slug: "sticker-on-glass",
+    title: "Sticker on Glass & One-Way Vision Dubai",
+    headline: "Sticker on Glass & One-Way Vision Printing & Manufacturing in Dubai",
+    subtitle: "Frosted privacy vinyl, transparent window decals & perforated one-way vision film. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Frosted privacy vinyl, transparent window decals & perforated one-way vision film. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/commercial-services/stickers.jpg",
+    badge: "Glass Decals",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/sticker-on-glass/image-1.jpg",
+      "/products/sticker-on-glass/image-2.jpg",
+      "/products/sticker-on-glass/image-3.jpg",
+      "/products/sticker-on-glass/image-4.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "sticker-on-glass-standard",
+        name: "Standard Sticker on Glass & One-Way Vision",
+        price: "AED 60 / sq meter",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sticker-on-glass-bulk",
+        name: "Bulk Pack Sticker on Glass & One-Way Vision",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "rollup-stand": {
+    slug: "rollup-stand",
+    title: "Rollup Banner Stand Dubai",
+    headline: "Rollup Banner Stand Printing & Manufacturing in Dubai",
+    subtitle: "Heavy-duty retractable aluminum rollup stand with anti-curl non-fade film. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Heavy-duty retractable aluminum rollup stand with anti-curl non-fade film. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/rollup-stand/image-1.jpg",
+    badge: "Express 2-Hour",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/rollup-stand/image-1.jpg",
+      "/products/rollup-stand/image-2.jpg",
+      "/products/rollup-stand/image-3.jpg",
+      "/products/rollup-stand/image-4.jpg",
+      "/products/rollup-stand/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "rollup-stand-standard",
+        name: "Standard Rollup Banner Stand",
+        price: "AED 80 / unit",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "rollup-stand-bulk",
+        name: "Bulk Pack Rollup Banner Stand",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "photo-frame": {
+    slug: "photo-frame",
+    title: "Custom Canvas & Photo Frames Dubai",
+    headline: "Custom Canvas & Photo Frames Printing & Manufacturing in Dubai",
+    subtitle: "Gallery wrap canvas prints, acrylic floating frames & premium wooden photo frames. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Gallery wrap canvas prints, acrylic floating frames & premium wooden photo frames. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/photo-frame/image-1.jpg",
+    badge: "Canvas Wrap",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/photo-frame/image-1.jpg",
+      "/products/photo-frame/image-2.jpg",
+      "/products/photo-frame/image-3.jpg",
+      "/products/photo-frame/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "photo-frame-standard",
+        name: "Standard Custom Canvas & Photo Frames",
+        price: "AED 90 / frame",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "photo-frame-bulk",
+        name: "Bulk Pack Custom Canvas & Photo Frames",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "flag-print": {
+    slug: "flag-print",
+    title: "Custom Flag Printing Dubai",
+    headline: "Custom Flag Printing Printing & Manufacturing in Dubai",
+    subtitle: "Double-sided knitted polyester beach flags, country flags & corporate desk flags. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Double-sided knitted polyester beach flags, country flags & corporate desk flags. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/flag-stand/image-1.jpg",
+    badge: "Wind Resistant",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/flag-print/image-1.jpg",
+      "/products/flag-print/image-2.jpg",
+      "/products/flag-print/image-3.jpg",
+      "/products/flag-print/image-4.jpg",
+      "/products/flag-print/image-5.jpg",
+      "/products/flag-print/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "flag-print-standard",
+        name: "Standard Custom Flag Printing",
+        price: "AED 75 / flag",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "flag-print-bulk",
+        name: "Bulk Pack Custom Flag Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "flag-stand": {
+    slug: "flag-stand",
+    title: "Teardrop & Feather Flag Stand Dubai",
+    headline: "Teardrop & Feather Flag Stand Printing & Manufacturing in Dubai",
+    subtitle: "Outdoor feather & teardrop flag pole kits with heavy steel ground spikes & water bases. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Outdoor feather & teardrop flag pole kits with heavy steel ground spikes & water bases. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/sticker-on-forex-foam-board/image-1.jpg",
+    badge: "Outdoor Flag",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/flag-stand/image-1.jpg",
+      "/products/flag-stand/image-2.jpg",
+      "/products/flag-stand/image-3.jpg",
+      "/products/flag-stand/image-4.jpg",
+      "/products/flag-stand/image-5.jpg",
+      "/products/flag-stand/image-6.jpg",
+      "/products/flag-stand/image-7.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "flag-stand-standard",
+        name: "Standard Teardrop & Feather Flag Stand",
+        price: "AED 160 / set",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "flag-stand-bulk",
+        name: "Bulk Pack Teardrop & Feather Flag Stand",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "banner-stand": {
+    slug: "banner-stand",
+    title: "X-Banner & Pop-Up Stand Dubai",
+    headline: "X-Banner & Pop-Up Stand Printing & Manufacturing in Dubai",
+    subtitle: "Lightweight fiberglass X-banner stands & curved magnetic pop-up exhibition backdrops. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Lightweight fiberglass X-banner stands & curved magnetic pop-up exhibition backdrops. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/rollup-stand/image-1.jpg",
+    badge: "Portable",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/banner-stand/image-1.jpg",
+      "/products/banner-stand/image-2.jpg",
+      "/products/banner-stand/image-3.jpg",
+      "/products/banner-stand/image-4.jpg",
+      "/products/banner-stand/image-5.jpg",
+      "/products/banner-stand/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "banner-stand-standard",
+        name: "Standard X-Banner & Pop-Up Stand",
+        price: "AED 65 / unit",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "banner-stand-bulk",
+        name: "Bulk Pack X-Banner & Pop-Up Stand",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "promotion-table": {
+    slug: "promotion-table",
+    title: "Promotion Counter Table Dubai",
+    headline: "Promotion Counter Table Printing & Manufacturing in Dubai",
+    subtitle: "Folding plastic & aluminum sampling counter tables with custom header print. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Folding plastic & aluminum sampling counter tables with custom header print. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/flag-print/image-1.jpg",
+    badge: "Sampling Table",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/promotion-table/image-1.jpg",
+      "/products/promotion-table/image-2.jpg",
+      "/products/promotion-table/image-3.jpg",
+      "/products/promotion-table/image-4.jpg",
+      "/products/promotion-table/image-5.jpg",
+      "/products/promotion-table/image-6.jpg",
+      "/products/promotion-table/image-7.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "promotion-table-standard",
+        name: "Standard Promotion Counter Table",
+        price: "AED 220 / unit",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "promotion-table-bulk",
+        name: "Bulk Pack Promotion Counter Table",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "reception-stand": {
+    slug: "reception-stand",
+    title: "Reception Information Stand Dubai",
+    headline: "Reception Information Stand Printing & Manufacturing in Dubai",
+    subtitle: "Stainless steel poster stands, brochure holders & lobby sign podiums. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Stainless steel poster stands, brochure holders & lobby sign podiums. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/reception-stand/image-1.jpg",
+    badge: "Lobby Stand",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/reception-stand/image-1.jpg",
+      "/products/reception-stand/image-2.jpg",
+      "/products/reception-stand/image-3.jpg",
+      "/products/reception-stand/image-4.jpg",
+      "/products/reception-stand/image-5.jpg",
+      "/products/reception-stand/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "reception-stand-standard",
+        name: "Standard Reception Information Stand",
+        price: "AED 140 / unit",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "reception-stand-bulk",
+        name: "Bulk Pack Reception Information Stand",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "shelf-d-board-stand": {
+    slug: "shelf-d-board-stand",
+    title: "D-Board Eco Display Stand Dubai",
+    headline: "D-Board Eco Display Stand Printing & Manufacturing in Dubai",
+    subtitle: "100% recyclable honeycomb cardboard retail shelving display stands & POS furniture. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "100% recyclable honeycomb cardboard retail shelving display stands & POS furniture. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/shelf-d-board-stand/image-1.jpg",
+    badge: "Eco Honeycomb",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/shelf-d-board-stand/image-1.jpg",
+      "/products/shelf-d-board-stand/image-2.jpg",
+      "/products/shelf-d-board-stand/image-3.jpg",
+      "/products/shelf-d-board-stand/image-4.jpg",
+      "/products/shelf-d-board-stand/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "shelf-d-board-stand-standard",
+        name: "Standard D-Board Eco Display Stand",
+        price: "AED 280 / stand",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "shelf-d-board-stand-bulk",
+        name: "Bulk Pack D-Board Eco Display Stand",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "business-cards": {
+    slug: "business-cards",
+    title: "Urgent Business Cards (350-760 GSM) Dubai",
+    headline: "Urgent Business Cards (350-760 GSM) Printing & Manufacturing in Dubai",
+    subtitle: "Luxury business cards with gold foil, spot UV, velvet touch & rounded corners. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Luxury business cards with gold foil, spot UV, velvet touch & rounded corners. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/business-cards/image-1.jpg",
+    badge: "Top Seller",
+    features: [
+      "Same Day (2 Hours) Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/business-cards/image-1.jpg",
+      "/products/business-cards/image-2.jpg",
+      "/products/business-cards/image-3.jpg",
+      "/products/business-cards/image-4.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "business-cards-standard",
+        name: "Standard Urgent Business Cards (350-760 GSM)",
+        price: "AED 70 / 100 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day (2 Hours)",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "business-cards-bulk",
+        name: "Bulk Pack Urgent Business Cards (350-760 GSM)",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "print-and-cut-sticker": {
+    slug: "print-and-cut-sticker",
+    title: "Print & Cut Die-Cut Stickers Dubai",
+    headline: "Print & Cut Die-Cut Stickers Printing & Manufacturing in Dubai",
+    subtitle: "Custom shape vinyl product labels, foil stickers & waterproof die-cut decals. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Custom shape vinyl product labels, foil stickers & waterproof die-cut decals. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/print-and-cut-sticker/image-1.jpg",
+    badge: "Precision Cut",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/print-and-cut-sticker/image-1.jpg",
+      "/products/print-and-cut-sticker/image-2.jpg",
+      "/products/print-and-cut-sticker/image-3.jpg",
+      "/products/print-and-cut-sticker/image-4.jpg",
+      "/products/print-and-cut-sticker/image-5.jpg",
+      "/products/print-and-cut-sticker/image-6.jpg",
+      "/products/print-and-cut-sticker/image-7.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "print-and-cut-sticker-standard",
+        name: "Standard Print & Cut Die-Cut Stickers",
+        price: "AED 35 / 100 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "print-and-cut-sticker-bulk",
+        name: "Bulk Pack Print & Cut Die-Cut Stickers",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "flyers": {
+    slug: "flyers",
+    title: "Flyers & Leaflet Printing Dubai",
+    headline: "Flyers & Leaflet Printing Printing & Manufacturing in Dubai",
+    subtitle: "A4, A5 & DL promotional flyers on 150 GSM / 300 GSM glossy or matte art paper. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "A4, A5 & DL promotional flyers on 150 GSM / 300 GSM glossy or matte art paper. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/flyers/image-1.jpg",
+    badge: "Fast Delivery",
+    features: [
+      "Same Day Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/flyers/image-1.jpg",
+      "/products/flyers/image-2.jpg",
+      "/products/flyers/image-3.jpg",
+      "/products/flyers/image-4.jpg",
+      "/products/flyers/image-5.jpg",
+      "/products/flyers/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "flyers-standard",
+        name: "Standard Flyers & Leaflet Printing",
+        price: "AED 90 / 250 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "flyers-bulk",
+        name: "Bulk Pack Flyers & Leaflet Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "menu": {
+    slug: "menu",
+    title: "Restaurant & Cafe Menu Printing Dubai",
+    headline: "Restaurant & Cafe Menu Printing Printing & Manufacturing in Dubai",
+    subtitle: "Waterproof synthetic menus, hardcover leather restaurant menus & bi-fold table menus. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Waterproof synthetic menus, hardcover leather restaurant menus & bi-fold table menus. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/menu/image-1.jpg",
+    badge: "Waterproof Menu",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/menu/image-1.jpg",
+      "/products/menu/image-2.jpg",
+      "/products/menu/image-3.jpg",
+      "/products/menu/image-4.jpg",
+      "/products/menu/image-5.jpg",
+      "/products/menu/image-6.jpg",
+      "/products/menu/image-7.jpg",
+      "/products/menu/image-8.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "menu-standard",
+        name: "Standard Restaurant & Cafe Menu Printing",
+        price: "AED 120 / 10 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "menu-bulk",
+        name: "Bulk Pack Restaurant & Cafe Menu Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "letterheads": {
+    slug: "letterheads",
+    title: "Corporate Letterheads Dubai",
+    headline: "Corporate Letterheads Printing & Manufacturing in Dubai",
+    subtitle: "100 GSM / 120 GSM laser-compatible official corporate letterheads. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "100 GSM / 120 GSM laser-compatible official corporate letterheads. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/letterheads/image-1.jpg",
+    badge: "Laser Friendly",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/letterheads/image-1.jpg",
+      "/products/letterheads/image-2.jpg",
+      "/products/letterheads/image-3.jpg",
+      "/products/letterheads/image-4.jpg",
+      "/products/letterheads/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "letterheads-standard",
+        name: "Standard Corporate Letterheads",
+        price: "AED 140 / 500 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "letterheads-bulk",
+        name: "Bulk Pack Corporate Letterheads",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "envelopes-print": {
+    slug: "envelopes-print",
+    title: "Custom Printed Envelopes Dubai",
+    headline: "Custom Printed Envelopes Printing & Manufacturing in Dubai",
+    subtitle: "DL, C5 & C4 commercial window & non-window branded corporate envelopes. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "DL, C5 & C4 commercial window & non-window branded corporate envelopes. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/envelopes-print/image-1.jpg",
+    badge: "Branded Envelopes",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/envelopes-print/image-1.jpg",
+      "/products/envelopes-print/image-2.jpg",
+      "/products/envelopes-print/image-3.jpg",
+      "/products/envelopes-print/image-4.jpg",
+      "/products/envelopes-print/image-5.jpg",
+      "/products/envelopes-print/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "envelopes-print-standard",
+        name: "Standard Custom Printed Envelopes",
+        price: "AED 160 / 500 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "envelopes-print-bulk",
+        name: "Bulk Pack Custom Printed Envelopes",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "bags-print": {
+    slug: "bags-print",
+    title: "Custom Branded Shopping & Tote Bags Dubai",
+    headline: "Custom Branded Shopping & Tote Bags Printing & Manufacturing in Dubai",
+    subtitle: "Eco-friendly craft paper bags with twisted rope handles & canvas tote bags. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Eco-friendly craft paper bags with twisted rope handles & canvas tote bags. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/bags-print/image-1.jpg",
+    badge: "Eco Paper & Tote",
+    features: [
+      "48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/bags-print/image-1.jpg",
+      "/products/bags-print/image-2.jpg",
+      "/products/bags-print/image-3.jpg",
+      "/products/bags-print/image-4.jpg",
+      "/products/bags-print/image-5.jpg",
+      "/products/bags-print/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "bags-print-standard",
+        name: "Standard Custom Branded Shopping & Tote Bags",
+        price: "AED 95 / 50 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "bags-print-bulk",
+        name: "Bulk Pack Custom Branded Shopping & Tote Bags",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "t-shirt-print": {
+    slug: "t-shirt-print",
+    title: "Custom T-Shirt & Polo Shirt Printing Dubai",
+    headline: "Custom T-Shirt & Polo Shirt Printing Printing & Manufacturing in Dubai",
+    subtitle: "Direct-to-Film (DTF) full color 100% cotton corporate staff uniforms & polo shirts. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Direct-to-Film (DTF) full color 100% cotton corporate staff uniforms & polo shirts. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/t-shirt-print/image-1.jpg",
+    badge: "DTF Cotton",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/t-shirt-print/image-1.jpg",
+      "/products/t-shirt-print/image-2.jpg",
+      "/products/t-shirt-print/image-3.jpg",
+      "/products/t-shirt-print/image-4.jpg",
+      "/products/t-shirt-print/image-5.jpg",
+      "/products/t-shirt-print/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "t-shirt-print-standard",
+        name: "Standard Custom T-Shirt & Polo Shirt Printing",
+        price: "AED 35 / shirt",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "t-shirt-print-bulk",
+        name: "Bulk Pack Custom T-Shirt & Polo Shirt Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "bottle-print": {
+    slug: "bottle-print",
+    title: "Custom Printed Water Bottles Dubai",
+    headline: "Custom Printed Water Bottles Printing & Manufacturing in Dubai",
+    subtitle: "Laser engraved & UV printed stainless steel sports bottles & thermal flasks. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Laser engraved & UV printed stainless steel sports bottles & thermal flasks. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/bottle-print/image-1.jpg",
+    badge: "Laser Engraved",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/bottle-print/image-1.jpg",
+      "/products/bottle-print/image-2.jpg",
+      "/products/bottle-print/image-3.jpg",
+      "/products/bottle-print/image-4.jpg",
+      "/products/bottle-print/image-5.jpg",
+      "/products/bottle-print/image-6.jpg",
+      "/products/bottle-print/image-7.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "bottle-print-standard",
+        name: "Standard Custom Printed Water Bottles",
+        price: "AED 28 / bottle",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "bottle-print-bulk",
+        name: "Bulk Pack Custom Printed Water Bottles",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "mugs-print": {
+    slug: "mugs-print",
+    title: "Ceramic Coffee Mugs Printing Dubai",
+    headline: "Ceramic Coffee Mugs Printing Printing & Manufacturing in Dubai",
+    subtitle: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/commercial-services/tumblers-mugs.jpg",
+    badge: "Microwave Safe",
+    features: [
+      "24 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/commercial-services/tumblers-mugs.jpg",
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "mugs-print-standard",
+        name: "Standard Ceramic Coffee Mugs Printing",
+        price: "AED 22 / mug",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "mugs-print-bulk",
+        name: "Bulk Pack Ceramic Coffee Mugs Printing",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "packaging": {
+    slug: "packaging",
+    title: "Custom Rigid Packaging & Gift Boxes Dubai",
+    headline: "Custom Rigid Packaging & Gift Boxes Printing & Manufacturing in Dubai",
+    subtitle: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/commercial-services/custom-packaging.jpg",
+    badge: "Rigid Boxes",
+    features: [
+      "48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/commercial-services/custom-packaging.jpg",
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "packaging-standard",
+        name: "Standard Custom Rigid Packaging & Gift Boxes",
+        price: "AED 150 / 50 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "packaging-bulk",
+        name: "Bulk Pack Custom Rigid Packaging & Gift Boxes",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "calendars": {
+    slug: "calendars",
+    title: "Custom Corporate Calendars Dubai",
+    headline: "Custom Corporate Calendars Printing & Manufacturing in Dubai",
+    subtitle: "Desk tent calendars, wall calendars with wire-o binding & custom photos. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Desk tent calendars, wall calendars with wire-o binding & custom photos. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/calendars/image-1.jpg",
+    badge: "Wire-O Bound",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/calendars/image-1.jpg",
+      "/products/calendars/image-2.jpg",
+      "/products/calendars/image-3.jpg",
+      "/products/calendars/image-4.jpg",
+      "/products/calendars/image-5.jpg",
+      "/products/calendars/image-6.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "calendars-standard",
+        name: "Standard Custom Corporate Calendars",
+        price: "AED 180 / 25 pcs",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "calendars-bulk",
+        name: "Bulk Pack Custom Corporate Calendars",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "awards-making": {
+    slug: "awards-making",
+    title: "Custom Trophy & Acrylic Awards Dubai",
+    headline: "Custom Trophy & Acrylic Awards Printing & Manufacturing in Dubai",
+    subtitle: "Crystal glass trophies, wooden plaques & custom cut 3D acrylic recognition awards. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Crystal glass trophies, wooden plaques & custom cut 3D acrylic recognition awards. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/products/awards-making/image-1.jpg",
+    badge: "Crystal & Wood",
+    features: [
+      "2-3 Days Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/products/awards-making/image-1.jpg",
+      "/products/awards-making/image-2.jpg",
+      "/products/awards-making/image-3.jpg",
+      "/products/awards-making/image-4.jpg",
+      "/products/awards-making/image-5.jpg",
+      "/products/awards-making/image-6.jpg",
+      "/products/awards-making/image-7.jpg",
+      "/products/awards-making/image-8.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "awards-making-standard",
+        name: "Standard Custom Trophy & Acrylic Awards",
+        price: "AED 120 / trophy",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "awards-making-bulk",
+        name: "Bulk Pack Custom Trophy & Acrylic Awards",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "diary-pen-print": {
+    slug: "diary-pen-print",
+    title: "Executive Diary & Pen Gift Sets Dubai",
+    headline: "Executive Diary & Pen Gift Sets Printing & Manufacturing in Dubai",
+    subtitle: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes. Urgent same day production & express delivery across Dubai & UAE.",
+    description: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
+    heroImage: "/commercial-services/notebooks-pens.jpg",
+    badge: "VIP Gift Set",
+    features: [
+      "24-48 Hours Fast Production Turnaround",
+      "Free Artwork Check & Pre-Flight Verification",
+      "Custom Size & Heavy-Duty Material Options",
+      "Same-Day & Express Delivery Across Dubai & UAE"
+    ],
+    samples: [
+      "/commercial-services/notebooks-pens.jpg",
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "diary-pen-print-standard",
+        name: "Standard Executive Diary & Pen Gift Sets",
+        price: "AED 45 / set",
+        quantity: "Standard Unit",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "diary-pen-print-bulk",
+        name: "Bulk Pack Executive Diary & Pen Gift Sets",
+        price: "Contact Press",
+        quantity: "High Volume",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Specification",
+        delivery: "2-3 Business Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+
+  "backlit-lamp-post": {
+    slug: "backlit-lamp-post",
+    title: "Backlit and Lamp Post Dubai",
+    headline: "Backlit and Lamp Post Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Backlit and Lamp Post printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Backlit and Lamp Post.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "backlit-lamp-post-standard",
+        name: "Standard Backlit and Lamp Post",
+        price: "AED 65 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "backlit-lamp-post-bulk",
+        name: "Bulk Backlit and Lamp Post",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "banners-mesh": {
+    slug: "banners-mesh",
+    title: "Banners & Mesh Dubai",
+    headline: "Banners & Mesh Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Banners & Mesh printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Banners & Mesh.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "banners-mesh-standard",
+        name: "Standard Banners & Mesh",
+        price: "AED 45 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "banners-mesh-bulk",
+        name: "Bulk Banners & Mesh",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "magnet-posters": {
+    slug: "magnet-posters",
+    title: "Magnet Posters Dubai",
+    headline: "Magnet Posters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Magnet Posters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Magnet Posters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "magnet-posters-standard",
+        name: "Standard Magnet Posters",
+        price: "AED 85 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "magnet-posters-bulk",
+        name: "Bulk Magnet Posters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "mupi-posters": {
+    slug: "mupi-posters",
+    title: "Mupi Posters Dubai",
+    headline: "Mupi Posters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Mupi Posters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Mupi Posters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "mupi-posters-standard",
+        name: "Standard Mupi Posters",
+        price: "AED 55 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "mupi-posters-bulk",
+        name: "Bulk Mupi Posters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "top-quality-posters": {
+    slug: "top-quality-posters",
+    title: "Top Quality Posters Dubai",
+    headline: "Top Quality Posters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Top Quality Posters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Top Quality Posters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "top-quality-posters-standard",
+        name: "Standard Top Quality Posters",
+        price: "AED 35 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "top-quality-posters-bulk",
+        name: "Bulk Top Quality Posters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "customized-posters": {
+    slug: "customized-posters",
+    title: "Customized Posters Dubai",
+    headline: "Customized Posters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Customized Posters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Customized Posters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "customized-posters-standard",
+        name: "Standard Customized Posters",
+        price: "AED 30 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "customized-posters-bulk",
+        name: "Bulk Customized Posters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "flat-surface-adhesive": {
+    slug: "flat-surface-adhesive",
+    title: "Flat Surface Adhesive Dubai",
+    headline: "Flat Surface Adhesive Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Flat Surface Adhesive printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Flat Surface Adhesive.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "flat-surface-adhesive-standard",
+        name: "Standard Flat Surface Adhesive",
+        price: "AED 50 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "flat-surface-adhesive-bulk",
+        name: "Bulk Flat Surface Adhesive",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "floor-adhesive": {
+    slug: "floor-adhesive",
+    title: "Floor Adhesive Dubai",
+    headline: "Floor Adhesive Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Floor Adhesive printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Floor Adhesive.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "floor-adhesive-standard",
+        name: "Standard Floor Adhesive",
+        price: "AED 65 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "floor-adhesive-bulk",
+        name: "Bulk Floor Adhesive",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "vinyl-decals-cutouts": {
+    slug: "vinyl-decals-cutouts",
+    title: "Vinyl Decals (Cutouts) Dubai",
+    headline: "Vinyl Decals (Cutouts) Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Vinyl Decals (Cutouts) printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Vinyl Decals (Cutouts).",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "vinyl-decals-cutouts-standard",
+        name: "Standard Vinyl Decals (Cutouts)",
+        price: "AED 45 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "vinyl-decals-cutouts-bulk",
+        name: "Bulk Vinyl Decals (Cutouts)",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "aluminum-composite-panel": {
+    slug: "aluminum-composite-panel",
+    title: "Aluminum Composite Panel (ACP) Dubai",
+    headline: "Aluminum Composite Panel (ACP) Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Aluminum Composite Panel (ACP) printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Aluminum Composite Panel (ACP).",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "aluminum-composite-panel-standard",
+        name: "Standard Aluminum Composite Panel (ACP)",
+        price: "AED 190 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "aluminum-composite-panel-bulk",
+        name: "Bulk Aluminum Composite Panel (ACP)",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "corrugated-board": {
+    slug: "corrugated-board",
+    title: "Corrugated Board Dubai",
+    headline: "Corrugated Board Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Corrugated Board printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Corrugated Board.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "corrugated-board-standard",
+        name: "Standard Corrugated Board",
+        price: "AED 40 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "corrugated-board-bulk",
+        name: "Bulk Corrugated Board",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "corrugated-plastic": {
+    slug: "corrugated-plastic",
+    title: "Corrugated Plastic Dubai",
+    headline: "Corrugated Plastic Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Corrugated Plastic printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Corrugated Plastic.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "corrugated-plastic-standard",
+        name: "Standard Corrugated Plastic",
+        price: "AED 45 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "corrugated-plastic-bulk",
+        name: "Bulk Corrugated Plastic",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-material": {
+    slug: "d-board-material",
+    title: "D-Board Dubai",
+    headline: "D-Board Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-material-standard",
+        name: "Standard D-Board",
+        price: "AED 120 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-material-bulk",
+        name: "Bulk D-Board",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "foam-sheet": {
+    slug: "foam-sheet",
+    title: "Foam Dubai",
+    headline: "Foam Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Foam printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Foam.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "foam-sheet-standard",
+        name: "Standard Foam",
+        price: "AED 35 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "foam-sheet-bulk",
+        name: "Bulk Foam",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "kapatex-material": {
+    slug: "kapatex-material",
+    title: "Kapatex Dubai",
+    headline: "Kapatex Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Kapatex printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Kapatex.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "kapatex-material-standard",
+        name: "Standard Kapatex",
+        price: "AED 75 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "kapatex-material-bulk",
+        name: "Bulk Kapatex",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "a3-posters": {
+    slug: "a3-posters",
+    title: "A3 Posters Dubai",
+    headline: "A3 Posters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom A3 Posters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for A3 Posters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "a3-posters-standard",
+        name: "Standard A3 Posters",
+        price: "AED 45 / 50 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "a3-posters-bulk",
+        name: "Bulk A3 Posters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "cad-plan-printing": {
+    slug: "cad-plan-printing",
+    title: "CAD & Plan Printing Dubai",
+    headline: "CAD & Plan Printing Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom CAD & Plan Printing printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for CAD & Plan Printing.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "cad-plan-printing-standard",
+        name: "Standard CAD & Plan Printing",
+        price: "AED 15 / sheet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "cad-plan-printing-bulk",
+        name: "Bulk CAD & Plan Printing",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "certificates": {
+    slug: "certificates",
+    title: "Certificates Dubai",
+    headline: "Certificates Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Certificates printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Certificates.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "certificates-standard",
+        name: "Standard Certificates",
+        price: "AED 60 / 50 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "certificates-bulk",
+        name: "Bulk Certificates",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "door-hangers": {
+    slug: "door-hangers",
+    title: "Door Hangers Dubai",
+    headline: "Door Hangers Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Door Hangers printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Door Hangers.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "door-hangers-standard",
+        name: "Standard Door Hangers",
+        price: "AED 110 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "door-hangers-bulk",
+        name: "Bulk Door Hangers",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "folded-leaflets": {
+    slug: "folded-leaflets",
+    title: "Folded Leaflets Dubai",
+    headline: "Folded Leaflets Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Folded Leaflets printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Folded Leaflets.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "folded-leaflets-standard",
+        name: "Standard Folded Leaflets",
+        price: "AED 120 / 250 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "folded-leaflets-bulk",
+        name: "Bulk Folded Leaflets",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "invitations-postcards": {
+    slug: "invitations-postcards",
+    title: "Invitations & Postcards Dubai",
+    headline: "Invitations & Postcards Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Invitations & Postcards printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Invitations & Postcards.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "invitations-postcards-standard",
+        name: "Standard Invitations & Postcards",
+        price: "AED 95 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "invitations-postcards-bulk",
+        name: "Bulk Invitations & Postcards",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "magazines": {
+    slug: "magazines",
+    title: "Magazines Dubai",
+    headline: "Magazines Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Magazines printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Magazines.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "magazines-standard",
+        name: "Standard Magazines",
+        price: "AED 350 / 50 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "magazines-bulk",
+        name: "Bulk Magazines",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "ncr-books": {
+    slug: "ncr-books",
+    title: "NCR Books Dubai",
+    headline: "NCR Books Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom NCR Books printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for NCR Books.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "ncr-books-standard",
+        name: "Standard NCR Books",
+        price: "AED 180 / 10 books",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "ncr-books-bulk",
+        name: "Bulk NCR Books",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "page-printing": {
+    slug: "page-printing",
+    title: "Page Printing Dubai",
+    headline: "Page Printing Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Page Printing printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Page Printing.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "page-printing-standard",
+        name: "Standard Page Printing",
+        price: "AED 0.5 / page",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "page-printing-bulk",
+        name: "Bulk Page Printing",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "placemats": {
+    slug: "placemats",
+    title: "Placemats Dubai",
+    headline: "Placemats Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Placemats printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Placemats.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "placemats-standard",
+        name: "Standard Placemats",
+        price: "AED 110 / 250 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "placemats-bulk",
+        name: "Bulk Placemats",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "presentation-folders": {
+    slug: "presentation-folders",
+    title: "Presentation Folders Dubai",
+    headline: "Presentation Folders Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Presentation Folders printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Presentation Folders.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "presentation-folders-standard",
+        name: "Standard Presentation Folders",
+        price: "AED 250 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "presentation-folders-bulk",
+        name: "Bulk Presentation Folders",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "presentations": {
+    slug: "presentations",
+    title: "Presentations Dubai",
+    headline: "Presentations Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Presentations printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Presentations.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "presentations-standard",
+        name: "Standard Presentations",
+        price: "AED 80 / copy",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "presentations-bulk",
+        name: "Bulk Presentations",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "tags": {
+    slug: "tags",
+    title: "Tags Dubai",
+    headline: "Tags Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Tags printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Tags.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "tags-standard",
+        name: "Standard Tags",
+        price: "AED 65 / 250 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "tags-bulk",
+        name: "Bulk Tags",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "tent-cards": {
+    slug: "tent-cards",
+    title: "Tent Cards Dubai",
+    headline: "Tent Cards Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Tent Cards printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Tent Cards.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "tent-cards-standard",
+        name: "Standard Tent Cards",
+        price: "AED 85 / 50 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "tent-cards-bulk",
+        name: "Bulk Tent Cards",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "wobblers": {
+    slug: "wobblers",
+    title: "Wobblers Dubai",
+    headline: "Wobblers Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Wobblers printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Wobblers.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "wobblers-standard",
+        name: "Standard Wobblers",
+        price: "AED 95 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "wobblers-bulk",
+        name: "Bulk Wobblers",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "silicone-wristbands": {
+    slug: "silicone-wristbands",
+    title: "Silicone Wristbands Dubai",
+    headline: "Silicone Wristbands Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Silicone Wristbands printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Silicone Wristbands.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "silicone-wristbands-standard",
+        name: "Standard Silicone Wristbands",
+        price: "AED 150 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "silicone-wristbands-bulk",
+        name: "Bulk Silicone Wristbands",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "tyvek-wristbands": {
+    slug: "tyvek-wristbands",
+    title: "Tyvek Wristbands Dubai",
+    headline: "Tyvek Wristbands Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Tyvek Wristbands printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Tyvek Wristbands.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "tyvek-wristbands-standard",
+        name: "Standard Tyvek Wristbands",
+        price: "AED 80 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "tyvek-wristbands-bulk",
+        name: "Bulk Tyvek Wristbands",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "perfect-binding": {
+    slug: "perfect-binding",
+    title: "Perfect Binding Dubai",
+    headline: "Perfect Binding Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Perfect Binding printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Perfect Binding.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "perfect-binding-standard",
+        name: "Standard Perfect Binding",
+        price: "AED 15 / book",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "perfect-binding-bulk",
+        name: "Bulk Perfect Binding",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "saddle-staple-binding": {
+    slug: "saddle-staple-binding",
+    title: "Saddle / Staple Binding Dubai",
+    headline: "Saddle / Staple Binding Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Saddle / Staple Binding printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Saddle / Staple Binding.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "saddle-staple-binding-standard",
+        name: "Standard Saddle / Staple Binding",
+        price: "AED 8 / book",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "saddle-staple-binding-bulk",
+        name: "Bulk Saddle / Staple Binding",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "spiral-wire-binding": {
+    slug: "spiral-wire-binding",
+    title: "Spiral / Wire Binding Dubai",
+    headline: "Spiral / Wire Binding Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Spiral / Wire Binding printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Spiral / Wire Binding.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "spiral-wire-binding-standard",
+        name: "Standard Spiral / Wire Binding",
+        price: "AED 10 / book",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "spiral-wire-binding-bulk",
+        name: "Bulk Spiral / Wire Binding",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "drawstring-bags": {
+    slug: "drawstring-bags",
+    title: "Drawstring Bags Dubai",
+    headline: "Drawstring Bags Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Drawstring Bags printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Drawstring Bags.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "drawstring-bags-standard",
+        name: "Standard Drawstring Bags",
+        price: "AED 12 / bag",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "drawstring-bags-bulk",
+        name: "Bulk Drawstring Bags",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "jute-cotton-bags": {
+    slug: "jute-cotton-bags",
+    title: "Jute & Cotton Bags Dubai",
+    headline: "Jute & Cotton Bags Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Jute & Cotton Bags printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Jute & Cotton Bags.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "jute-cotton-bags-standard",
+        name: "Standard Jute & Cotton Bags",
+        price: "AED 18 / bag",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "jute-cotton-bags-bulk",
+        name: "Bulk Jute & Cotton Bags",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "booklet-menu": {
+    slug: "booklet-menu",
+    title: "Booklet Menu Dubai",
+    headline: "Booklet Menu Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Booklet Menu printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Booklet Menu.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "booklet-menu-standard",
+        name: "Standard Booklet Menu",
+        price: "AED 35 / menu",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "booklet-menu-bulk",
+        name: "Bulk Booklet Menu",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "folded-menu": {
+    slug: "folded-menu",
+    title: "Folded Menu Dubai",
+    headline: "Folded Menu Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Folded Menu printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Folded Menu.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "folded-menu-standard",
+        name: "Standard Folded Menu",
+        price: "AED 15 / menu",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "folded-menu-bulk",
+        name: "Bulk Folded Menu",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "long-menu": {
+    slug: "long-menu",
+    title: "Long Menu Dubai",
+    headline: "Long Menu Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Long Menu printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Long Menu.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "long-menu-standard",
+        name: "Standard Long Menu",
+        price: "AED 12 / menu",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "long-menu-bulk",
+        name: "Bulk Long Menu",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "table-tent-menu": {
+    slug: "table-tent-menu",
+    title: "Table Tent Menu Dubai",
+    headline: "Table Tent Menu Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Table Tent Menu printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Table Tent Menu.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "table-tent-menu-standard",
+        name: "Standard Table Tent Menu",
+        price: "AED 20 / menu",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "table-tent-menu-bulk",
+        name: "Bulk Table Tent Menu",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "ready-envelopes": {
+    slug: "ready-envelopes",
+    title: "Ready Envelopes Dubai",
+    headline: "Ready Envelopes Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Ready Envelopes printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Ready Envelopes.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "ready-envelopes-standard",
+        name: "Standard Ready Envelopes",
+        price: "AED 120 / 500 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "ready-envelopes-bulk",
+        name: "Bulk Ready Envelopes",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "carry-box": {
+    slug: "carry-box",
+    title: "Carry Box Dubai",
+    headline: "Carry Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Carry Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Carry Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "carry-box-standard",
+        name: "Standard Carry Box",
+        price: "AED 3 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "carry-box-bulk",
+        name: "Bulk Carry Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "crash-lock-medium-box": {
+    slug: "crash-lock-medium-box",
+    title: "Crash Lock Medium Box Dubai",
+    headline: "Crash Lock Medium Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Crash Lock Medium Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Crash Lock Medium Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "crash-lock-medium-box-standard",
+        name: "Standard Crash Lock Medium Box",
+        price: "AED 4 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "crash-lock-medium-box-bulk",
+        name: "Bulk Crash Lock Medium Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hanging-box": {
+    slug: "hanging-box",
+    title: "Hanging Box Dubai",
+    headline: "Hanging Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hanging Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hanging Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hanging-box-standard",
+        name: "Standard Hanging Box",
+        price: "AED 2.5 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hanging-box-bulk",
+        name: "Bulk Hanging Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "interactive-table-top-box": {
+    slug: "interactive-table-top-box",
+    title: "Interactive Table Top Box Dubai",
+    headline: "Interactive Table Top Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Interactive Table Top Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Interactive Table Top Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "interactive-table-top-box-standard",
+        name: "Standard Interactive Table Top Box",
+        price: "AED 8 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "interactive-table-top-box-bulk",
+        name: "Bulk Interactive Table Top Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "interlock-carry-bag": {
+    slug: "interlock-carry-bag",
+    title: "Interlock Carry Bag Dubai",
+    headline: "Interlock Carry Bag Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Interlock Carry Bag printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Interlock Carry Bag.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "interlock-carry-bag-standard",
+        name: "Standard Interlock Carry Bag",
+        price: "AED 5 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "interlock-carry-bag-bulk",
+        name: "Bulk Interlock Carry Bag",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "party-favor-box": {
+    slug: "party-favor-box",
+    title: "Party Favor Box Dubai",
+    headline: "Party Favor Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Party Favor Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Party Favor Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "party-favor-box-standard",
+        name: "Standard Party Favor Box",
+        price: "AED 3.5 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "party-favor-box-bulk",
+        name: "Bulk Party Favor Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "personal-care-box": {
+    slug: "personal-care-box",
+    title: "Personal Care Box Dubai",
+    headline: "Personal Care Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Personal Care Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Personal Care Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "personal-care-box-standard",
+        name: "Standard Personal Care Box",
+        price: "AED 4 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "personal-care-box-bulk",
+        name: "Bulk Personal Care Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pillow-box": {
+    slug: "pillow-box",
+    title: "Pillow Box Dubai",
+    headline: "Pillow Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Pillow Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Pillow Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pillow-box-standard",
+        name: "Standard Pillow Box",
+        price: "AED 2 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pillow-box-bulk",
+        name: "Bulk Pillow Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "small-gift-box": {
+    slug: "small-gift-box",
+    title: "Small Gift Box Dubai",
+    headline: "Small Gift Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Small Gift Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Small Gift Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "small-gift-box-standard",
+        name: "Standard Small Gift Box",
+        price: "AED 3 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "small-gift-box-bulk",
+        name: "Bulk Small Gift Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "tray-box": {
+    slug: "tray-box",
+    title: "Tray Box Dubai",
+    headline: "Tray Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Tray Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Tray Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "tray-box-standard",
+        name: "Standard Tray Box",
+        price: "AED 3.5 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "tray-box-bulk",
+        name: "Bulk Tray Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "twisted-box": {
+    slug: "twisted-box",
+    title: "Twisted Box Dubai",
+    headline: "Twisted Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Twisted Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Twisted Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "twisted-box-standard",
+        name: "Standard Twisted Box",
+        price: "AED 4.5 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "twisted-box-bulk",
+        name: "Bulk Twisted Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "wave-box": {
+    slug: "wave-box",
+    title: "Wave Box Dubai",
+    headline: "Wave Box Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Wave Box printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Wave Box.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "wave-box-standard",
+        name: "Standard Wave Box",
+        price: "AED 4 / box",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "wave-box-bulk",
+        name: "Bulk Wave Box",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "desk-calendars": {
+    slug: "desk-calendars",
+    title: "Desk Calendars Dubai",
+    headline: "Desk Calendars Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Desk Calendars printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Desk Calendars.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "desk-calendars-standard",
+        name: "Standard Desk Calendars",
+        price: "AED 180 / 25 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "desk-calendars-bulk",
+        name: "Bulk Desk Calendars",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "wall-calendars": {
+    slug: "wall-calendars",
+    title: "Wall Calendars Dubai",
+    headline: "Wall Calendars Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Wall Calendars printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Wall Calendars.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "wall-calendars-standard",
+        name: "Standard Wall Calendars",
+        price: "AED 220 / 25 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "wall-calendars-bulk",
+        name: "Bulk Wall Calendars",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "basic-lanyards": {
+    slug: "basic-lanyards",
+    title: "Basic Lanyards Dubai",
+    headline: "Basic Lanyards Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Basic Lanyards printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Basic Lanyards.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "basic-lanyards-standard",
+        name: "Standard Basic Lanyards",
+        price: "AED 3.5 / lanyard",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "basic-lanyards-bulk",
+        name: "Bulk Basic Lanyards",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "custom-lanyards": {
+    slug: "custom-lanyards",
+    title: "Custom Lanyards Dubai",
+    headline: "Custom Lanyards Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Custom Lanyards printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Custom Lanyards.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "custom-lanyards-standard",
+        name: "Standard Custom Lanyards",
+        price: "AED 5 / lanyard",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "custom-lanyards-bulk",
+        name: "Bulk Custom Lanyards",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "double-hook-lanyards": {
+    slug: "double-hook-lanyards",
+    title: "Double Hook Lanyards Dubai",
+    headline: "Double Hook Lanyards Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Double Hook Lanyards printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Double Hook Lanyards.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "double-hook-lanyards-standard",
+        name: "Standard Double Hook Lanyards",
+        price: "AED 6.5 / lanyard",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "double-hook-lanyards-bulk",
+        name: "Bulk Double Hook Lanyards",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "roll-stickers": {
+    slug: "roll-stickers",
+    title: "Roll Stickers Dubai",
+    headline: "Roll Stickers Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Roll Stickers printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Roll Stickers.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "roll-stickers-standard",
+        name: "Standard Roll Stickers",
+        price: "AED 85 / 500 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "roll-stickers-bulk",
+        name: "Bulk Roll Stickers",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "stickers": {
+    slug: "stickers",
+    title: "Round, Vinyl & Glass Stickers Dubai",
+    headline: "Round, Vinyl & Glass Stickers Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Round, Vinyl & Glass Stickers printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Round, Vinyl & Glass Stickers.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "stickers-standard",
+        name: "Standard Round, Vinyl & Glass Stickers",
+        price: "AED 35 / 100 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "stickers-bulk",
+        name: "Bulk Round, Vinyl & Glass Stickers",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "character-stand": {
+    slug: "character-stand",
+    title: "Character Stand Dubai",
+    headline: "Character Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Character Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Character Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "character-stand-standard",
+        name: "Standard Character Stand",
+        price: "AED 180 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "character-stand-bulk",
+        name: "Bulk Character Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hashtag-signs": {
+    slug: "hashtag-signs",
+    title: "Hashtag Signs Dubai",
+    headline: "Hashtag Signs Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hashtag Signs printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hashtag Signs.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hashtag-signs-standard",
+        name: "Standard Hashtag Signs",
+        price: "AED 75 / sign",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hashtag-signs-bulk",
+        name: "Bulk Hashtag Signs",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "instagram-frame": {
+    slug: "instagram-frame",
+    title: "Instagram Frame Dubai",
+    headline: "Instagram Frame Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Instagram Frame printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Instagram Frame.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "instagram-frame-standard",
+        name: "Standard Instagram Frame",
+        price: "AED 95 / frame",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "instagram-frame-bulk",
+        name: "Bulk Instagram Frame",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "acrylic-wall-displays": {
+    slug: "acrylic-wall-displays",
+    title: "Acrylic Wall Displays Dubai",
+    headline: "Acrylic Wall Displays Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Acrylic Wall Displays printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Acrylic Wall Displays.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "acrylic-wall-displays-standard",
+        name: "Standard Acrylic Wall Displays",
+        price: "AED 190 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "acrylic-wall-displays-bulk",
+        name: "Bulk Acrylic Wall Displays",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "acrylic-sandwich-displays": {
+    slug: "acrylic-sandwich-displays",
+    title: "Acrylic Sandwich Displays Dubai",
+    headline: "Acrylic Sandwich Displays Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Acrylic Sandwich Displays printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Acrylic Sandwich Displays.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "acrylic-sandwich-displays-standard",
+        name: "Standard Acrylic Sandwich Displays",
+        price: "AED 140 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "acrylic-sandwich-displays-bulk",
+        name: "Bulk Acrylic Sandwich Displays",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-acrylic-displays": {
+    slug: "classic-acrylic-displays",
+    title: "Classic Acrylic Displays Dubai",
+    headline: "Classic Acrylic Displays Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic Acrylic Displays printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic Acrylic Displays.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-acrylic-displays-standard",
+        name: "Standard Classic Acrylic Displays",
+        price: "AED 110 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-acrylic-displays-bulk",
+        name: "Bulk Classic Acrylic Displays",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "a-board": {
+    slug: "a-board",
+    title: "A-Board Dubai",
+    headline: "A-Board Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom A-Board printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for A-Board.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "a-board-standard",
+        name: "Standard A-Board",
+        price: "AED 220 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "a-board-bulk",
+        name: "Bulk A-Board",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "double-sided-poster-stand": {
+    slug: "double-sided-poster-stand",
+    title: "Double Sided Poster Stand Dubai",
+    headline: "Double Sided Poster Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Double Sided Poster Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Double Sided Poster Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "double-sided-poster-stand-standard",
+        name: "Standard Double Sided Poster Stand",
+        price: "AED 280 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "double-sided-poster-stand-bulk",
+        name: "Bulk Double Sided Poster Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "l-shape-banner": {
+    slug: "l-shape-banner",
+    title: "L Shape Banner Dubai",
+    headline: "L Shape Banner Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom L Shape Banner printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for L Shape Banner.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "l-shape-banner-standard",
+        name: "Standard L Shape Banner",
+        price: "AED 120 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "l-shape-banner-bulk",
+        name: "Bulk L Shape Banner",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pop-up-stands": {
+    slug: "pop-up-stands",
+    title: "Pop Up Stands Dubai",
+    headline: "Pop Up Stands Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Pop Up Stands printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Pop Up Stands.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pop-up-stands-standard",
+        name: "Standard Pop Up Stands",
+        price: "AED 850 / backdrop",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pop-up-stands-bulk",
+        name: "Bulk Pop Up Stands",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "3d-pos-display": {
+    slug: "3d-pos-display",
+    title: "3D POS Display Dubai",
+    headline: "3D POS Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom 3D POS Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for 3D POS Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "3d-pos-display-standard",
+        name: "Standard 3D POS Display",
+        price: "AED 320 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "3d-pos-display-bulk",
+        name: "Bulk 3D POS Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "a4-brochure-rack-stand": {
+    slug: "a4-brochure-rack-stand",
+    title: "A4 Brochure Rack Stand Dubai",
+    headline: "A4 Brochure Rack Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom A4 Brochure Rack Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for A4 Brochure Rack Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "a4-brochure-rack-stand-standard",
+        name: "Standard A4 Brochure Rack Stand",
+        price: "AED 180 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "a4-brochure-rack-stand-bulk",
+        name: "Bulk A4 Brochure Rack Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "a4-magazine-stand": {
+    slug: "a4-magazine-stand",
+    title: "A4 Magazine Stand Dubai",
+    headline: "A4 Magazine Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom A4 Magazine Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for A4 Magazine Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "a4-magazine-stand-standard",
+        name: "Standard A4 Magazine Stand",
+        price: "AED 190 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "a4-magazine-stand-bulk",
+        name: "Bulk A4 Magazine Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-2-shelf-d-board-stand": {
+    slug: "classic-2-shelf-d-board-stand",
+    title: "Classic 2 Shelf D-Board Stand Dubai",
+    headline: "Classic 2 Shelf D-Board Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic 2 Shelf D-Board Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic 2 Shelf D-Board Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-2-shelf-d-board-stand-standard",
+        name: "Standard Classic 2 Shelf D-Board Stand",
+        price: "AED 240 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-2-shelf-d-board-stand-bulk",
+        name: "Bulk Classic 2 Shelf D-Board Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-3-shelf-corrugated-stand": {
+    slug: "classic-3-shelf-corrugated-stand",
+    title: "Classic 3 Shelf Corrugated Stand Dubai",
+    headline: "Classic 3 Shelf Corrugated Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic 3 Shelf Corrugated Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic 3 Shelf Corrugated Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-3-shelf-corrugated-stand-standard",
+        name: "Standard Classic 3 Shelf Corrugated Stand",
+        price: "AED 210 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-3-shelf-corrugated-stand-bulk",
+        name: "Bulk Classic 3 Shelf Corrugated Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-d-board-pos-display": {
+    slug: "classic-d-board-pos-display",
+    title: "Classic D-Board POS Display Dubai",
+    headline: "Classic D-Board POS Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic D-Board POS Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic D-Board POS Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-d-board-pos-display-standard",
+        name: "Standard Classic D-Board POS Display",
+        price: "AED 260 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-d-board-pos-display-bulk",
+        name: "Bulk Classic D-Board POS Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-counter-table": {
+    slug: "d-board-counter-table",
+    title: "D-Board Counter Table Dubai",
+    headline: "D-Board Counter Table Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Counter Table printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Counter Table.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-counter-table-standard",
+        name: "Standard D-Board Counter Table",
+        price: "AED 290 / counter",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-counter-table-bulk",
+        name: "Bulk D-Board Counter Table",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-zig-zag-pos-display": {
+    slug: "d-board-zig-zag-pos-display",
+    title: "D-Board Zig Zag POS Display Dubai",
+    headline: "D-Board Zig Zag POS Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Zig Zag POS Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Zig Zag POS Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-zig-zag-pos-display-standard",
+        name: "Standard D-Board Zig Zag POS Display",
+        price: "AED 310 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-zig-zag-pos-display-bulk",
+        name: "Bulk D-Board Zig Zag POS Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "five-partitions-d-board-stand": {
+    slug: "five-partitions-d-board-stand",
+    title: "Five Partitions D-Board Stand Dubai",
+    headline: "Five Partitions D-Board Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Five Partitions D-Board Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Five Partitions D-Board Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "five-partitions-d-board-stand-standard",
+        name: "Standard Five Partitions D-Board Stand",
+        price: "AED 340 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "five-partitions-d-board-stand-bulk",
+        name: "Bulk Five Partitions D-Board Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "foldable-brochure-rack-stand": {
+    slug: "foldable-brochure-rack-stand",
+    title: "Foldable Brochure Rack Stand Dubai",
+    headline: "Foldable Brochure Rack Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Foldable Brochure Rack Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Foldable Brochure Rack Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "foldable-brochure-rack-stand-standard",
+        name: "Standard Foldable Brochure Rack Stand",
+        price: "AED 220 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "foldable-brochure-rack-stand-bulk",
+        name: "Bulk Foldable Brochure Rack Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "four-sided-display": {
+    slug: "four-sided-display",
+    title: "Four Sided Display Dubai",
+    headline: "Four Sided Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Four Sided Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Four Sided Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "four-sided-display-standard",
+        name: "Standard Four Sided Display",
+        price: "AED 380 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "four-sided-display-bulk",
+        name: "Bulk Four Sided Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hi-five-d-board-stand": {
+    slug: "hi-five-d-board-stand",
+    title: "Hi Five D-Board Stand Dubai",
+    headline: "Hi Five D-Board Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hi Five D-Board Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hi Five D-Board Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hi-five-d-board-stand-standard",
+        name: "Standard Hi Five D-Board Stand",
+        price: "AED 350 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hi-five-d-board-stand-bulk",
+        name: "Bulk Hi Five D-Board Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "parametric-shelf-display": {
+    slug: "parametric-shelf-display",
+    title: "Parametric Shelf Display Dubai",
+    headline: "Parametric Shelf Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Parametric Shelf Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Parametric Shelf Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "parametric-shelf-display-standard",
+        name: "Standard Parametric Shelf Display",
+        price: "AED 450 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "parametric-shelf-display-bulk",
+        name: "Bulk Parametric Shelf Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pole-banner-stand": {
+    slug: "pole-banner-stand",
+    title: "Pole Banner Stand Dubai",
+    headline: "Pole Banner Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Pole Banner Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Pole Banner Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pole-banner-stand-standard",
+        name: "Standard Pole Banner Stand",
+        price: "AED 170 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pole-banner-stand-bulk",
+        name: "Bulk Pole Banner Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pop-up-desk": {
+    slug: "pop-up-desk",
+    title: "Pop Up Desk Dubai",
+    headline: "Pop Up Desk Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Pop Up Desk printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Pop Up Desk.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pop-up-desk-standard",
+        name: "Standard Pop Up Desk",
+        price: "AED 390 / desk",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pop-up-desk-bulk",
+        name: "Bulk Pop Up Desk",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sanitizing-station": {
+    slug: "sanitizing-station",
+    title: "Sanitizing Station Dubai",
+    headline: "Sanitizing Station Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Sanitizing Station printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Sanitizing Station.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "sanitizing-station-standard",
+        name: "Standard Sanitizing Station",
+        price: "AED 250 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sanitizing-station-bulk",
+        name: "Bulk Sanitizing Station",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "step-ladder-pos-display": {
+    slug: "step-ladder-pos-display",
+    title: "Step Ladder POS Display Dubai",
+    headline: "Step Ladder POS Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Step Ladder POS Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Step Ladder POS Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "step-ladder-pos-display-standard",
+        name: "Standard Step Ladder POS Display",
+        price: "AED 330 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "step-ladder-pos-display-bulk",
+        name: "Bulk Step Ladder POS Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "strong-display-stand": {
+    slug: "strong-display-stand",
+    title: "Strong Display Stand Dubai",
+    headline: "Strong Display Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Strong Display Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Strong Display Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "strong-display-stand-standard",
+        name: "Standard Strong Display Stand",
+        price: "AED 360 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "strong-display-stand-bulk",
+        name: "Bulk Strong Display Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "teddy-bear-display-stand": {
+    slug: "teddy-bear-display-stand",
+    title: "Teddy Bear Display Stand Dubai",
+    headline: "Teddy Bear Display Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Teddy Bear Display Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Teddy Bear Display Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "teddy-bear-display-stand-standard",
+        name: "Standard Teddy Bear Display Stand",
+        price: "AED 290 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "teddy-bear-display-stand-bulk",
+        name: "Bulk Teddy Bear Display Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "three-sided-display": {
+    slug: "three-sided-display",
+    title: "Three Sided Display Dubai",
+    headline: "Three Sided Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Three Sided Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Three Sided Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "three-sided-display-standard",
+        name: "Standard Three Sided Display",
+        price: "AED 310 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "three-sided-display-bulk",
+        name: "Bulk Three Sided Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "utility-sales-d-board-stand": {
+    slug: "utility-sales-d-board-stand",
+    title: "Utility Sales D-Board Stand Dubai",
+    headline: "Utility Sales D-Board Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Utility Sales D-Board Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Utility Sales D-Board Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "utility-sales-d-board-stand-standard",
+        name: "Standard Utility Sales D-Board Stand",
+        price: "AED 290 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "utility-sales-d-board-stand-bulk",
+        name: "Bulk Utility Sales D-Board Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "ipad-stand": {
+    slug: "ipad-stand",
+    title: "iPad Stand Dubai",
+    headline: "iPad Stand Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom iPad Stand printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for iPad Stand.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "ipad-stand-standard",
+        name: "Standard iPad Stand",
+        price: "AED 260 / stand",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "ipad-stand-bulk",
+        name: "Bulk iPad Stand",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "broadbase-classic-roll-up": {
+    slug: "broadbase-classic-roll-up",
+    title: "BroadBase Classic Roll Up Dubai",
+    headline: "BroadBase Classic Roll Up Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom BroadBase Classic Roll Up printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for BroadBase Classic Roll Up.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "broadbase-classic-roll-up-standard",
+        name: "Standard BroadBase Classic Roll Up",
+        price: "AED 140 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "broadbase-classic-roll-up-bulk",
+        name: "Bulk BroadBase Classic Roll Up",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "broadbase-two-side-roll-up": {
+    slug: "broadbase-two-side-roll-up",
+    title: "Broadbase Two Side Roll Up Dubai",
+    headline: "Broadbase Two Side Roll Up Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Broadbase Two Side Roll Up printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Broadbase Two Side Roll Up.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "broadbase-two-side-roll-up-standard",
+        name: "Standard Broadbase Two Side Roll Up",
+        price: "AED 210 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "broadbase-two-side-roll-up-bulk",
+        name: "Bulk Broadbase Two Side Roll Up",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "large-pocket-table-display": {
+    slug: "large-pocket-table-display",
+    title: "Large Pocket Table Display Dubai",
+    headline: "Large Pocket Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Large Pocket Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Large Pocket Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "large-pocket-table-display-standard",
+        name: "Standard Large Pocket Table Display",
+        price: "AED 45 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "large-pocket-table-display-bulk",
+        name: "Bulk Large Pocket Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "mid-pocket-table-display": {
+    slug: "mid-pocket-table-display",
+    title: "Mid Pocket Table Display Dubai",
+    headline: "Mid Pocket Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Mid Pocket Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Mid Pocket Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "mid-pocket-table-display-standard",
+        name: "Standard Mid Pocket Table Display",
+        price: "AED 35 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "mid-pocket-table-display-bulk",
+        name: "Bulk Mid Pocket Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "mini-x-banner": {
+    slug: "mini-x-banner",
+    title: "Mini X Banner Dubai",
+    headline: "Mini X Banner Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Mini X Banner printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Mini X Banner.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "mini-x-banner-standard",
+        name: "Standard Mini X Banner",
+        price: "AED 30 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "mini-x-banner-bulk",
+        name: "Bulk Mini X Banner",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pos-table-display": {
+    slug: "pos-table-display",
+    title: "POS Table Display Dubai",
+    headline: "POS Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom POS Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for POS Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pos-table-display-standard",
+        name: "Standard POS Table Display",
+        price: "AED 50 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pos-table-display-bulk",
+        name: "Bulk POS Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "sheet-holder-table-display": {
+    slug: "sheet-holder-table-display",
+    title: "Sheet Holder Table Display Dubai",
+    headline: "Sheet Holder Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Sheet Holder Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Sheet Holder Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "sheet-holder-table-display-standard",
+        name: "Standard Sheet Holder Table Display",
+        price: "AED 40 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "sheet-holder-table-display-bulk",
+        name: "Bulk Sheet Holder Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "single-face-forex-table-display": {
+    slug: "single-face-forex-table-display",
+    title: "Single Face Forex Table Display Dubai",
+    headline: "Single Face Forex Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Single Face Forex Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Single Face Forex Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "single-face-forex-table-display-standard",
+        name: "Standard Single Face Forex Table Display",
+        price: "AED 45 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "single-face-forex-table-display-bulk",
+        name: "Bulk Single Face Forex Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "small-pocket-table-display": {
+    slug: "small-pocket-table-display",
+    title: "Small Pocket Table Display Dubai",
+    headline: "Small Pocket Table Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Small Pocket Table Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Small Pocket Table Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "small-pocket-table-display-standard",
+        name: "Standard Small Pocket Table Display",
+        price: "AED 28 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "small-pocket-table-display-bulk",
+        name: "Bulk Small Pocket Table Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "table-shelf-display": {
+    slug: "table-shelf-display",
+    title: "Table Shelf Display Dubai",
+    headline: "Table Shelf Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Table Shelf Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Table Shelf Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "table-shelf-display-standard",
+        name: "Standard Table Shelf Display",
+        price: "AED 65 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "table-shelf-display-bulk",
+        name: "Bulk Table Shelf Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "table-top-d-board-display": {
+    slug: "table-top-d-board-display",
+    title: "Table Top D-Board Display Dubai",
+    headline: "Table Top D-Board Display Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Table Top D-Board Display printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Table Top D-Board Display.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "table-top-d-board-display-standard",
+        name: "Standard Table Top D-Board Display",
+        price: "AED 75 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "table-top-d-board-display-bulk",
+        name: "Bulk Table Top D-Board Display",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "table-top-roll-up": {
+    slug: "table-top-roll-up",
+    title: "Table Top Roll up Dubai",
+    headline: "Table Top Roll up Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Table Top Roll up printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Table Top Roll up.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "table-top-roll-up-standard",
+        name: "Standard Table Top Roll up",
+        price: "AED 55 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "table-top-roll-up-bulk",
+        name: "Bulk Table Top Roll up",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "fabric-canvas": {
+    slug: "fabric-canvas",
+    title: "Fabric Canvas Dubai",
+    headline: "Fabric Canvas Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Fabric Canvas printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Fabric Canvas.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Hot",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "fabric-canvas-standard",
+        name: "Standard Fabric Canvas",
+        price: "AED 110 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "fabric-canvas-bulk",
+        name: "Bulk Fabric Canvas",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hardcover-photo-books": {
+    slug: "hardcover-photo-books",
+    title: "Hardcover Photo Books Dubai",
+    headline: "Hardcover Photo Books Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hardcover Photo Books printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hardcover Photo Books.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hardcover-photo-books-standard",
+        name: "Standard Hardcover Photo Books",
+        price: "AED 190 / book",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hardcover-photo-books-bulk",
+        name: "Bulk Hardcover Photo Books",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "softcover-photo-books": {
+    slug: "softcover-photo-books",
+    title: "Softcover Photo Books Dubai",
+    headline: "Softcover Photo Books Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Softcover Photo Books printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Softcover Photo Books.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "softcover-photo-books-standard",
+        name: "Standard Softcover Photo Books",
+        price: "AED 120 / book",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "softcover-photo-books-bulk",
+        name: "Bulk Softcover Photo Books",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "cork-coasters": {
+    slug: "cork-coasters",
+    title: "Cork Coasters Dubai",
+    headline: "Cork Coasters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Cork Coasters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Cork Coasters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "cork-coasters-standard",
+        name: "Standard Cork Coasters",
+        price: "AED 45 / 10 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "cork-coasters-bulk",
+        name: "Bulk Cork Coasters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hardboard-coasters": {
+    slug: "hardboard-coasters",
+    title: "Hardboard Coasters Dubai",
+    headline: "Hardboard Coasters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hardboard Coasters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hardboard Coasters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hardboard-coasters-standard",
+        name: "Standard Hardboard Coasters",
+        price: "AED 60 / 10 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hardboard-coasters-bulk",
+        name: "Bulk Hardboard Coasters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "paper-coasters": {
+    slug: "paper-coasters",
+    title: "Paper Coasters Dubai",
+    headline: "Paper Coasters Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Paper Coasters printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Paper Coasters.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "paper-coasters-standard",
+        name: "Standard Paper Coasters",
+        price: "AED 35 / 50 pcs",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "paper-coasters-bulk",
+        name: "Bulk Paper Coasters",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "creative-photo-panels": {
+    slug: "creative-photo-panels",
+    title: "Creative Photo Panels Dubai",
+    headline: "Creative Photo Panels Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Creative Photo Panels printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Creative Photo Panels.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "creative-photo-panels-standard",
+        name: "Standard Creative Photo Panels",
+        price: "AED 85 / panel",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "creative-photo-panels-bulk",
+        name: "Bulk Creative Photo Panels",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-photo-panels": {
+    slug: "classic-photo-panels",
+    title: "Classic Photo Panels Dubai",
+    headline: "Classic Photo Panels Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic Photo Panels printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic Photo Panels.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-photo-panels-standard",
+        name: "Standard Classic Photo Panels",
+        price: "AED 65 / panel",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-photo-panels-bulk",
+        name: "Bulk Classic Photo Panels",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "hardboard-panels-with-easel": {
+    slug: "hardboard-panels-with-easel",
+    title: "Hardboard Panels With Easel Dubai",
+    headline: "Hardboard Panels With Easel Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Hardboard Panels With Easel printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hardboard Panels With Easel.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "hardboard-panels-with-easel-standard",
+        name: "Standard Hardboard Panels With Easel",
+        price: "AED 75 / panel",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "hardboard-panels-with-easel-bulk",
+        name: "Bulk Hardboard Panels With Easel",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "classic-plaques": {
+    slug: "classic-plaques",
+    title: "Classic Plaques Dubai",
+    headline: "Classic Plaques Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Classic Plaques printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Classic Plaques.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "classic-plaques-standard",
+        name: "Standard Classic Plaques",
+        price: "AED 110 / plaque",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "classic-plaques-bulk",
+        name: "Bulk Classic Plaques",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "specialty-shaped-plaques": {
+    slug: "specialty-shaped-plaques",
+    title: "Specialty Shaped Plaques Dubai",
+    headline: "Specialty Shaped Plaques Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Specialty Shaped Plaques printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Specialty Shaped Plaques.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "specialty-shaped-plaques-standard",
+        name: "Standard Specialty Shaped Plaques",
+        price: "AED 140 / plaque",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "specialty-shaped-plaques-bulk",
+        name: "Bulk Specialty Shaped Plaques",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "ready-mugs": {
+    slug: "ready-mugs",
+    title: "Ready Mugs Dubai",
+    headline: "Ready Mugs Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Ready Mugs printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Ready Mugs.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "ready-mugs-standard",
+        name: "Standard Ready Mugs",
+        price: "AED 18 / mug",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "ready-mugs-bulk",
+        name: "Bulk Ready Mugs",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "polyester-mouse-pads": {
+    slug: "polyester-mouse-pads",
+    title: "Polyester Mouse Pads Dubai",
+    headline: "Polyester Mouse Pads Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Polyester Mouse Pads printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Polyester Mouse Pads.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "polyester-mouse-pads-standard",
+        name: "Standard Polyester Mouse Pads",
+        price: "AED 25 / pad",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "polyester-mouse-pads-bulk",
+        name: "Bulk Polyester Mouse Pads",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "travel-adaptors": {
+    slug: "travel-adaptors",
+    title: "Travel Adaptors Dubai",
+    headline: "Travel Adaptors Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Travel Adaptors printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Travel Adaptors.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "travel-adaptors-standard",
+        name: "Standard Travel Adaptors",
+        price: "AED 45 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "travel-adaptors-bulk",
+        name: "Bulk Travel Adaptors",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "power-banks": {
+    slug: "power-banks",
+    title: "Power Banks Dubai",
+    headline: "Power Banks Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Power Banks printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Power Banks.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "power-banks-standard",
+        name: "Standard Power Banks",
+        price: "AED 65 / unit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "power-banks-bulk",
+        name: "Bulk Power Banks",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "pens-print": {
+    slug: "pens-print",
+    title: "Pens Dubai",
+    headline: "Pens Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Pens printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Pens.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "pens-print-standard",
+        name: "Standard Pens",
+        price: "AED 5 / pen",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "pens-print-bulk",
+        name: "Bulk Pens",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "12-piece-coloring-pencils-set": {
+    slug: "12-piece-coloring-pencils-set",
+    title: "12 Piece Coloring Pencils Set Dubai",
+    headline: "12 Piece Coloring Pencils Set Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom 12 Piece Coloring Pencils Set printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for 12 Piece Coloring Pencils Set.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "12-piece-coloring-pencils-set-standard",
+        name: "Standard 12 Piece Coloring Pencils Set",
+        price: "AED 15 / set",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "12-piece-coloring-pencils-set-bulk",
+        name: "Bulk 12 Piece Coloring Pencils Set",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "12-piece-crayon-set": {
+    slug: "12-piece-crayon-set",
+    title: "12 Piece Crayon Set Dubai",
+    headline: "12 Piece Crayon Set Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom 12 Piece Crayon Set printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for 12 Piece Crayon Set.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "12-piece-crayon-set-standard",
+        name: "Standard 12 Piece Crayon Set",
+        price: "AED 12 / set",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "12-piece-crayon-set-bulk",
+        name: "Bulk 12 Piece Crayon Set",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "anti-stress-balls": {
+    slug: "anti-stress-balls",
+    title: "Anti Stress Balls Dubai",
+    headline: "Anti Stress Balls Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Anti Stress Balls printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Anti Stress Balls.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "anti-stress-balls-standard",
+        name: "Standard Anti Stress Balls",
+        price: "AED 8 / pc",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "anti-stress-balls-bulk",
+        name: "Bulk Anti Stress Balls",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "bag-tags": {
+    slug: "bag-tags",
+    title: "Bag Tags Dubai",
+    headline: "Bag Tags Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Bag Tags printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Bag Tags.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "bag-tags-standard",
+        name: "Standard Bag Tags",
+        price: "AED 12 / tag",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "bag-tags-bulk",
+        name: "Bulk Bag Tags",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "customized-carpets": {
+    slug: "customized-carpets",
+    title: "Customized Carpets Dubai",
+    headline: "Customized Carpets Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Customized Carpets printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Customized Carpets.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "customized-carpets-standard",
+        name: "Standard Customized Carpets",
+        price: "AED 120 / m²",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "customized-carpets-bulk",
+        name: "Bulk Customized Carpets",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "face-shields": {
+    slug: "face-shields",
+    title: "Face Shields Dubai",
+    headline: "Face Shields Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Face Shields printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Face Shields.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "face-shields-standard",
+        name: "Standard Face Shields",
+        price: "AED 10 / pc",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "face-shields-bulk",
+        name: "Bulk Face Shields",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "fridge-magnets": {
+    slug: "fridge-magnets",
+    title: "Fridge Magnets Dubai",
+    headline: "Fridge Magnets Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Fridge Magnets printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Fridge Magnets.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "fridge-magnets-standard",
+        name: "Standard Fridge Magnets",
+        price: "AED 6 / magnet",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "fridge-magnets-bulk",
+        name: "Bulk Fridge Magnets",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "photo-frames-with-easel": {
+    slug: "photo-frames-with-easel",
+    title: "Photo Frames With Easel Dubai",
+    headline: "Photo Frames With Easel Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Photo Frames With Easel printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Photo Frames With Easel.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "photo-frames-with-easel-standard",
+        name: "Standard Photo Frames With Easel",
+        price: "AED 55 / frame",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "photo-frames-with-easel-bulk",
+        name: "Bulk Photo Frames With Easel",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "puzzles": {
+    slug: "puzzles",
+    title: "Puzzles Dubai",
+    headline: "Puzzles Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Puzzles printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Puzzles.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Sale",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "puzzles-standard",
+        name: "Standard Puzzles",
+        price: "AED 45 / set",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "puzzles-bulk",
+        name: "Bulk Puzzles",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "vr-cardboard-kit-v2": {
+    slug: "vr-cardboard-kit-v2",
+    title: "VR Cardboard Kit V2 Dubai",
+    headline: "VR Cardboard Kit V2 Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom VR Cardboard Kit V2 printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for VR Cardboard Kit V2.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "vr-cardboard-kit-v2-standard",
+        name: "Standard VR Cardboard Kit V2",
+        price: "AED 25 / kit",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "vr-cardboard-kit-v2-bulk",
+        name: "Bulk VR Cardboard Kit V2",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "dtoy": {
+    slug: "dtoy",
+    title: "DToy Dubai",
+    headline: "DToy Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom DToy printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for DToy.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "dtoy-standard",
+        name: "Standard DToy",
+        price: "AED 85 / toy",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "dtoy-bulk",
+        name: "Bulk DToy",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "bar-chair": {
+    slug: "bar-chair",
+    title: "Bar Chair Dubai",
+    headline: "Bar Chair Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Bar Chair printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Bar Chair.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "bar-chair-standard",
+        name: "Standard Bar Chair",
+        price: "AED 180 / chair",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "bar-chair-bulk",
+        name: "Bulk Bar Chair",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "coffee-table-and-chairs": {
+    slug: "coffee-table-and-chairs",
+    title: "Coffee Table and Chairs Dubai",
+    headline: "Coffee Table and Chairs Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Coffee Table and Chairs printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Coffee Table and Chairs.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "coffee-table-and-chairs-standard",
+        name: "Standard Coffee Table and Chairs",
+        price: "AED 390 / set",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "coffee-table-and-chairs-bulk",
+        name: "Bulk Coffee Table and Chairs",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-big-designer-chair": {
+    slug: "d-board-big-designer-chair",
+    title: "D-Board Big Designer Chair Dubai",
+    headline: "D-Board Big Designer Chair Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Big Designer Chair printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Big Designer Chair.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-big-designer-chair-standard",
+        name: "Standard D-Board Big Designer Chair",
+        price: "AED 280 / chair",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-big-designer-chair-bulk",
+        name: "Bulk D-Board Big Designer Chair",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-christmas-tree": {
+    slug: "d-board-christmas-tree",
+    title: "D-Board Christmas Tree Dubai",
+    headline: "D-Board Christmas Tree Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Christmas Tree printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Christmas Tree.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-christmas-tree-standard",
+        name: "Standard D-Board Christmas Tree",
+        price: "AED 190 / tree",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-christmas-tree-bulk",
+        name: "Bulk D-Board Christmas Tree",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-compact-stool": {
+    slug: "d-board-compact-stool",
+    title: "D-Board Compact Stool Dubai",
+    headline: "D-Board Compact Stool Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Compact Stool printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Compact Stool.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-compact-stool-standard",
+        name: "Standard D-Board Compact Stool",
+        price: "AED 65 / stool",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-compact-stool-bulk",
+        name: "Bulk D-Board Compact Stool",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-stool": {
+    slug: "d-board-stool",
+    title: "D-Board Stool Dubai",
+    headline: "D-Board Stool Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Stool printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Stool.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-stool-standard",
+        name: "Standard D-Board Stool",
+        price: "AED 75 / stool",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-stool-bulk",
+        name: "Bulk D-Board Stool",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "d-board-table-and-chair-set": {
+    slug: "d-board-table-and-chair-set",
+    title: "D-Board Table and Chair Set Dubai",
+    headline: "D-Board Table and Chair Set Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom D-Board Table and Chair Set printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for D-Board Table and Chair Set.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "d-board-table-and-chair-set-standard",
+        name: "Standard D-Board Table and Chair Set",
+        price: "AED 420 / set",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "d-board-table-and-chair-set-bulk",
+        name: "Bulk D-Board Table and Chair Set",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "kids-chair": {
+    slug: "kids-chair",
+    title: "Kids Chair Dubai",
+    headline: "Kids Chair Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Kids Chair printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Kids Chair.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "kids-chair-standard",
+        name: "Standard Kids Chair",
+        price: "AED 85 / chair",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "kids-chair-bulk",
+        name: "Bulk Kids Chair",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "premium-home-office-desk": {
+    slug: "premium-home-office-desk",
+    title: "Premium Home Office Desk Dubai",
+    headline: "Premium Home Office Desk Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Premium Home Office Desk printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Premium Home Office Desk.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "premium-home-office-desk-standard",
+        name: "Standard Premium Home Office Desk",
+        price: "AED 550 / desk",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "premium-home-office-desk-bulk",
+        name: "Bulk Premium Home Office Desk",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "rocking-chair": {
+    slug: "rocking-chair",
+    title: "Rocking Chair Dubai",
+    headline: "Rocking Chair Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Rocking Chair printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Rocking Chair.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "rocking-chair-standard",
+        name: "Standard Rocking Chair",
+        price: "AED 240 / chair",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "rocking-chair-bulk",
+        name: "Bulk Rocking Chair",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "standard-home-office-desk": {
+    slug: "standard-home-office-desk",
+    title: "Standard Home Office Desk Dubai",
+    headline: "Standard Home Office Desk Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Standard Home Office Desk printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Standard Home Office Desk.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "standard-home-office-desk-standard",
+        name: "Standard Standard Home Office Desk",
+        price: "AED 380 / desk",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "standard-home-office-desk-bulk",
+        name: "Bulk Standard Home Office Desk",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+  "stylish-chair": {
+    slug: "stylish-chair",
+    title: "Stylish Chair Dubai",
+    headline: "Stylish Chair Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Stylish Chair printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Stylish Chair.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "stylish-chair-standard",
+        name: "Standard Stylish Chair",
+        price: "AED 190 / chair",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "stylish-chair-bulk",
+        name: "Bulk Stylish Chair",
+        price: "Contact Press",
+        quantity: "Bulk Order",
+        gsm: "Heavy Duty",
+        lamination: "Protective Lamination",
+        size: "Custom Size",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      }
+    ],
+  },
+
+  "face-masks": {
+    slug: "face-masks",
+    title: "Face Masks Dubai",
+    headline: "Face Masks Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Face Masks printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Face Masks.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "face-masks-standard",
+        name: "Standard Face Masks",
+        price: "Contact Press",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      }
+    ],
+  },
+  "personalized-aprons": {
+    slug: "personalized-aprons",
+    title: "Personalized Aprons Dubai",
+    headline: "Personalized Aprons Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Personalized Aprons printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Personalized Aprons.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "personalized-aprons-standard",
+        name: "Standard Personalized Aprons",
+        price: "Contact Press",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      }
+    ],
+  },
+  "ready-t-shirts": {
+    slug: "ready-t-shirts",
+    title: "Ready T-Shirts Dubai",
+    headline: "Ready T-Shirts Printing & Manufacturing in Dubai",
+    subtitle: "High quality custom Ready T-Shirts printing with urgent same-day production & express delivery across Dubai & UAE.",
+    description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Ready T-Shirts.",
+    heroImage: "/commercial-services/business-cards.jpg",
+    badge: "Custom Print",
+    features: [
+      "Same-Day Production & Express Delivery",
+      "Free Artwork Check (300 DPI)",
+      "High Resolution Full Color Print",
+      "Bulk Volume Corporate Discounts"
+    ],
+    samples: [
+      "/commercial-services/business-cards.jpg",
+      "/commercial-services/3d-signage.jpg"
+    ],
+    pricingPackages: [
+      {
+        id: "ready-t-shirts-standard",
+        name: "Standard Ready T-Shirts",
+        price: "Contact Press",
+        quantity: "Standard Pack",
+        gsm: "Premium Grade",
+        lamination: "Custom Coating",
+        size: "Standard / Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      }
+    ],
+  },
+
+  "frosted-on-glass": {
+    slug: "frosted-on-glass",
+    title: "Frosted Glass Film Dubai",
+    headline: "Frosted Glass Vinyl Film Printing & Installation in Dubai",
+    subtitle: "Frosted acid-etched vinyl for office partitions, shower screens & glass doors. Premium sandblasted look with full privacy. Same-day installation across Dubai.",
+    description: "Our frosted glass film gives any glass surface an elegant etched-glass appearance while providing full privacy. Ideal for office meeting rooms, glass partitions, shower enclosures, and shopfront windows across Dubai and UAE.",
+    heroImage: "/products/frosted-on-glass/image-1.jpg",
+    badge: "Privacy Film",
+    features: [
+      "Same-Day Supply & Installation Available",
+      "Bubble-Free Air-Release Vinyl Technology",
+      "Custom Cut to Any Shape or Size",
+      "Removable Without Damage to Glass"
+    ],
+    samples: ["/products/frosted-on-glass/image-1.jpg", "/products/frosted-on-glass/image-2.jpg", "/products/frosted-on-glass/image-3.jpg", "/products/frosted-on-glass/image-4.jpg", "/products/frosted-on-glass/image-5.jpg", "/products/frosted-on-glass/image-6.jpg", "/products/frosted-on-glass/image-7.jpg"],
+    pricingPackages: [
+      {
+        id: "frosted-on-glass-standard",
+        name: "Frosted Film — Standard",
+        price: "AED 55 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Heavy-Duty Vinyl",
+        lamination: "N/A",
+        size: "Custom Cut",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "frosted-on-glass-premium",
+        name: "Frosted Film — Premium Printed",
+        price: "AED 85 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Premium Grade",
+        lamination: "Anti-Scratch Overlay",
+        size: "Custom Design",
+        delivery: "24-48 Hours",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+
+  "one-way-vision-on-glass": {
+    slug: "one-way-vision-on-glass",
+    title: "One Way Vision Glass Film Dubai",
+    headline: "One Way Vision Window Film Printing & Installation in Dubai",
+    subtitle: "Perforated window vinyl — full-color brand print visible from outside, clear line of sight from inside. Perfect for retail shopfronts across Dubai & UAE.",
+    description: "One way vision film allows businesses to turn shopfront glass into a full-color advertising canvas without blocking the view from inside. UV-resistant outdoor-grade perforated vinyl with 50/50 perforation ratio for maximum print quality and visibility.",
+    heroImage: "/commercial-services/stickers.jpg",
+    badge: "Shopfront",
+    features: [
+      "Full-Color UV-Resistant Outdoor Print",
+      "See-Through from Inside — Opaque from Outside",
+      "Professional Bubble-Free Installation",
+      "Custom Size for Any Window or Shopfront"
+    ],
+    samples: ["/commercial-services/stickers.jpg", "/commercial-services/event-rollups.jpg", "/commercial-services/3d-signage.jpg"],
+    pricingPackages: [
+      {
+        id: "one-way-vision-standard",
+        name: "One Way Vision — Standard",
+        price: "AED 70 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Perforated Vinyl",
+        lamination: "UV Laminate",
+        size: "Custom Cut",
+        delivery: "24 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "one-way-vision-installed",
+        name: "One Way Vision — Supply & Install",
+        price: "AED 110 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Premium Outdoor Vinyl",
+        lamination: "UV Laminate + Install",
+        size: "Custom Fit",
+        delivery: "24-48 Hours",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+
+  "window-privacy-film": {
+    slug: "window-privacy-film",
+    title: "Window Privacy Film Dubai",
+    headline: "Window Privacy Film Supply & Installation in Dubai",
+    subtitle: "Solar control, anti-glare, blackout & frosted privacy window films for offices, meeting rooms, clinics & residences across Dubai & UAE.",
+    description: "We supply and install a full range of window films in Dubai: solar control films to reduce heat and glare, privacy frosted films for meeting rooms, blackout films for server rooms and cinemas, and decorative films for interior branding.",
+    heroImage: "/commercial-services/stickers.jpg",
+    badge: "Solar Control",
+    features: [
+      "Solar Heat Reduction up to 79%",
+      "UV Protection — Blocks 99% of UV Rays",
+      "Available in Frosted, Tinted & Blackout",
+      "Professional Supply & Installation Team"
+    ],
+    samples: [
+      "/products/window-privacy-film/image-1.jpg",
+      "/products/window-privacy-film/image-2.jpg",
+      "/products/window-privacy-film/image-3.jpg",
+      "/products/window-privacy-film/image-4.jpg",
+      "/products/window-privacy-film/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "window-privacy-film-standard",
+        name: "Privacy Film — Standard Frosted",
+        price: "AED 50 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Standard Vinyl",
+        lamination: "N/A",
+        size: "Custom Cut",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "window-privacy-film-solar",
+        name: "Solar Control Film — Premium",
+        price: "AED 80 / m²",
+        quantity: "Per Square Metre",
+        gsm: "Premium Solar Film",
+        lamination: "Anti-Scratch",
+        size: "Custom Fit",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+
+  "stamp-making": {
+    slug: "stamp-making",
+    title: "Stamp Making Dubai",
+    headline: "Custom Rubber & Self-Inking Stamp Making in Dubai",
+    subtitle: "Custom self-inking, pre-inked & traditional rubber stamps for offices, accounts, clinics and legal use. Same-day production across Dubai & UAE.",
+    description: "We manufacture custom stamps of all types in Dubai — self-inking Trodat stamps, pre-inked Colop stamps, traditional wooden handle rubber stamps, and large format date stamps. Logo stamps, address stamps, signature stamps, and Arabic text stamps available.",
+    heroImage: "/products/stamp-making/image-1.jpg",
+    badge: "Same Day",
+    features: [
+      "Same-Day Production & Pickup Available",
+      "Self-Inking Trodat & Colop Brand Stamps",
+      "Arabic & English Text — Any Font",
+      "Logo, Signature, Address & Date Stamps"
+    ],
+    samples: ["/products/stamp-making/image-1.jpg", "/products/stamp-making/image-2.jpg", "/products/stamp-making/image-3.jpg", "/products/stamp-making/image-4.jpg"],
+    pricingPackages: [
+      {
+        id: "stamp-making-self-inking",
+        name: "Self-Inking Stamp (Small)",
+        price: "AED 35 / stamp",
+        quantity: "1 Unit",
+        gsm: "N/A",
+        lamination: "N/A",
+        size: "Up to 40×15mm",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "stamp-making-large",
+        name: "Self-Inking Stamp (Large)",
+        price: "AED 65 / stamp",
+        quantity: "1 Unit",
+        gsm: "N/A",
+        lamination: "N/A",
+        size: "Up to 70×40mm",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+      },
+      {
+        id: "stamp-making-logo",
+        name: "Logo / Round Stamp",
+        price: "AED 85 / stamp",
+        quantity: "1 Unit",
+        gsm: "N/A",
+        lamination: "N/A",
+        size: "Custom Round / Oval",
+        delivery: "24 Hours",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+
+  "parking-signage": {
+    slug: "parking-signage",
+    title: "Parking Signage Dubai",
+    headline: "Custom Parking Signs Manufacturing & Installation in Dubai",
+    subtitle: "Reflective aluminum parking signs, reserved bay markers, no-parking boards & directional arrows for buildings and car parks across Dubai & UAE.",
+    description: "We manufacture and install a complete range of parking signage for residential buildings, commercial towers, hospitals, malls, and industrial facilities in Dubai. All signs use 3M-grade reflective vinyl on aluminum composite panels and comply with Dubai Municipality guidelines.",
+    heroImage: "/products/parking-signage/image-1.jpg",
+    badge: "Reflective",
+    features: [
+      "3M-Grade Reflective Vinyl for Night Visibility",
+      "Aluminum Composite Panel Construction",
+      "Dubai Municipality Compliant Design",
+      "Custom Text, Numbering & Logo Possible"
+    ],
+    samples: [
+      "/products/parking-signage/image-1.jpg",
+      "/products/parking-signage/image-2.jpg",
+      "/products/parking-signage/image-3.jpg",
+      "/products/parking-signage/image-4.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "parking-signage-standard",
+        name: "Standard Parking Sign",
+        price: "AED 45 / sign",
+        quantity: "Per Unit",
+        gsm: "Aluminum ACP",
+        lamination: "Reflective Vinyl",
+        size: "300×450mm",
+        delivery: "24-48 Hours",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "parking-signage-large",
+        name: "Large Parking Sign with Post",
+        price: "AED 180 / set",
+        quantity: "Sign + Post",
+        gsm: "Heavy Aluminum",
+        lamination: "3M Reflective",
+        size: "600×900mm",
+        delivery: "2-3 Days",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+
+  "elevator-safety-sign": {
+    slug: "elevator-safety-sign",
+    title: "Elevator Safety Sign Dubai",
+    headline: "Elevator Safety Signs & Floor Indicators Manufacturing in Dubai",
+    subtitle: "Photoluminescent & aluminum elevator floor indicators, capacity signs, emergency instructions & compliance notices. Same-day production in Dubai.",
+    description: "We produce the full range of elevator and lift safety signage required for Dubai Municipality and Civil Defense compliance — floor number indicators, weight capacity signs, emergency instructions, no-smoking signs, and evacuation notices. Available in photoluminescent, brushed aluminum, and acrylic formats.",
+    heroImage: "/products/elevator-safety-sign/image-1.jpg",
+    badge: "Safety Compliant",
+    features: [
+      "Dubai Civil Defense & DM Compliant",
+      "Photoluminescent — Glows in Dark / Blackout",
+      "Brushed Aluminum & Acrylic Options",
+      "Arabic & English Bilingual Available"
+    ],
+    samples: [
+      "/products/elevator-safety-sign/image-1.jpg",
+      "/products/elevator-safety-sign/image-2.jpg",
+      "/products/elevator-safety-sign/image-3.jpg",
+      "/products/elevator-safety-sign/image-4.jpg",
+      "/products/elevator-safety-sign/image-5.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "elevator-safety-sign-standard",
+        name: "Elevator Floor Indicator (Vinyl)",
+        price: "AED 30 / sign",
+        quantity: "Per Unit",
+        gsm: "Photoluminescent Vinyl",
+        lamination: "Anti-Scratch",
+        size: "Standard 100×100mm",
+        delivery: "Same Day",
+        speedCategory: "Same Day / Express",
+        isFeatured: true,
+      },
+      {
+        id: "elevator-safety-sign-aluminum",
+        name: "Elevator Sign — Brushed Aluminum",
+        price: "AED 75 / sign",
+        quantity: "Per Unit",
+        gsm: "2mm Aluminum",
+        lamination: "Brushed Finish",
+        size: "Custom Size",
+        delivery: "24-48 Hours",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+};
