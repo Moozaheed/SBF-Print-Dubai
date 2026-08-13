@@ -31,6 +31,12 @@ export default function ServiceDetailContent({ service }: Props) {
     ? service.samples
     : [service.heroImage, "/commercial-services/business-cards.jpg", "/commercial-services/3d-signage.jpg"];
 
+  // Related products: same category, current excluded, max 4
+  const currentProduct = ALL_PRODUCTS.find((p) => p.slug === service.slug);
+  const relatedProducts = ALL_PRODUCTS
+    .filter((p) => p.slug !== service.slug && (!currentProduct || p.category === currentProduct.category))
+    .slice(0, 4);
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   // Customization Form Controls State
@@ -74,6 +80,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 src={samples[activeImageIndex]}
                 alt={service.title}
                 fill
+                priority
                 className="object-contain p-4 transition-all duration-300"
               />
             </div>
@@ -90,7 +97,7 @@ export default function ServiceDetailContent({ service }: Props) {
                       : "border-zinc-200 opacity-70 hover:opacity-100"
                   }`}
                 >
-                  <Image src={img} alt={`Thumbnail ${idx}`} fill className="object-contain p-1" />
+                  <Image src={img} alt={`Thumbnail ${idx}`} fill loading="lazy" className="object-contain p-1" />
                 </button>
               ))}
             </div>
@@ -483,10 +490,10 @@ export default function ServiceDetailContent({ service }: Props) {
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {ALL_PRODUCTS.slice(0, 4).map((item) => (
+            {relatedProducts.map((item) => (
               <Link key={item.id} href={`/services/${item.slug}`} className="group bg-white rounded-2xl border border-zinc-200 p-4 space-y-3 text-center shadow-sm hover:shadow-md transition-all">
                 <div className="relative aspect-square rounded-xl bg-zinc-50 p-2 overflow-hidden flex items-center justify-center">
-                  <Image src={item.image} alt={item.title} fill className="object-contain p-2 group-hover:scale-105 transition-transform" />
+                  <Image src={item.image} alt={`${item.title} Dubai — SBF Print`} fill loading="lazy" className="object-contain p-2 group-hover:scale-105 transition-transform" />
                 </div>
                 <div className="space-y-1">
                   <h3 className="text-sm font-bold text-zinc-900 group-hover:text-[#C68FE6] transition-colors line-clamp-1">

@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     images: ["/portfolio/gold-foil-luxury-card.jpg"],
   },
   verification: {
-    google: "",
+    google: "rcjqTmsiEMzrBvmhymV_wrDy8u17WPkiUWLJ4r-N_gk",
   },
 };
 

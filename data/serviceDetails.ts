@@ -6440,7 +6440,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Hardcover Photo Books Printing & Manufacturing in Dubai",
     subtitle: "High quality custom Hardcover Photo Books printing with urgent same-day production & express delivery across Dubai & UAE.",
     description: "Premium CMYK color accuracy, durable commercial materials, and precision finishing for Hardcover Photo Books.",
-    heroImage: "/commercial-services/business-cards.jpg",
+    heroImage: "/products/hardcover-photo-books/image-1.jpg",
     badge: "Sale",
     features: [
       "Same-Day Production & Express Delivery",
@@ -6449,8 +6449,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Bulk Volume Corporate Discounts"
     ],
     samples: [
-      "/commercial-services/business-cards.jpg",
-      "/commercial-services/3d-signage.jpg"
+      "/products/hardcover-photo-books/image-1.jpg",
+      "/products/hardcover-photo-books/image-2.jpg",
+      "/products/hardcover-photo-books/image-3.jpg",
+      "/products/hardcover-photo-books/image-4.jpg",
+      "/products/hardcover-photo-books/image-5.jpg",
     ],
     pricingPackages: [
       {

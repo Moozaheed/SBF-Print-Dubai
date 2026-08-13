@@ -9,6 +9,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Printing & Signage Blog Dubai | Tips, Guides & Insights | SBF Print",
   description: "Expert printing tips, signage guides, and design insights from SBF Print & Design — Dubai's leading commercial printing press in Downtown Dubai.",
+  alternates: {
+    canonical: "https://sbfprint.ae/blog",
+  },
+  openGraph: {
+    title: "Printing & Signage Blog Dubai | SBF Print & Design",
+    description: "Expert printing tips, signage guides, and design insights from Downtown Dubai's leading commercial printing press.",
+    url: "https://sbfprint.ae/blog",
+    images: [{ url: "/portfolio/gold-foil-luxury-card.jpg", width: 1200, height: 630, alt: "SBF Print & Design Blog Dubai" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Printing & Signage Blog Dubai | SBF Print",
+    description: "Expert printing tips and signage guides from SBF Print & Design Dubai.",
+    images: ["/portfolio/gold-foil-luxury-card.jpg"],
+  },
 };
 
 export default function BlogPage() {

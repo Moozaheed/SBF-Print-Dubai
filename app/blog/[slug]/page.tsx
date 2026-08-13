@@ -23,11 +23,22 @@ export async function generateMetadata({
   return {
     title: `${post.title} | SBF Print & Design Dubai`,
     description: post.metaDescription,
+    alternates: {
+      canonical: `https://sbfprint.ae/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.metaDescription,
+      url: `https://sbfprint.ae/blog/${post.slug}`,
       images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
       type: "article",
+      siteName: "SBF Print & Design Dubai",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.metaDescription,
+      images: [post.image],
     },
   };
 }
