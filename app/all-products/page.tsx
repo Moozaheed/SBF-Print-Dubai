@@ -20,6 +20,15 @@ export const metadata: Metadata = {
     title: "All Printing & Signage Services Dubai | SBF Print",
     description: "Complete range of commercial printing & signage in Dubai. Same-day delivery across UAE.",
     url: "https://sbfprint.ae/all-products",
+    images: [{ url: "https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg", width: 1200, height: 630, alt: "SBF Print & Design — All Printing Services Dubai" }],
+    type: "website",
+    siteName: "SBF Print And Design",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Printing & Signage Services Dubai | SBF Print",
+    description: "Complete range of commercial printing & signage in Dubai. Same-day delivery across UAE.",
+    images: ["https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg"],
   },
 };
 

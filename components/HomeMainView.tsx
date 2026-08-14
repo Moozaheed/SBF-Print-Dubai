@@ -48,7 +48,7 @@ export default function HomeMainView() {
     { title: "PHOTOBOOKS", image: "/featured/photobooks.jpg", href: "/services/hardcover-photo-books" },
     { title: "JUTE & COTTON BAGS", image: "/featured/jute-bags.jpg", href: "/services/bags-print" },
     { title: "CANVAS", image: "/featured/canvas.jpg", href: "/services/photo-frame" },
-    { title: "STICKERS & LABELS", image: "/featured/stickers.jpg", href: "/services/stickers" },
+    { title: "STICKERS & LABELS", image: "/featured/stickers.jpg", href: "/services/print-and-cut-sticker" },
   ];
 
   const bestSellerSlugs = [
@@ -166,6 +166,7 @@ export default function HomeMainView() {
                 src={tile.image}
                 alt={tile.title}
                 fill
+                priority
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-center justify-center p-4">

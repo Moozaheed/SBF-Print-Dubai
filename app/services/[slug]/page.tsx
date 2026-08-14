@@ -33,14 +33,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${service.title} | SBF Print & Design Dubai`,
       description: `${service.subtitle} Same-day production & delivery across Dubai & UAE.`,
       url: canonicalUrl,
-      images: [{ url: service.heroImage, width: 1200, height: 630, alt: service.title }],
+      images: [{ url: `https://sbfprint.ae${service.heroImage}`, width: 1200, height: 630, alt: service.title }],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: `${service.title} | SBF Print Dubai`,
       description: service.subtitle,
-      images: [service.heroImage],
+      images: [`https://sbfprint.ae${service.heroImage}`],
     },
   };
 }

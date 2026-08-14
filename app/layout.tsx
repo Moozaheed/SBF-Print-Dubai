@@ -229,7 +229,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Dubai" />
         <meta name="geo.position" content="25.1972;55.2744" />
         <meta name="ICBM" content="25.1972, 55.2744" />
-        <link rel="canonical" href="https://sbfprint.ae" />
+        <link rel="preload" href="/hero/hero-1.jpg" as="image" />
         <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
