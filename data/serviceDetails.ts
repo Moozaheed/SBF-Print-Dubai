@@ -1542,7 +1542,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Ceramic Coffee Mugs Printing Printing & Manufacturing in Dubai",
     subtitle: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints. Urgent same day production & express delivery across Dubai & UAE.",
     description: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
-    heroImage: "/commercial-services/tumblers-mugs.jpg",
+    heroImage: "/products/mugs-print/image-1.jpg",
     badge: "Microwave Safe",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1551,9 +1551,10 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/commercial-services/tumblers-mugs.jpg",
-      "/commercial-services/business-cards.jpg",
-      "/commercial-services/3d-signage.jpg"
+      "/products/mugs-print/image-1.jpg",
+      "/products/mugs-print/image-2.jpg",
+      "/products/mugs-print/image-3.jpg",
+      "/products/mugs-print/image-4.jpg",
     ],
     pricingPackages: [
       {
@@ -1587,7 +1588,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Rigid Packaging & Gift Boxes Printing & Manufacturing in Dubai",
     subtitle: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes. Urgent same day production & express delivery across Dubai & UAE.",
     description: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
-    heroImage: "/commercial-services/custom-packaging.jpg",
+    heroImage: "/products/packaging/image-1.jpg",
     badge: "Rigid Boxes",
     features: [
       "48 Hours Fast Production Turnaround",
@@ -1596,9 +1597,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/commercial-services/custom-packaging.jpg",
-      "/commercial-services/business-cards.jpg",
-      "/commercial-services/3d-signage.jpg"
+      "/products/packaging/image-1.jpg",
+      "/products/packaging/image-2.jpg",
+      "/products/packaging/image-3.jpg",
+      "/products/packaging/image-4.jpg",
+      "/products/packaging/image-5.jpg",
     ],
     pricingPackages: [
       {
@@ -1730,7 +1733,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Executive Diary & Pen Gift Sets Printing & Manufacturing in Dubai",
     subtitle: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes. Urgent same day production & express delivery across Dubai & UAE.",
     description: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes. Premium CMYK color accuracy, custom size cutting, and heavy-duty materials guaranteed.",
-    heroImage: "/commercial-services/notebooks-pens.jpg",
+    heroImage: "/products/diary-pen-print/image-1.jpg",
     badge: "VIP Gift Set",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -1739,9 +1742,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/commercial-services/notebooks-pens.jpg",
-      "/commercial-services/business-cards.jpg",
-      "/commercial-services/3d-signage.jpg"
+      "/products/diary-pen-print/image-1.jpg",
+      "/products/diary-pen-print/image-2.jpg",
+      "/products/diary-pen-print/image-3.jpg",
+      "/products/diary-pen-print/image-4.jpg",
+      "/products/diary-pen-print/image-5.jpg",
     ],
     pricingPackages: [
       {
@@ -8258,7 +8263,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "One Way Vision Window Film Printing & Installation in Dubai",
     subtitle: "Perforated window vinyl — full-color brand print visible from outside, clear line of sight from inside. Perfect for retail shopfronts across Dubai & UAE.",
     description: "One way vision film allows businesses to turn shopfront glass into a full-color advertising canvas without blocking the view from inside. UV-resistant outdoor-grade perforated vinyl with 50/50 perforation ratio for maximum print quality and visibility.",
-    heroImage: "/commercial-services/stickers.jpg",
+    heroImage: "/products/one-way-vision-on-glass/image-1.jpg",
     badge: "Shopfront",
     features: [
       "Full-Color UV-Resistant Outdoor Print",
@@ -8266,7 +8271,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Professional Bubble-Free Installation",
       "Custom Size for Any Window or Shopfront"
     ],
-    samples: ["/commercial-services/stickers.jpg", "/commercial-services/event-rollups.jpg", "/commercial-services/3d-signage.jpg"],
+    samples: [
+      "/products/one-way-vision-on-glass/image-1.jpg",
+      "/products/one-way-vision-on-glass/image-2.jpg",
+      "/products/one-way-vision-on-glass/image-3.jpg",
+      "/products/one-way-vision-on-glass/image-4.jpg",
+      "/products/one-way-vision-on-glass/image-5.jpg",
+    ],
     pricingPackages: [
       {
         id: "one-way-vision-standard",
@@ -8485,6 +8496,52 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
         lamination: "Brushed Finish",
         size: "Custom Size",
         delivery: "24-48 Hours",
+        speedCategory: "Standard 2-3 Days",
+      },
+    ],
+  },
+  "led-screen-display": {
+    slug: "led-screen-display",
+    title: "LED Screen Display Dubai",
+    headline: "LED Screen Display Manufacturing & Supply in Dubai",
+    subtitle: "High-brightness indoor & outdoor LED screen displays for retail stores, events, wayfinding, lobbies and advertising. Same-day consultation & fast delivery across Dubai & UAE.",
+    description: "SBF Print & Design supplies and installs high-brightness LED screen displays for retail, hospitality, corporate lobbies, events, and outdoor advertising across Dubai and the UAE. From P2.5 indoor panels to P6 outdoor cabinets, we deliver turnkey LED solutions with full installation, content setup, and after-sales support.",
+    heroImage: "/products/led-screen-display/image-1.jpg",
+    badge: "LED Digital",
+    features: [
+      "Indoor P2.5 / P3 & Outdoor P6 / P8 LED Panels",
+      "High Brightness — Vivid Colors Day & Night",
+      "Turnkey Supply, Installation & Content Setup",
+      "Same-Day Consultation & Express Delivery Dubai"
+    ],
+    samples: [
+      "/products/led-screen-display/image-1.jpg",
+      "/products/led-screen-display/image-2.jpg",
+      "/products/led-screen-display/image-3.jpg",
+      "/products/led-screen-display/image-4.jpg",
+    ],
+    pricingPackages: [
+      {
+        id: "led-screen-display-indoor",
+        name: "Indoor LED Screen Display",
+        price: "AED 1,200 / sqm",
+        quantity: "Per Square Meter",
+        gsm: "P2.5 / P3 Indoor Panel",
+        lamination: "Aluminum Cabinet",
+        size: "Custom Size",
+        delivery: "3-5 Days",
+        speedCategory: "Standard 2-3 Days",
+        isFeatured: true,
+      },
+      {
+        id: "led-screen-display-outdoor",
+        name: "Outdoor LED Screen Display",
+        price: "Contact Press",
+        quantity: "Per Square Meter",
+        gsm: "P6 / P8 Outdoor Panel",
+        lamination: "Weatherproof Cabinet",
+        size: "Custom Size",
+        delivery: "5-7 Business Days",
         speedCategory: "Standard 2-3 Days",
       },
     ],

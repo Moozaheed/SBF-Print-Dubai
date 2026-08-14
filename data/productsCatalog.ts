@@ -179,6 +179,19 @@ export const ALL_PRODUCTS: ProductItem[] = [
     badge: "Safety Compliant",
   },
 
+  {
+    id: "led-screen-display",
+    slug: "led-screen-display",
+    title: "LED Screen Display",
+    category: "Signage",
+    subcategory: "Signage",
+    description: "High-brightness indoor & outdoor LED screen displays for retail, events, wayfinding and advertising.",
+    image: "/products/led-screen-display/image-1.jpg",
+    startingPrice: "AED 1,200 / unit",
+    turnaround: "3-5 Days",
+    badge: "LED Digital",
+  },
+
   // ==========================================
   // 2. PRINTING AND DISPLAY
   // ==========================================
@@ -357,7 +370,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Perforated window vinyl film for shopfronts — full-color print visible from outside, clear visibility from inside. Ideal for retail branding.",
-    image: "/commercial-services/stickers.jpg",
+    image: "/products/one-way-vision-on-glass/image-1.jpg",
     startingPrice: "AED 70 / m²",
     turnaround: "24 Hours",
     badge: "Shopfront",
@@ -493,7 +506,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints.",
-    image: "/commercial-services/tumblers-mugs.jpg",
+    image: "/products/mugs-print/image-1.jpg",
     startingPrice: "AED 22 / mug",
     turnaround: "24 Hours",
     badge: "Microwave Safe",
@@ -505,7 +518,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes.",
-    image: "/commercial-services/custom-packaging.jpg",
+    image: "/products/packaging/image-1.jpg",
     startingPrice: "AED 150 / 50 pcs",
     turnaround: "48 Hours",
     badge: "Rigid Boxes",
@@ -541,7 +554,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes.",
-    image: "/commercial-services/notebooks-pens.jpg",
+    image: "/products/diary-pen-print/image-1.jpg",
     startingPrice: "AED 45 / set",
     turnaround: "24-48 Hours",
     badge: "VIP Gift Set",

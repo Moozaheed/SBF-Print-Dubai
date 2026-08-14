@@ -5,9 +5,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://sbfprint.ae"),
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   title: {
     default: "Printing Press Dubai | SBF Print & Design — Same Day Printing Downtown Dubai",
@@ -111,13 +117,13 @@ export default function RootLayout({
         "currenciesAccepted": "AED",
         "paymentAccepted": "Cash, Visa, Mastercard, Tabby, Bank Transfer",
         "priceRange": "AED 35 - AED 5000",
-        "hasMap": "https://www.google.com/maps?cid=4646316211352300491",
+        "hasMap": "https://maps.app.goo.gl/E46BUEZRX81Duh6e9",
         "sameAs": [
-          "https://www.google.com/maps?cid=4646316211352300491",
+          "https://maps.app.goo.gl/E46BUEZRX81Duh6e9",
         ],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Downtown Dubai",
+          "streetAddress": "Nakheel Centre, Deira",
           "addressLocality": "Dubai",
           "addressRegion": "Dubai",
           "addressCountry": "AE",
@@ -224,6 +230,10 @@ export default function RootLayout({
         <meta name="geo.position" content="25.1972;55.2744" />
         <meta name="ICBM" content="25.1972, 55.2744" />
         <link rel="canonical" href="https://sbfprint.ae" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">

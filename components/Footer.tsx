@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-zinc-500 leading-relaxed">
-              Downtown Dubai's premier commercial printing house specializing in offset business cards, luxury gold foil packaging, vinyl banners, and fast 48-hour delivery across the UAE.
+              Nakheel Centre, Deira Dubai — commercial printing press specializing in offset business cards, luxury gold foil packaging, vinyl banners, and fast 48-hour delivery across the UAE.
             </p>
 
             <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700 bg-emerald-50 p-2.5 rounded-xl border border-emerald-200">

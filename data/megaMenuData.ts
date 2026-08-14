@@ -37,6 +37,7 @@ export const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
           { title: "Stamp making", slug: "stamp-making" },
           { title: "Parking signage", slug: "parking-signage" },
           { title: "Elevator safety sign", slug: "elevator-safety-sign" },
+          { title: "LED Screen Display", slug: "led-screen-display" },
         ],
       },
     ],

@@ -51,9 +51,17 @@ export default function HomeMainView() {
     { title: "STICKERS & LABELS", image: "/featured/stickers.jpg", href: "/services/stickers" },
   ];
 
-  // Minimum 5 products for On Sale as explicitly requested
-  const onSaleProducts = ALL_PRODUCTS.slice(0, 5);
-  const bestSellers = ALL_PRODUCTS.slice(5, 10);
+  const bestSellerSlugs = [
+    // Signage
+    "outdoor-signboard-3d-letter", "safety-sign", "reception-letter", "banner-and-festoon", "flex-signboard",
+    // Printing and Display
+    "sticker-on-vehicles", "frosted-on-glass", "rollup-stand", "photo-frame", "sticker-on-wall",
+    // Marketing & Gift
+    "business-cards", "packaging", "menu", "print-and-cut-sticker", "mugs-print",
+  ];
+  const onSaleSlugs = ["flyers", "letterheads", "calendars", "sticker-on-forex-foam-board", "flag-print"];
+  const bestSellers = bestSellerSlugs.map(s => ALL_PRODUCTS.find(p => p.slug === s)).filter(Boolean) as typeof ALL_PRODUCTS;
+  const onSaleProducts = onSaleSlugs.map(s => ALL_PRODUCTS.find(p => p.slug === s)).filter(Boolean) as typeof ALL_PRODUCTS;
 
   const faqItems = [
     {
@@ -171,24 +179,23 @@ export default function HomeMainView() {
       </div>
 
 
-      {/* SECTION 3: ON SALE CAROUSEL (MINIMUM 5 PRODUCTS) */}
+      {/* SECTION 3: BEST SELLERS */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 space-y-6">
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2.5 text-[#C68FE6]">
-            <Tag className="w-6 h-6" />
+            <Star className="w-6 h-6 fill-[#C68FE6]" />
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              On Sale
+              Best Sellers
             </h2>
           </div>
           <p className="text-xs text-zinc-500">
-            Urgent same-day promotional discounts on top printing services
+            Our most popular printing &amp; signage products across Dubai &amp; UAE
           </p>
           <div className="w-16 h-1 bg-[#C68FE6] rounded-full mx-auto" />
         </div>
 
-        {/* Minimum 5 Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {onSaleProducts.map((p) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {bestSellers.map((p) => (
             <Link
               key={p.id}
               href={`/services/${p.slug}`}
@@ -196,8 +203,8 @@ export default function HomeMainView() {
             >
               <div className="space-y-3">
                 <div className="relative aspect-square rounded-xl bg-zinc-50 p-2 overflow-hidden flex items-center justify-center">
-                  <span className="absolute top-2 left-2 z-10 text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-rose-600 text-white shadow">
-                    SALE
+                  <span className="absolute top-2 left-2 z-10 text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-white shadow">
+                    BEST SELLER
                   </span>
                   <Image src={p.image} alt={p.title} fill className="object-contain p-2 group-hover:scale-105 transition-transform" />
                 </div>
@@ -205,15 +212,11 @@ export default function HomeMainView() {
                   <h3 className="text-xs sm:text-sm font-bold text-zinc-900 group-hover:text-[#C68FE6] transition-colors line-clamp-1">
                     {p.title}
                   </h3>
-                  <p className="text-[11px] text-zinc-400 line-through">
-                    Starting At AED 9.03
-                  </p>
-                  <p className="text-xs font-extrabold text-[#C68FE6]">
-                    AED {p.startingPrice.split(" ")[1] || "8.58"}
+                  <p className="text-[11px] text-zinc-500 font-semibold">
+                    From <span className="text-[#C68FE6] font-extrabold">{p.startingPrice}</span>
                   </p>
                 </div>
               </div>
-
               <div className="pt-2">
                 <span className="w-full py-2 rounded-xl bg-purple-50 text-[#C68FE6] font-bold text-xs inline-block group-hover:bg-[#C68FE6] group-hover:text-white transition-colors">
                   Customize Order
@@ -272,26 +275,32 @@ export default function HomeMainView() {
       </div>
 
 
-      {/* SECTION 5: BEST SELLERS CAROUSEL */}
+      {/* SECTION 5: ON SALE */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 space-y-6">
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2.5 text-[#C68FE6]">
-            <Star className="w-6 h-6 fill-[#C68FE6]" />
+            <Tag className="w-6 h-6" />
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Best Sellers
+              On Sale
             </h2>
           </div>
+          <p className="text-xs text-zinc-500">
+            Urgent same-day promotional discounts on top printing services
+          </p>
           <div className="w-16 h-1 bg-[#C68FE6] rounded-full mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-          {bestSellers.map((p) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {onSaleProducts.map((p) => (
             <Link
               key={p.id}
               href={`/services/${p.slug}`}
               className="group bg-white rounded-2xl border border-zinc-200 p-4 space-y-3 text-center shadow-sm hover:shadow-md transition-all"
             >
               <div className="relative aspect-square rounded-xl bg-zinc-50 p-2 overflow-hidden flex items-center justify-center">
+                <span className="absolute top-2 left-2 z-10 text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-rose-600 text-white shadow">
+                  SALE
+                </span>
                 <Image src={p.image} alt={p.title} fill className="object-contain p-2 group-hover:scale-105 transition-transform" />
               </div>
               <div className="space-y-1">
