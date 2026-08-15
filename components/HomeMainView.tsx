@@ -97,19 +97,8 @@ export default function HomeMainView() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen pt-36 pb-20 selection:bg-[#C68FE6] selection:text-white">
       
-      {/* H1 — primary keyword for SEO */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6 text-center space-y-2">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight leading-tight">
-          Commercial Printing Press in Dubai — Signage, Business Cards &amp; More
-        </h1>
-        <p className="text-sm text-zinc-500 max-w-2xl mx-auto">
-          Nakheel Centre, Deira Dubai &nbsp;·&nbsp; Same-Day Printing &nbsp;·&nbsp; Free Artwork Check &nbsp;·&nbsp; Delivery Across UAE
-        </p>
-        <div className="w-16 h-1 bg-[#C68FE6] rounded-full mx-auto" />
-      </div>
-
       {/* SECTION 1: TOP HERO FULL-IMAGE BANNER CAROUSEL */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="relative rounded-3xl overflow-hidden shadow-xl border border-zinc-200 bg-zinc-100 group aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/9]">
           
           {(() => {
