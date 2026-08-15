@@ -366,6 +366,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/acrylic-3d-board/image-1.jpg",
       "/products/acrylic-3d-board/image-2.jpg",
       "/products/acrylic-3d-board/image-3.jpg",
+      "/products/acrylic-3d-board/image-4.jpg",
     ],
     pricingPackages: [
       {
@@ -740,7 +741,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/rollup-stand/image-2.jpg",
       "/products/rollup-stand/image-3.jpg",
       "/products/rollup-stand/image-4.jpg",
-      "/products/rollup-stand/image-5.jpg",
     ],
     pricingPackages: [
       {
@@ -834,7 +834,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/flag-print/image-3.jpg",
       "/products/flag-print/image-4.jpg",
       "/products/flag-print/image-5.jpg",
-      "/products/flag-print/image-6.jpg",
     ],
     pricingPackages: [
       {
@@ -883,7 +882,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/flag-stand/image-4.jpg",
       "/products/flag-stand/image-5.jpg",
       "/products/flag-stand/image-6.jpg",
-      "/products/flag-stand/image-7.jpg",
     ],
     pricingPackages: [
       {
@@ -931,7 +929,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/banner-stand/image-3.jpg",
       "/products/banner-stand/image-4.jpg",
       "/products/banner-stand/image-5.jpg",
-      "/products/banner-stand/image-6.jpg",
     ],
     pricingPackages: [
       {
@@ -979,8 +976,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/promotion-table/image-3.jpg",
       "/products/promotion-table/image-4.jpg",
       "/products/promotion-table/image-5.jpg",
-      "/products/promotion-table/image-6.jpg",
-      "/products/promotion-table/image-7.jpg",
     ],
     pricingPackages: [
       {
@@ -1027,8 +1022,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/reception-stand/image-2.jpg",
       "/products/reception-stand/image-3.jpg",
       "/products/reception-stand/image-4.jpg",
-      "/products/reception-stand/image-5.jpg",
-      "/products/reception-stand/image-6.jpg",
     ],
     pricingPackages: [
       {
@@ -1075,7 +1068,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/shelf-d-board-stand/image-2.jpg",
       "/products/shelf-d-board-stand/image-3.jpg",
       "/products/shelf-d-board-stand/image-4.jpg",
-      "/products/shelf-d-board-stand/image-5.jpg",
     ],
     pricingPackages: [
       {
@@ -1315,7 +1307,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/letterheads/image-2.jpg",
       "/products/letterheads/image-3.jpg",
       "/products/letterheads/image-4.jpg",
-      "/products/letterheads/image-5.jpg",
     ],
     pricingPackages: [
       {
@@ -1459,7 +1450,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/t-shirt-print/image-3.jpg",
       "/products/t-shirt-print/image-4.jpg",
       "/products/t-shirt-print/image-5.jpg",
-      "/products/t-shirt-print/image-6.jpg",
     ],
     pricingPackages: [
       {
@@ -1507,8 +1497,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/bottle-print/image-3.jpg",
       "/products/bottle-print/image-4.jpg",
       "/products/bottle-print/image-5.jpg",
-      "/products/bottle-print/image-6.jpg",
-      "/products/bottle-print/image-7.jpg",
     ],
     pricingPackages: [
       {
@@ -1698,8 +1686,6 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "/products/awards-making/image-4.jpg",
       "/products/awards-making/image-5.jpg",
       "/products/awards-making/image-6.jpg",
-      "/products/awards-making/image-7.jpg",
-      "/products/awards-making/image-8.jpg",
     ],
     pricingPackages: [
       {
@@ -8229,7 +8215,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Custom Cut to Any Shape or Size",
       "Removable Without Damage to Glass"
     ],
-    samples: ["/products/frosted-on-glass/image-1.jpg", "/products/frosted-on-glass/image-2.jpg", "/products/frosted-on-glass/image-3.jpg", "/products/frosted-on-glass/image-4.jpg", "/products/frosted-on-glass/image-5.jpg", "/products/frosted-on-glass/image-6.jpg", "/products/frosted-on-glass/image-7.jpg"],
+    samples: [
+      "/products/frosted-on-glass/image-1.jpg",
+      "/products/frosted-on-glass/image-2.jpg",
+      "/products/frosted-on-glass/image-3.jpg",
+      "/products/frosted-on-glass/image-4.jpg",
+      "/products/frosted-on-glass/image-5.jpg",
+    ],
     pricingPackages: [
       {
         id: "frosted-on-glass-standard",

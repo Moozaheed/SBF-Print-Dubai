@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MessageSquare, ShieldCheck, Printer } from "lucide-react";
+import { Phone, Mail, MessageSquare, ShieldCheck, Printer, MapPin } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -108,6 +108,18 @@ export default function Footer() {
                   className="hover:text-[#1877F2] transition-colors"
                 >
                   SBF Print & Design
+                </a>
+              </li>
+
+              <li className="flex items-start gap-2.5 pt-1">
+                <MapPin className="w-4 h-4 text-[#C68FE6] flex-shrink-0 mt-0.5" />
+                <a
+                  href="https://maps.app.goo.gl/E46BUEZRX81Duh6e9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C68FE6] transition-colors leading-snug"
+                >
+                  Nakheel Centre, Deira Dubai, UAE
                 </a>
               </li>
             </ul>

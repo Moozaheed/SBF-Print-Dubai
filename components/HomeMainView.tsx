@@ -66,11 +66,11 @@ export default function HomeMainView() {
   const faqItems = [
     {
       question: "Why should I choose SBF Print over other printing companies in Dubai?",
-      answer: "SBF Print & Design provides state-of-the-art 4-color offset and high-resolution digital printing in Downtown Dubai. We offer transparent instant pricing, free 300 DPI pre-flight artwork checks, 48-hour turnarounds, and direct WhatsApp order assistance with zero hidden fees."
+      answer: "SBF Print & Design provides state-of-the-art 4-color offset and high-resolution digital printing at Nakheel Centre, Deira Dubai. We offer transparent instant pricing, free 300 DPI pre-flight artwork checks, 48-hour turnarounds, and direct WhatsApp order assistance with zero hidden fees."
     },
     {
       question: "Do you offer same-day or urgent printing services?",
-      answer: "Yes! We offer express same-day and urgent 2-hour dispatch for business cards, flyers, roll-up stands, stickers, and promotional items across Downtown Dubai, Business Bay, and major UAE business hubs."
+      answer: "Yes! We offer express same-day and urgent 2-hour dispatch for business cards, flyers, roll-up stands, stickers, and promotional items from our Nakheel Centre, Deira Dubai location across all major UAE business hubs."
     },
     {
       question: "What payment methods do you accept?",

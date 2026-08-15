@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     ],
   },
   title: {
-    default: "Printing Press Dubai | SBF Print & Design — Same Day Printing Downtown Dubai",
+    default: "Printing Press Dubai | SBF Print & Design — Same Day Printing Deira Dubai",
     template: "%s | SBF Print & Design Dubai",
   },
   description:
-    "SBF Print & Design — #1 commercial printing press in Downtown Dubai. Business cards, signage, banners, stickers, 3D letters & custom packaging. Same-day printing & delivery across Dubai & UAE. Call +971 56 816 7269.",
+    "SBF Print & Design — commercial printing press at Nakheel Centre, Deira Dubai. Business cards, signage, banners, stickers, 3D letters & custom packaging. Same-day printing & delivery across Dubai & UAE. Call +971 56 816 7269.",
   keywords: [
     "printing press dubai",
     "printing company dubai",
@@ -111,7 +111,7 @@ export default function RootLayout({
           "https://sbfprint.ae/commercial-services/3d-signage.jpg",
           "https://sbfprint.ae/commercial-services/business-cards.jpg",
         ],
-        "description": "SBF Print & Design is Downtown Dubai's leading commercial printing press offering business cards, 3D signage, banners, stickers, packaging, and same-day printing across Dubai & UAE.",
+        "description": "SBF Print & Design is located at Nakheel Centre, Deira Dubai — a leading commercial printing press offering business cards, 3D signage, banners, stickers, packaging, and same-day printing across Dubai & UAE.",
         "telephone": "+9710525069091",
         "email": "sbfprintdesing@gmail.com",
         "currenciesAccepted": "AED",
@@ -181,7 +181,7 @@ export default function RootLayout({
         "@id": "https://sbfprint.ae/#website",
         "url": "https://sbfprint.ae",
         "name": "SBF Print & Design Dubai",
-        "description": "Commercial printing press in Downtown Dubai offering same-day printing for business cards, signage, banners, stickers, packaging and more.",
+        "description": "Commercial printing press at Nakheel Centre, Deira Dubai offering same-day printing for business cards, signage, banners, stickers, packaging and more.",
         "publisher": { "@id": "https://sbfprint.ae/#business" },
         "potentialAction": {
           "@type": "SearchAction",
@@ -195,12 +195,12 @@ export default function RootLayout({
           {
             "@type": "Question",
             "name": "Where is SBF Print & Design located in Dubai?",
-            "acceptedAnswer": { "@type": "Answer", "text": "SBF Print & Design is located in Downtown Dubai, UAE. We offer same-day delivery across all Dubai areas including Business Bay, DIFC, JBR, Deira, and all 7 UAE Emirates." },
+            "acceptedAnswer": { "@type": "Answer", "text": "SBF Print & Design is located at Nakheel Centre, Deira Dubai, UAE. We offer same-day delivery across all Dubai areas including Business Bay, DIFC, JBR, and all 7 UAE Emirates." },
           },
           {
             "@type": "Question",
             "name": "Do you offer same-day printing in Dubai?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer same-day and express 2-hour printing for business cards, flyers, stickers, roll-up stands, and most marketing materials across Downtown Dubai and Business Bay." },
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer same-day and express 2-hour printing for business cards, flyers, stickers, roll-up stands, and most marketing materials from our Nakheel Centre, Deira Dubai location across all major UAE business hubs." },
           },
           {
             "@type": "Question",
