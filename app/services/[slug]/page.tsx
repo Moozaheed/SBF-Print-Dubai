@@ -69,6 +69,41 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           "availability": "https://schema.org/InStock",
           "seller": { "@type": "Organization", "name": "SBF Print And Design" },
           "areaServed": { "@type": "City", "name": "Dubai" },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "AE",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+            "merchantReturnDays": 0,
+            "returnMethod": "https://schema.org/ReturnInStore",
+            "returnFees": "https://schema.org/FreeReturn",
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "AED",
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "AE",
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 1,
+                "unitCode": "DAY",
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 2,
+                "unitCode": "DAY",
+              },
+            },
+          },
         },
         "aggregateRating": {
           "@type": "AggregateRating",
