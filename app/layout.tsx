@@ -6,11 +6,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sbfprint.ae"),
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.ico",
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
@@ -83,7 +80,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Printing Press Dubai | SBF Print & Design",
-    description: "Same-day commercial printing in Downtown Dubai — business cards, signage, banners & more. +971 56 816 7269.",
+    description: "Same-day commercial printing at Nakheel Centre, Deira Dubai — business cards, signage, banners & more. +971 056 816 7269.",
     images: ["/portfolio/gold-foil-luxury-card.jpg"],
   },
   verification: {
@@ -131,8 +128,8 @@ export default function RootLayout({
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 25.1972,
-          "longitude": 55.2744,
+          "latitude": 25.2697,
+          "longitude": 55.3094,
         },
         "areaServed": [
           { "@type": "City", "name": "Dubai" },
@@ -227,13 +224,8 @@ export default function RootLayout({
       <head>
         <meta name="geo.region" content="AE-DU" />
         <meta name="geo.placename" content="Dubai" />
-        <meta name="geo.position" content="25.1972;55.2744" />
-        <meta name="ICBM" content="25.1972, 55.2744" />
-        <link rel="preload" href="/hero/hero-1.jpg" as="image" />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="geo.position" content="25.2697;55.3094" />
+        <meta name="ICBM" content="25.2697, 55.3094" />
 
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
