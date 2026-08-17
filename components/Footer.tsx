@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MessageSquare, ShieldCheck, Printer, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MessageSquare, ShieldCheck, MapPin } from "lucide-react";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -29,18 +30,14 @@ export default function Footer() {
 
           {/* Column 1: Brand & Identity */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#C68FE6] flex items-center justify-center text-white font-black shadow-md">
-                <Printer className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-xl tracking-tight text-zinc-900">
-                  SBF <span className="text-[#C68FE6]">PRINT</span>
-                </span>
-                <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
-                  And Design Dubai
-                </span>
-              </div>
+            <div>
+              <Image
+                src="/logo.png"
+                alt="SBF Print & Design Dubai"
+                width={160}
+                height={46}
+                className="h-10 w-auto object-contain"
+              />
             </div>
 
             <p className="text-xs text-zinc-500 leading-relaxed">

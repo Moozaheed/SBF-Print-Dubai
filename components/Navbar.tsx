@@ -46,18 +46,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 gap-4">
           
           {/* BRAND LOGO on Left */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
-            <div className="w-10 h-10 rounded-xl bg-[#C68FE6] text-white flex items-center justify-center font-black text-xl shadow-md group-hover:scale-105 transition-transform">
-              <Printer className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black text-zinc-900 tracking-tight leading-none">
-                SBF<span className="text-[#C68FE6]">PRINT</span>
-              </span>
-              <span className="text-[10px] font-bold text-zinc-400 tracking-widest uppercase">
-                And Design Dubai
-              </span>
-            </div>
+          <Link href="/" className="flex-shrink-0 group">
+            <Image
+              src="/logo.png"
+              alt="SBF Print & Design Dubai"
+              width={220}
+              height={64}
+              priority
+              className="h-14 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* SEARCH BAR in Center matching screenshot */}
