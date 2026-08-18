@@ -239,6 +239,18 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-PR8GVW9C');`}
         </Script>
 
+        {/* Google Ads */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18394263279"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18394263279');`}
+        </Script>
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
