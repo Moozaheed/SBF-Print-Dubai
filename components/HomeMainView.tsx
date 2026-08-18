@@ -33,13 +33,13 @@ export default function HomeMainView() {
 
   const heroBanners = [
     {
-      title: "Tabby Buy Now Pay Later",
-      image: "/hero/hero-1.jpg",
+      title: "High-Tech Printing Press Dubai",
+      image: "/hero/concept-1.jpg",
       href: "/all-products",
     },
     {
-      title: "Commercial Printing & Signage Press",
-      image: "/hero/hero-2.jpg",
+      title: "Luxury Print Showroom Dubai",
+      image: "/hero/concept-2.jpg",
       href: "/all-products",
     },
   ];
