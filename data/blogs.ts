@@ -124,7 +124,7 @@ Visit our [All Products](/all-products) page, choose your product, set your spec
     category: "Business Cards",
     date: "3 Aug 2026",
     readTime: "7 min read",
-    image: "/commercial-services/business-cards.jpg",
+    image: "/blog/business-cards-guide.jpg",
     excerpt: "Your business card is the first physical impression of your brand. In Dubai's competitive market, the right finishing can mean the difference between a card that gets kept and one that gets forgotten.",
     content: `
 ## Why Your Business Card Finishing Matters More Than You Think
@@ -237,7 +237,7 @@ We produce luxury business cards with same-day and 24-hour turnaround, free artw
     category: "Signage",
     date: "5 Aug 2026",
     readTime: "8 min read",
-    image: "/commercial-services/3d-signage.jpg",
+    image: "/blog/3d-signage-guide.jpg",
     excerpt: "In Dubai's competitive retail environment, your storefront signage is your most powerful and always-on marketing asset. Here's how to use 3D signage to dominate your street.",
     content: `
 ## Why Storefront Signage Is Your Highest-ROI Marketing Investment
