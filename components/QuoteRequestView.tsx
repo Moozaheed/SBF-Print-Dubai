@@ -406,10 +406,10 @@ export default function QuoteRequestView() {
               <button
                 type="button"
                 onClick={handleWhatsAppDirect}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Send to WhatsApp (+971 56 816 7269)</span>
+                <span>Send to WhatsApp</span>
               </button>
             </div>
 
@@ -808,7 +808,7 @@ export default function QuoteRequestView() {
                 className="w-full sm:w-2/3 py-4 rounded-2xl bg-[#C68FE6] hover:bg-[#b078d6] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
-                <span>{isSubmitting ? "Dispatching to sbfprintdesign@gmail.com..." : "Submit Quotation Request"}</span>
+                <span>{isSubmitting ? "Submitting Quotation Request..." : "Submit Quotation Request"}</span>
               </button>
 
               <button

@@ -270,7 +270,7 @@ export default function CartDrawer() {
                   className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Request Quote on WhatsApp (+971 56 816 7269)</span>
+                  <span>Request Quote on WhatsApp</span>
                 </button>
 
                 <button
@@ -279,7 +279,7 @@ export default function CartDrawer() {
                   className="w-full py-2.5 px-4 rounded-xl border border-zinc-300 hover:bg-white text-zinc-700 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#C68FE6]" />
-                  <span>Email Quote to sbfprintdesign@gmail.com</span>
+                  <span>Email Quote Request</span>
                 </button>
               </div>
 
