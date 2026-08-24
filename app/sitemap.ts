@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/request-quote`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/all-products`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/privacy-policy`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     ...serviceUrls,
     ...blogUrls,
   ];

@@ -203,7 +203,8 @@ export default function Footer() {
           <div className="flex flex-wrap gap-4 text-zinc-600 font-medium">
             <Link href="/quote" className="text-[#C68FE6] font-bold hover:underline">Request a Quote</Link>
             <Link href="/all-products" className="hover:text-[#C68FE6]">All Products</Link>
-            <a href="https://wa.me/971568167269" target="_blank" rel="noreferrer" className="hover:text-[#C68FE6]">Instant WhatsApp Quote</a>
+            <Link href="/privacy-policy" className="hover:text-[#C68FE6]">Privacy Policy</Link>
+            <a href="https://wa.me/971568167269" target="_blank" rel="noreferrer" className="hover:text-[#C68FE6]">WhatsApp Support</a>
             <a href="mailto:sbfprintdesign@gmail.com" className="hover:text-[#C68FE6]">Email Support</a>
           </div>
         </div>
