@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   FileText,
@@ -21,6 +21,9 @@ import {
   ChevronRight,
   ArrowLeft,
   Layers,
+  RefreshCw,
+  AlertCircle,
+  Lock,
 } from "lucide-react";
 
 const POPULAR_PRODUCTS = [
@@ -62,6 +65,17 @@ export default function QuoteRequestView() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  // Validation Error States
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+
+  // Captcha State
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [captchaInput, setCaptchaInput] = useState("");
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+
   // Multi-product Items State
   const [items, setItems] = useState<QuoteItem[]>([
     {
@@ -82,6 +96,54 @@ export default function QuoteRequestView() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [quoteId, setQuoteId] = useState("");
+
+  // Generate randomized Captcha challenge
+  const generateCaptcha = () => {
+    const n1 = Math.floor(Math.random() * 9) + 1;
+    const n2 = Math.floor(Math.random() * 9) + 1;
+    setNum1(n1);
+    setNum2(n2);
+    setCaptchaInput("");
+    setIsCaptchaVerified(false);
+    setCaptchaError("");
+  };
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  // Validation Helpers
+  const validateEmail = (val: string): boolean => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!val.trim()) {
+      setEmailError("Email address is required.");
+      return false;
+    }
+    if (!emailRegex.test(val.trim())) {
+      setEmailError("Please enter a valid email address (e.g. name@company.ae).");
+      return false;
+    }
+    setEmailError("");
+    return true;
+  };
+
+  const validatePhone = (val: string): boolean => {
+    const cleaned = val.replace(/[^0-9]/g, "");
+    if (!val.trim()) {
+      setPhoneError("Phone/WhatsApp number is required.");
+      return false;
+    }
+    if (/[a-zA-Z]/.test(val)) {
+      setPhoneError("Phone number cannot contain alphabetic letters.");
+      return false;
+    }
+    if (cleaned.length < 7 || cleaned.length > 15) {
+      setPhoneError("Please enter a valid phone number (7-15 digits, e.g. +971 50 123 4567).");
+      return false;
+    }
+    setPhoneError("");
+    return true;
+  };
 
   // Item Management Handlers
   const addItem = () => {
@@ -111,7 +173,7 @@ export default function QuoteRequestView() {
     );
   };
 
-  // WhatsApp Message Formatter (Strictly No emojis)
+  // WhatsApp Message Formatter
   const buildWhatsAppMessage = () => {
     const selectedSpeed = SPEED_OPTIONS.find((s) => s.id === speed)?.title || speed;
     
@@ -141,6 +203,15 @@ export default function QuoteRequestView() {
   };
 
   const handleWhatsAppDirect = () => {
+    const isEmailValid = validateEmail(email);
+    const isPhoneValid = validatePhone(phone);
+    if (!fullName.trim()) {
+      alert("Please enter your Full Name.");
+      return;
+    }
+    if (!isEmailValid || !isPhoneValid) {
+      return;
+    }
     const msg = encodeURIComponent(buildWhatsAppMessage());
     window.open(`https://wa.me/971568167269?text=${msg}`, "_blank");
   };
@@ -153,33 +224,79 @@ export default function QuoteRequestView() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
+    // 1. Validate Email & Phone
+    const isEmailValid = validateEmail(email);
+    const isPhoneValid = validatePhone(phone);
+    if (!isEmailValid || !isPhoneValid) {
+      return;
+    }
+
+    // 2. Validate Security Captcha
+    const expectedAnswer = num1 + num2;
+    if (parseInt(captchaInput.trim(), 10) !== expectedAnswer) {
+      setCaptchaError(`Incorrect security answer. Please solve: ${num1} + ${num2} = ?`);
+      return;
+    }
+    setCaptchaError("");
+
+    setIsSubmitting(true);
     const generatedId = `SBF-Q-${Math.floor(100000 + Math.random() * 900000)}`;
     setQuoteId(generatedId);
 
-    const formData = new FormData();
-    formData.append("form-name", "quotation-request");
-    formData.append("quoteId", generatedId);
-    formData.append("fullName", fullName);
-    formData.append("company", company);
-    formData.append("email", email);
-    formData.append("phone", phone);
-    formData.append("itemsCount", items.length.toString());
-    formData.append("itemsSummary", JSON.stringify(items));
-    formData.append("speed", speed);
-    formData.append("fileName", fileName || "None attached");
-    formData.append("generalNotes", generalNotes);
-    formData.append("targetEmail", "sbfprintdesign@gmail.com");
+    // Build structured summary for email
+    let itemsEmailText = "";
+    items.forEach((item, idx) => {
+      itemsEmailText += `Item ${idx + 1}: ${item.productName} (Qty: ${item.quantity}, Size: ${item.dimensions}${item.notes ? `, Note: ${item.notes}` : ""})
+`;
+    });
+
+    const web3formsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "e53d5a2d-b054-4752-bf6d-88f5a6b0c273";
 
     try {
+      // 1. Dispatch directly via Web3Forms API to sbfprintdesign@gmail.com
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: web3formsAccessKey,
+          subject: `[New Quote #${generatedId}] from ${fullName} (${company || "Individual"})`,
+          from_name: "SBF Print Quote Desk",
+          to_email: "sbfprintdesign@gmail.com",
+          name: fullName,
+          email: email,
+          phone: phone,
+          company: company || "Not specified",
+          speed: SPEED_OPTIONS.find((s) => s.id === speed)?.title,
+          file_name: fileName || "No file attached",
+          products_summary: itemsEmailText,
+          notes: generalNotes || "None",
+        }),
+      });
+
+      // 2. Also send to Netlify Forms static capture
+      const formData = new FormData();
+      formData.append("form-name", "quotation-request");
+      formData.append("quoteId", generatedId);
+      formData.append("fullName", fullName);
+      formData.append("company", company);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("itemsSummary", itemsEmailText);
+      formData.append("speed", speed);
+      formData.append("generalNotes", generalNotes);
+      formData.append("targetEmail", "sbfprintdesign@gmail.com");
+
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
     } catch (err) {
-      console.warn("Form submission recorded:", err);
+      console.warn("Form dispatch note:", err);
     }
 
     setIsSubmitting(false);
@@ -303,6 +420,7 @@ export default function QuoteRequestView() {
                   setIsSubmitted(false);
                   setGeneralNotes("");
                   setFileName("");
+                  generateCaptcha();
                 }}
                 className="hover:text-[#C68FE6] inline-flex items-center gap-1 transition-colors"
               >
@@ -342,6 +460,7 @@ export default function QuoteRequestView() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Full Name */}
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1.5">
                     Full Name <span className="text-red-500">*</span>
@@ -356,6 +475,7 @@ export default function QuoteRequestView() {
                   />
                 </div>
 
+                {/* Company Name */}
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1.5">
                     Company / Brand Name <span className="text-zinc-400 font-normal">(Optional)</span>
@@ -369,6 +489,7 @@ export default function QuoteRequestView() {
                   />
                 </div>
 
+                {/* Email with Verification */}
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1.5">
                     Email Address <span className="text-red-500">*</span>
@@ -377,12 +498,25 @@ export default function QuoteRequestView() {
                     type="email"
                     required
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (emailError) validateEmail(e.target.value);
+                    }}
+                    onBlur={(e) => validateEmail(e.target.value)}
                     placeholder="e.g. mohammed@company.ae"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-900 focus:outline-none focus:border-[#C68FE6] focus:bg-white transition-all"
+                    className={`w-full px-4 py-3 rounded-xl bg-zinc-50 border text-xs font-semibold text-zinc-900 focus:outline-none focus:bg-white transition-all ${
+                      emailError ? "border-red-400 focus:border-red-500" : "border-zinc-200 focus:border-[#C68FE6]"
+                    }`}
                   />
+                  {emailError && (
+                    <div className="flex items-center gap-1 text-[11px] text-red-500 font-semibold mt-1">
+                      <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                      <span>{emailError}</span>
+                    </div>
+                  )}
                 </div>
 
+                {/* Phone / Mobile with Verification */}
                 <div>
                   <label className="block text-xs font-bold text-zinc-700 mb-1.5">
                     Phone / WhatsApp Number <span className="text-red-500">*</span>
@@ -391,10 +525,22 @@ export default function QuoteRequestView() {
                     type="tel"
                     required
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                      if (phoneError) validatePhone(e.target.value);
+                    }}
+                    onBlur={(e) => validatePhone(e.target.value)}
                     placeholder="e.g. +971 50 123 4567"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-900 focus:outline-none focus:border-[#C68FE6] focus:bg-white transition-all"
+                    className={`w-full px-4 py-3 rounded-xl bg-zinc-50 border text-xs font-semibold text-zinc-900 focus:outline-none focus:bg-white transition-all ${
+                      phoneError ? "border-red-400 focus:border-red-500" : "border-zinc-200 focus:border-[#C68FE6]"
+                    }`}
                   />
+                  {phoneError && (
+                    <div className="flex items-center gap-1 text-[11px] text-red-500 font-semibold mt-1">
+                      <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                      <span>{phoneError}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -598,6 +744,54 @@ export default function QuoteRequestView() {
               </div>
             </div>
 
+            {/* 5. SECURITY CAPTCHA VERIFICATION */}
+            <div className="space-y-3 pt-4 border-t border-zinc-100">
+              <div className="flex items-center gap-2">
+                <Lock className="w-4 h-4 text-[#C68FE6]" />
+                <h3 className="text-xs font-extrabold text-zinc-900 uppercase tracking-tight">
+                  Security Verification <span className="text-red-500">*</span>
+                </h3>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="px-4 py-2 rounded-xl bg-white border border-zinc-300 font-mono font-bold text-sm text-zinc-900 shadow-inner tracking-widest select-none">
+                    {num1} + {num2} = ?
+                  </div>
+                  <button
+                    type="button"
+                    onClick={generateCaptcha}
+                    title="Generate new challenge"
+                    className="p-2 rounded-lg text-zinc-500 hover:text-[#C68FE6] hover:bg-purple-50 transition-colors cursor-pointer"
+                  >
+                    <RefreshCw className="w-4 h-4" />
+                  </button>
+                </div>
+
+                <div className="flex-1 max-w-xs">
+                  <input
+                    type="text"
+                    required
+                    value={captchaInput}
+                    onChange={(e) => {
+                      setCaptchaInput(e.target.value);
+                      if (captchaError) setCaptchaError("");
+                    }}
+                    placeholder="Enter answer"
+                    className={`w-full px-4 py-2.5 rounded-xl bg-white border text-xs font-bold text-zinc-900 focus:outline-none transition-all ${
+                      captchaError ? "border-red-400 focus:border-red-500" : "border-zinc-200 focus:border-[#C68FE6]"
+                    }`}
+                  />
+                </div>
+              </div>
+              {captchaError && (
+                <div className="flex items-center gap-1 text-[11px] text-red-500 font-semibold">
+                  <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>{captchaError}</span>
+                </div>
+              )}
+            </div>
+
             {/* NOTICE BOX */}
             <div className="bg-purple-50/70 border border-purple-200 rounded-2xl p-4 flex items-start gap-3 text-xs text-zinc-700">
               <Info className="w-4 h-4 text-[#C68FE6] flex-shrink-0 mt-0.5" />
@@ -614,7 +808,7 @@ export default function QuoteRequestView() {
                 className="w-full sm:w-2/3 py-4 rounded-2xl bg-[#C68FE6] hover:bg-[#b078d6] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
-                <span>{isSubmitting ? "Sending Quotation Request..." : "Submit Quotation Request"}</span>
+                <span>{isSubmitting ? "Dispatching to sbfprintdesign@gmail.com..." : "Submit Quotation Request"}</span>
               </button>
 
               <button

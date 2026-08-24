@@ -1,27 +1,133 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { MessageSquare, Phone, MapPin, Mail, Clock, Send, ShieldCheck, Sparkles } from "lucide-react";
+import { useState, useEffect, FormEvent } from "react";
+import {
+  MessageSquare,
+  Phone,
+  MapPin,
+  Mail,
+  Send,
+  Sparkles,
+  AlertCircle,
+  CheckCircle2,
+  RefreshCw,
+  Lock,
+} from "lucide-react";
 
 export default function ContactUs() {
   const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [serviceCategory, setServiceCategory] = useState("Business Cards");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
+  // Validation & Error States
+  const [emailError, setEmailError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+
+  // Captcha Challenge
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [captchaInput, setCaptchaInput] = useState("");
+
+  // Submission State
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const generateCaptcha = () => {
+    setNum1(Math.floor(Math.random() * 9) + 1);
+    setNum2(Math.floor(Math.random() * 9) + 1);
+    setCaptchaInput("");
+    setCaptchaError("");
+  };
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const validateEmail = (val: string): boolean => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!val.trim()) {
+      setEmailError("Email address is required.");
+      return false;
+    }
+    if (!emailRegex.test(val.trim())) {
+      setEmailError("Please enter a valid email address (e.g. name@company.ae).");
+      return false;
+    }
+    setEmailError("");
+    return true;
+  };
+
+  const validatePhone = (val: string): boolean => {
+    const cleaned = val.replace(/[^0-9]/g, "");
+    if (!val.trim()) {
+      setPhoneError("Phone/WhatsApp number is required.");
+      return false;
+    }
+    if (/[a-zA-Z]/.test(val)) {
+      setPhoneError("Phone number cannot contain alphabetic letters.");
+      return false;
+    }
+    if (cleaned.length < 7 || cleaned.length > 15) {
+      setPhoneError("Please enter a valid phone number (7-15 digits).");
+      return false;
+    }
+    setPhoneError("");
+    return true;
+  };
+
+  const handleWhatsAppSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const isEmailValid = validateEmail(email);
+    const isPhoneValid = validatePhone(phone);
+    if (!fullName.trim() || !isEmailValid || !isPhoneValid) return;
+
+    const formattedText = `*NEW INQUIRY — SBF PRINT DUBAI*\n\n*Client:* ${fullName}\n*Email:* ${email}\n*Phone:* ${phone}\n*Service:* ${serviceCategory}\n*Details:* ${message || "General Inquiry"}`;
+    const whatsappUrl = `https://wa.me/971568167269?text=${encodeURIComponent(formattedText)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
+  const handleEmailSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const formattedText = `Hi SBF Print %26 Design,%0A%0AMy Name: ${encodeURIComponent(
-      fullName
-    )}%0APhone/WhatsApp: ${encodeURIComponent(
-      phone
-    )}%0APrint Service Required: ${encodeURIComponent(
-      serviceCategory
-    )}%0ADetails/Quantity: ${encodeURIComponent(message)}`;
+    const isEmailValid = validateEmail(email);
+    const isPhoneValid = validatePhone(phone);
+    if (!isEmailValid || !isPhoneValid) return;
 
-    const whatsappUrl = `https://wa.me/971568167269?text=${formattedText}`;
-    window.open(whatsappUrl, "_blank");
+    const expectedAnswer = num1 + num2;
+    if (parseInt(captchaInput.trim(), 10) !== expectedAnswer) {
+      setCaptchaError(`Incorrect security answer: ${num1} + ${num2} = ?`);
+      return;
+    }
+    setCaptchaError("");
+
+    setIsSubmitting(true);
+    const web3formsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "e53d5a2d-b054-4752-bf6d-88f5a6b0c273";
+
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: web3formsAccessKey,
+          subject: `[Website Contact Inquiry] from ${fullName}`,
+          from_name: "SBF Print Contact Form",
+          to_email: "sbfprintdesign@gmail.com",
+          name: fullName,
+          email: email,
+          phone: phone,
+          service: serviceCategory,
+          message: message,
+        }),
+      });
+    } catch (err) {
+      console.warn("Contact submission note:", err);
+    }
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
   return (
@@ -49,7 +155,7 @@ export default function ContactUs() {
             </h2>
 
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
-              Have an urgent printing request or need custom finishing advice? Reach out directly to our production team via WhatsApp, phone, or visit our press in Downtown Dubai.
+              Have an urgent printing request or need custom finishing advice? Reach out directly to our production team via WhatsApp, phone, or email.
             </p>
 
             {/* Direct Contact Methods List */}
@@ -103,7 +209,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider block">
-                    Email Official Quotations
+                    Official Quotations Email
                   </span>
                   <span className="text-base font-extrabold text-white group-hover:text-orange-400 transition-colors">
                     sbfprintdesign@gmail.com
@@ -134,97 +240,200 @@ export default function ContactUs() {
             </div>
           </div>
 
-          {/* Right Column: Contact Form Sending Direct Message to WhatsApp */}
+          {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
             <div className="bg-zinc-950 p-6 sm:p-8 rounded-3xl border border-zinc-800 shadow-2xl space-y-6">
               
-              <div className="space-y-1">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-white">Send Us a Direct Message</h3>
-                <p className="text-xs sm:text-sm text-zinc-400">
-                  Fill in your requirements below and tap submit to send your request straight to our WhatsApp.
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                
-                {/* Full Name & Phone */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-zinc-300">Your Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Karim Ahmed"
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors"
-                    />
+              {isSubmitted ? (
+                <div className="py-12 text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-zinc-300">WhatsApp / Mobile Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+971 50 123 4567"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                {/* Service Category Selection */}
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-zinc-300">Print Product Needed</label>
-                  <select
-                    value={serviceCategory}
-                    onChange={(e) => setServiceCategory(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors"
+                  <h3 className="text-2xl font-black text-white">Inquiry Sent Successfully!</h3>
+                  <p className="text-sm text-zinc-400 max-w-md mx-auto">
+                    Your inquiry has been emailed to <strong className="text-white">sbfprintdesign@gmail.com</strong>. Our team will contact you within 30 minutes.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setMessage("");
+                      generateCaptcha();
+                    }}
+                    className="px-6 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold transition-colors cursor-pointer"
                   >
-                    <option value="Luxury Business Cards (350-750 GSM)">Luxury Business Cards (350-750 GSM)</option>
-                    <option value="Custom Packaging & Gift Boxes">Custom Packaging &amp; Gift Boxes</option>
-                    <option value="Round, Vinyl & Glass Stickers">Round, Vinyl &amp; Glass Stickers</option>
-                    <option value="Self-Ink Rubber Stamps">Self-Ink Rubber Stamps</option>
-                    <option value="Booklets & Catalogs">Booklets &amp; Catalogs</option>
-                    <option value="Shopping & Tote Bags">Shopping &amp; Tote Bags</option>
-                    <option value="Event Rollup Banners & Backdrops">Event Rollup Banners &amp; Backdrops</option>
-                    <option value="Lanyards & Table Tents">Lanyards &amp; Table Tents</option>
-                    <option value="3D Signboard & Signage">3D Signboard &amp; Signage</option>
-                    <option value="T-Shirt Printing">T-Shirt Printing</option>
-                    <option value="Tumblers & Mugs">Tumblers &amp; Mugs</option>
-                    <option value="Notebooks & Executive Gifts">Notebooks &amp; Executive Gifts</option>
-                  </select>
+                    Send Another Message
+                  </button>
                 </div>
+              ) : (
+                <>
+                  <div className="space-y-1">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-white">Send Us a Direct Inquiry</h3>
+                    <p className="text-xs sm:text-sm text-zinc-400">
+                      Dispatches directly to <strong className="text-zinc-200">sbfprintdesign@gmail.com</strong> and WhatsApp.
+                    </p>
+                  </div>
 
-                {/* Message / Quantity Details */}
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-zinc-300">Quantity &amp; Print Details</label>
-                  <textarea
-                    rows={4}
-                    required
-                    placeholder="e.g. I need 500 pcs 400 GSM matte laminated cards with gold foil logo by tomorrow..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors resize-none"
-                  />
-                </div>
+                  <form onSubmit={handleEmailSubmit} className="space-y-4">
+                    
+                    {/* Full Name & Phone */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-zinc-300">Your Name *</label>
+                        <input
+                          type="text"
+                          required
+                          placeholder="e.g. Karim Ahmed"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors"
+                        />
+                      </div>
 
-                {/* Submit Button to WhatsApp */}
-                <button
-                  type="submit"
-                  className="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/30 transition-all hover:scale-[1.01] flex items-center justify-center gap-2"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  <span>Send Message to WhatsApp</span>
-                  <Send className="w-4 h-4 ml-1" />
-                </button>
+                      <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-zinc-300">Email Address *</label>
+                        <input
+                          type="email"
+                          required
+                          placeholder="e.g. karim@company.ae"
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (emailError) validateEmail(e.target.value);
+                          }}
+                          onBlur={(e) => validateEmail(e.target.value)}
+                          className={`w-full px-4 py-3 rounded-xl bg-zinc-900 border text-white text-sm focus:outline-none transition-colors ${
+                            emailError ? "border-red-500" : "border-zinc-800 focus:border-orange-500"
+                          }`}
+                        />
+                        {emailError && (
+                          <div className="flex items-center gap-1 text-[11px] text-red-400 font-semibold">
+                            <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                            <span>{emailError}</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
 
-              </form>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-zinc-300">WhatsApp / Mobile Number *</label>
+                        <input
+                          type="tel"
+                          required
+                          placeholder="+971 50 123 4567"
+                          value={phone}
+                          onChange={(e) => {
+                            setPhone(e.target.value);
+                            if (phoneError) validatePhone(e.target.value);
+                          }}
+                          onBlur={(e) => validatePhone(e.target.value)}
+                          className={`w-full px-4 py-3 rounded-xl bg-zinc-900 border text-white text-sm focus:outline-none transition-colors ${
+                            phoneError ? "border-red-500" : "border-zinc-800 focus:border-orange-500"
+                          }`}
+                        />
+                        {phoneError && (
+                          <div className="flex items-center gap-1 text-[11px] text-red-400 font-semibold">
+                            <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                            <span>{phoneError}</span>
+                          </div>
+                        )}
+                      </div>
 
-              <p className="text-[11px] text-zinc-500 text-center font-medium">
-                ⚡ Tapping submit opens WhatsApp directly with your filled inquiry details.
-              </p>
+                      {/* Service Category Selection */}
+                      <div className="space-y-1.5">
+                        <label className="text-xs font-bold text-zinc-300">Print Product Needed</label>
+                        <select
+                          value={serviceCategory}
+                          onChange={(e) => setServiceCategory(e.target.value)}
+                          className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors"
+                        >
+                          <option value="Luxury Business Cards (350-750 GSM)">Luxury Business Cards (350-750 GSM)</option>
+                          <option value="Custom Packaging & Gift Boxes">Custom Packaging &amp; Gift Boxes</option>
+                          <option value="Round, Vinyl & Glass Stickers">Round, Vinyl &amp; Glass Stickers</option>
+                          <option value="Self-Ink Rubber Stamps">Self-Ink Rubber Stamps</option>
+                          <option value="Booklets & Catalogs">Booklets &amp; Catalogs</option>
+                          <option value="Shopping & Tote Bags">Shopping &amp; Tote Bags</option>
+                          <option value="Event Rollup Banners & Backdrops">Event Rollup Banners &amp; Backdrops</option>
+                          <option value="Lanyards & Table Tents">Lanyards &amp; Table Tents</option>
+                          <option value="3D Signboard & Signage">3D Signboard &amp; Signage</option>
+                          <option value="T-Shirt Printing">T-Shirt Printing</option>
+                          <option value="Tumblers & Mugs">Tumblers &amp; Mugs</option>
+                          <option value="Notebooks & Executive Gifts">Notebooks &amp; Executive Gifts</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Message / Quantity Details */}
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-bold text-zinc-300">Quantity &amp; Print Details</label>
+                      <textarea
+                        rows={3}
+                        required
+                        placeholder="e.g. I need 500 pcs 400 GSM matte laminated cards with gold foil logo by tomorrow..."
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                      />
+                    </div>
+
+                    {/* Security Captcha */}
+                    <div className="space-y-2 p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
+                      <div className="flex items-center gap-2 text-xs font-bold text-zinc-300">
+                        <Lock className="w-3.5 h-3.5 text-orange-400" />
+                        <span>Security Challenge: Solve {num1} + {num2} = ?</span>
+                        <button
+                          type="button"
+                          onClick={generateCaptcha}
+                          className="ml-auto text-zinc-400 hover:text-orange-400 p-1 cursor-pointer"
+                          title="New Challenge"
+                        >
+                          <RefreshCw className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                      <input
+                        type="text"
+                        required
+                        value={captchaInput}
+                        onChange={(e) => {
+                          setCaptchaInput(e.target.value);
+                          if (captchaError) setCaptchaError("");
+                        }}
+                        placeholder="Enter math answer"
+                        className="w-full px-3 py-2 rounded-lg bg-zinc-950 border border-zinc-800 text-white text-xs font-bold focus:outline-none focus:border-orange-500"
+                      />
+                      {captchaError && (
+                        <div className="flex items-center gap-1 text-[11px] text-red-400 font-semibold">
+                          <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                          <span>{captchaError}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Buttons Row */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-orange-500/20 transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
+                      >
+                        <Send className="w-4 h-4" />
+                        <span>{isSubmitting ? "Dispatching..." : "Send Email to SBF Print"}</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={handleWhatsAppSubmit}
+                        className="py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Send via WhatsApp</span>
+                      </button>
+                    </div>
+
+                  </form>
+                </>
+              )}
 
             </div>
           </div>
