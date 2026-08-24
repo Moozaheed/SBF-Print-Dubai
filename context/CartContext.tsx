@@ -18,16 +18,14 @@ export interface CartItem {
   slug: string;
   title: string;
   image: string;
-  unitPrice: number;
   quantity: number;
-  totalPrice: number;
   specs: CartItemSpecs;
 }
 
 interface CartContextType {
   cart: CartItem[];
   cartCount: number;
-  subtotal: number;
+  totalUnits: number;
   isCartOpen: boolean;
   addToCart: (item: Omit<CartItem, "id">) => void;
   removeFromCart: (id: string) => void;
@@ -40,7 +38,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-const STORAGE_KEY = "sbf_print_cart_v1";
+const STORAGE_KEY = "sbf_print_cart_v2";
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -72,11 +70,27 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [cart, isHydrated]);
 
   const addToCart = (item: Omit<CartItem, "id">) => {
-    const newItem: CartItem = {
-      ...item,
-      id: `${item.slug}-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
-    };
-    setCart((prev) => [...prev, newItem]);
+    const specsKey = JSON.stringify(item.specs || {});
+    setCart((prev) => {
+      const existingIndex = prev.findIndex(
+        (i) => i.slug === item.slug && JSON.stringify(i.specs || {}) === specsKey
+      );
+      if (existingIndex > -1) {
+        const updated = [...prev];
+        const existing = updated[existingIndex];
+        const newQty = existing.quantity + item.quantity;
+        updated[existingIndex] = {
+          ...existing,
+          quantity: newQty,
+        };
+        return updated;
+      }
+      const newItem: CartItem = {
+        ...item,
+        id: `${item.slug}-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+      };
+      return [...prev, newItem];
+    });
     setIsCartOpen(true);
   };
 
@@ -92,8 +106,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCart((prev) =>
       prev.map((item) => {
         if (item.id === id) {
-          const newTotal = parseFloat((item.unitPrice * quantity).toFixed(2));
-          return { ...item, quantity, totalPrice: newTotal };
+          return { ...item, quantity };
         }
         return item;
       })
@@ -107,17 +120,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
 
-  const cartCount = cart.reduce((sum, item) => sum + 1, 0);
-  const subtotal = parseFloat(
-    cart.reduce((sum, item) => sum + (item.totalPrice || item.unitPrice * item.quantity), 0).toFixed(2)
-  );
+  const cartCount = cart.length;
+  const totalUnits = cart.reduce((sum, item) => sum + (item.quantity || 0), 0);
 
   return (
     <CartContext.Provider
       value={{
         cart,
         cartCount,
-        subtotal,
+        totalUnits,
         isCartOpen,
         addToCart,
         removeFromCart,

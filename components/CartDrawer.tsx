@@ -15,11 +15,13 @@ import {
   ShieldCheck,
   Truck,
   Sparkles,
+  CheckCircle2,
+  Layers,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 export default function CartDrawer() {
-  const { cart, isCartOpen, closeCart, removeFromCart, updateQuantity, clearCart, subtotal } = useCart();
+  const { cart, isCartOpen, closeCart, removeFromCart, updateQuantity, clearCart, totalUnits } = useCart();
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [deliveryNotes, setDeliveryNotes] = useState("");
@@ -31,29 +33,29 @@ export default function CartDrawer() {
     cart.forEach((item, index) => {
       itemsText += `\n*Item ${index + 1}: ${item.title}*\n`;
       itemsText += `- Quantity: ${item.quantity} units\n`;
-      itemsText += `- Item Total: AED ${item.totalPrice.toFixed(2)}\n`;
       if (item.specs.size) itemsText += `- Size: ${item.specs.size}\n`;
       if (item.specs.material) itemsText += `- Material: ${item.specs.material}\n`;
+      if (item.specs.thickness) itemsText += `- Thickness: ${item.specs.thickness}\n`;
       if (item.specs.finishing && item.specs.finishing !== "None") itemsText += `- Finishing: ${item.specs.finishing}\n`;
       if (item.specs.lamination && item.specs.lamination !== "None") itemsText += `- Lamination: ${item.specs.lamination}\n`;
-      if (item.specs.printing) itemsText += `- Print: ${item.specs.printing}\n`;
-      if (item.specs.comments) itemsText += `- Custom Note: ${item.specs.comments}\n`;
+      if (item.specs.printing) itemsText += `- Printing: ${item.specs.printing}\n`;
+      if (item.specs.comments) itemsText += `- Note: ${item.specs.comments}\n`;
     });
 
     const lines = [
-      "*OFFICIAL ORDER CHECKOUT — SBF PRINT DUBAI*",
+      "*OFFICIAL QUOTATION & ORDER INQUIRY — SBF PRINT DUBAI*",
       "----------------------------------------",
       `*Client Name:* ${customerName || "Not provided"}`,
       `*Client Phone / WhatsApp:* ${customerPhone || "Not provided"}`,
-      `*Delivery Notes / Address:* ${deliveryNotes || "Downtown / Dubai UAE"}`,
+      `*Delivery Location / Notes:* ${deliveryNotes || "Dubai / UAE"}`,
       "----------------------------------------",
-      "*ORDER SUMMARY:*",
+      "*ITEMS TO QUOTE:*",
       itemsText,
       "----------------------------------------",
-      `*Total Items:* ${cart.length}`,
-      `*Grand Total (incl. 5% VAT):* AED ${subtotal.toFixed(2)}`,
+      `*Total Products:* ${cart.length}`,
+      `*Total Quantity:* ${totalUnits} units`,
       "----------------------------------------",
-      "Please confirm artwork submission, production schedule & invoice.",
+      "Please provide your official quotation, bulk tier pricing & timeline.",
     ];
 
     return lines.join("\n");
@@ -65,7 +67,7 @@ export default function CartDrawer() {
   };
 
   const handleEmailCheckout = () => {
-    const subject = encodeURIComponent(`New Printing Order — SBF Print (${customerName || "Website Client"})`);
+    const subject = encodeURIComponent(`Quotation & Order Inquiry — SBF Print (${customerName || "Website Client"})`);
     const body = encodeURIComponent(buildWhatsAppCartMessage().replace(/\*/g, ""));
     window.open(`mailto:sbfprintdesign@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
@@ -89,9 +91,9 @@ export default function CartDrawer() {
                 <ShoppingCart className="w-5 h-5" />
               </div>
               <div>
-                <h2 className="text-base font-extrabold text-zinc-900">Your Shopping Cart</h2>
+                <h2 className="text-base font-extrabold text-zinc-900">Your Quotation Cart</h2>
                 <p className="text-xs text-zinc-500 font-medium">
-                  {cart.length} {cart.length === 1 ? "item" : "items"} configured
+                  {cart.length} {cart.length === 1 ? "product" : "products"} ({totalUnits} total units)
                 </p>
               </div>
             </div>
@@ -126,7 +128,7 @@ export default function CartDrawer() {
                 <div className="space-y-1">
                   <h3 className="text-base font-bold text-zinc-900">Your Cart is Empty</h3>
                   <p className="text-xs text-zinc-500 max-w-xs mx-auto">
-                    Browse our catalog, configure your specifications, and click Add to Cart to begin your order.
+                    Browse our catalog, configure your specifications, and click Add to Cart to request a quote.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -192,8 +194,8 @@ export default function CartDrawer() {
                         )}
                       </div>
 
-                      {/* Pricing & Quantity Controls */}
-                      <div className="flex items-center justify-between pt-1">
+                      {/* Quantity Controls & Quote Badge */}
+                      <div className="flex items-center justify-between pt-1.5">
                         <div className="flex items-center border border-zinc-200 rounded-lg bg-white overflow-hidden">
                           <button
                             type="button"
@@ -214,13 +216,10 @@ export default function CartDrawer() {
                           </button>
                         </div>
 
-                        <div className="text-right">
-                          <div className="text-xs font-black text-[#C68FE6]">
-                            AED {item.totalPrice.toFixed(2)}
-                          </div>
-                          <div className="text-[10px] text-zinc-400">
-                            AED {(item.totalPrice / item.quantity).toFixed(2)} / unit
-                          </div>
+                        <div>
+                          <span className="text-[11px] font-extrabold text-[#C68FE6] bg-purple-50 border border-purple-200 px-2 py-0.5 rounded-md">
+                            Quote on Request
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -252,31 +251,26 @@ export default function CartDrawer() {
                 />
               </div>
 
-              {/* Subtotal & VAT Breakdown */}
-              <div className="space-y-1.5 text-xs">
-                <div className="flex justify-between text-zinc-600 font-medium">
-                  <span>Subtotal:</span>
-                  <span>AED {subtotal.toFixed(2)}</span>
+              {/* Quote Information Summary */}
+              <div className="bg-purple-50/70 border border-purple-200 rounded-xl p-3 text-xs space-y-1">
+                <div className="flex justify-between font-bold text-zinc-900">
+                  <span>Quotation Summary:</span>
+                  <span className="text-[#C68FE6]">{cart.length} items ({totalUnits} pcs)</span>
                 </div>
-                <div className="flex justify-between text-zinc-500 text-[11px]">
-                  <span>VAT (5% Included):</span>
-                  <span>AED {(subtotal * (0.05 / 1.05)).toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-base font-black text-zinc-900 pt-1 border-t border-zinc-200">
-                  <span>Grand Total:</span>
-                  <span className="text-[#C68FE6]">AED {subtotal.toFixed(2)}</span>
-                </div>
+                <p className="text-[11px] text-zinc-600">
+                  Official pricing will be provided based on your specifications, quantity tiers, and finishing.
+                </p>
               </div>
 
               {/* Checkout Action Buttons */}
-              <div className="space-y-2 pt-2">
+              <div className="space-y-2 pt-1">
                 <button
                   type="button"
                   onClick={handleWhatsAppCheckout}
                   className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Checkout on WhatsApp (+971 56 816 7269)</span>
+                  <span>Request Quote on WhatsApp (+971 56 816 7269)</span>
                 </button>
 
                 <button
@@ -285,7 +279,7 @@ export default function CartDrawer() {
                   className="w-full py-2.5 px-4 rounded-xl border border-zinc-300 hover:bg-white text-zinc-700 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#C68FE6]" />
-                  <span>Email Order to sbfprintdesign@gmail.com</span>
+                  <span>Email Quote to sbfprintdesign@gmail.com</span>
                 </button>
               </div>
 

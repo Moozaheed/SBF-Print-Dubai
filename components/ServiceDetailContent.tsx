@@ -59,13 +59,9 @@ export default function ServiceDetailContent({ service }: Props) {
   const reviews = getReviewsForProduct(service.slug, 3);
   const avgRating = (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1);
 
-  // Dynamic Price Calculation
-  const basePricePerUnit = 1.14;
-  const calculatedPrice = (basePricePerUnit * quantity).toFixed(2);
-
   // Construct WhatsApp Order Message
   const orderMessage = encodeURIComponent(
-    `Hello SBF Print & Design,\nI would like to order ${service.title}:\n- Size: ${selectedSize}\n- Quantity: ${quantity} pcs\n- Material: ${selectedMaterial}\n- Thickness: ${selectedThickness}\n- Finishing: ${selectedFinishing}\n- Lamination: ${selectedLamination}\n- Orientation: ${selectedOrientation}\n- Estimated Price: AED ${calculatedPrice}\n\nPlease confirm order and production schedule.`
+    `Hello SBF Print & Design,\nI would like to request an official quotation for ${service.title}:\n- Size: ${selectedSize}\n- Quantity: ${quantity} pcs\n- Material: ${selectedMaterial}\n- Thickness: ${selectedThickness}\n- Finishing: ${selectedFinishing}\n- Lamination: ${selectedLamination}\n- Orientation: ${selectedOrientation}\n${comments ? `- Custom Note: ${comments}\n` : ""}\nPlease provide your best official pricing and production timeline.`
   );
 
   const handleAddToCart = () => {
@@ -73,9 +69,7 @@ export default function ServiceDetailContent({ service }: Props) {
       slug: service.slug,
       title: service.title,
       image: samples[activeImageIndex] || service.heroImage,
-      unitPrice: basePricePerUnit,
       quantity,
-      totalPrice: parseFloat(calculatedPrice),
       specs: {
         size: selectedSize,
         material: selectedMaterial,
@@ -135,8 +129,9 @@ export default function ServiceDetailContent({ service }: Props) {
               <h1 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight">
                 {service.title}
               </h1>
-              <p className="text-sm text-zinc-500 mt-1">
-                starting at <span className="text-[#C68FE6] font-extrabold text-lg">AED {basePricePerUnit}</span>
+              <p className="text-xs font-bold text-[#C68FE6] uppercase tracking-wider mt-1.5 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Price on Official Quotation • Bulk Tier Rates</span>
               </p>
             </div>
 
@@ -396,13 +391,16 @@ export default function ServiceDetailContent({ service }: Props) {
                 </span>
               </div>
 
-              {/* Price Calculation Box */}
-              <div className="text-center py-4 space-y-1 border-y border-zinc-200">
-                <div className="text-3xl sm:text-4xl font-black text-[#C68FE6]">
-                  AED {calculatedPrice}
+              {/* Quote Information Box */}
+              <div className="text-center py-4 space-y-1.5 border-y border-zinc-200">
+                <div className="text-xl sm:text-2xl font-black text-zinc-900">
+                  Official Quote on Request
                 </div>
-                <span className="text-[11px] font-semibold text-zinc-500 block">
-                  *All prices include 5% VAT
+                <span className="text-xs font-bold text-[#C68FE6] block">
+                  Volume Tier Pricing for {quantity} Units
+                </span>
+                <span className="text-[11px] text-zinc-500 block">
+                  Free artwork check • 30-min response • Dubai delivery
                 </span>
               </div>
 
@@ -420,7 +418,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 ) : (
                   <>
                     <ShoppingCart className="w-5 h-5" />
-                    <span>Add to Cart</span>
+                    <span>Add to Cart / Request Quote</span>
                   </>
                 )}
               </button>
@@ -433,7 +431,7 @@ export default function ServiceDetailContent({ service }: Props) {
                 className="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span>Instant Order on WhatsApp</span>
+                <span>Get Instant Quote on WhatsApp</span>
               </a>
 
 
