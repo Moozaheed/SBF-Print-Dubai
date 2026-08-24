@@ -216,6 +216,12 @@ export default function QuoteRequestView() {
     window.open(`https://wa.me/971568167269?text=${msg}`, "_blank");
   };
 
+  const handleEmailDirect = () => {
+    const subject = encodeURIComponent(`Quotation Request #${quoteId || "New"} — ${fullName} (${company || "Individual"})`);
+    const body = encodeURIComponent(buildWhatsAppMessage().replace(/\*/g, ""));
+    window.open(`mailto:sbfprintdesign@gmail.com?subject=${subject}&body=${body}`, "_blank");
+  };
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setFileName(e.target.files[0].name);
@@ -399,15 +405,24 @@ export default function QuoteRequestView() {
               </p>
             </div>
 
-            {/* WhatsApp direct bridge */}
-            <div className="pt-2">
+            {/* Dual Instant Bridges */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={handleWhatsAppDirect}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Send to WhatsApp</span>
+                <span>Send to WhatsApp (+971 56 816 7269)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={handleEmailDirect}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
+              >
+                <Mail className="w-4 h-4 text-[#C68FE6]" />
+                <span>Open in Email App</span>
               </button>
             </div>
 
