@@ -113,13 +113,8 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* SIGN IN / REGISTER / SHOPPING CART on Right */}
-          <div className="flex items-center gap-4 sm:gap-6 flex-shrink-0">
-            <div className="hidden sm:flex items-center gap-3 text-xs font-semibold text-zinc-700">
-              <span className="hover:text-[#C68FE6] cursor-pointer">Sign In</span>
-              <span className="text-zinc-300">|</span>
-              <span className="hover:text-[#C68FE6] cursor-pointer">Register</span>
-            </div>
+          {/* RIGHT ACTIONS: GET A QUOTE & SHOPPING CART */}
+          <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
 
             {/* Request a Quote Button */}
             <Link
