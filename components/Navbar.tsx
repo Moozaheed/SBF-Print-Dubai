@@ -121,6 +121,15 @@ export default function Navbar() {
               <span className="hover:text-[#C68FE6] cursor-pointer">Register</span>
             </div>
 
+            {/* Request a Quote Button */}
+            <Link
+              href="/quote"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 text-[#C68FE6] border border-purple-200 text-xs font-bold transition-all shadow-xs"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Get a Quote</span>
+            </Link>
+
             {/* Shopping Cart Button with Counter */}
             <Link
               href="/all-products"
@@ -170,9 +179,20 @@ export default function Navbar() {
             <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Product Categories</h4>
             <div className="grid grid-cols-1 gap-2">
               <Link
-                href="/all-products"
+                href="/quote"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-3 rounded-xl bg-purple-50 text-[#C68FE6] font-bold text-xs flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" />
+                  <span>Request a Quotation</span>
+                </div>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/all-products"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-3 rounded-xl bg-zinc-100 text-zinc-800 font-bold text-xs flex items-center justify-between"
               >
                 <span>View All Products</span>
                 <ArrowRight className="w-4 h-4" />

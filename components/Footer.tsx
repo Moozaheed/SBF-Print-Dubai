@@ -200,9 +200,10 @@ export default function Footer() {
               Craftsmen.it
             </a>
           </p>
-          <div className="flex gap-4 text-zinc-600 font-medium">
+          <div className="flex flex-wrap gap-4 text-zinc-600 font-medium">
+            <Link href="/quote" className="text-[#C68FE6] font-bold hover:underline">Request a Quote</Link>
             <Link href="/all-products" className="hover:text-[#C68FE6]">All Products</Link>
-            <a href="https://wa.me/9710525069091" target="_blank" rel="noreferrer" className="hover:text-[#C68FE6]">Instant Quote</a>
+            <a href="https://wa.me/971568167269" target="_blank" rel="noreferrer" className="hover:text-[#C68FE6]">Instant WhatsApp Quote</a>
             <a href="mailto:sbfprintdesign@gmail.com" className="hover:text-[#C68FE6]">Email Support</a>
           </div>
         </div>
