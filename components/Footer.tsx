@@ -79,8 +79,8 @@ export default function Footer() {
 
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#C68FE6] flex-shrink-0" />
-                <a href="mailto:sbfprintdesing@gmail.com" className="hover:text-[#C68FE6] font-mono text-zinc-700 transition-colors">
-                  sbfprintdesing@gmail.com
+                <a href="mailto:sbfprintdesign@gmail.com" className="hover:text-[#C68FE6] font-mono text-zinc-700 transition-colors">
+                  sbfprintdesign@gmail.com
                 </a>
               </li>
 
@@ -203,7 +203,7 @@ export default function Footer() {
           <div className="flex gap-4 text-zinc-600 font-medium">
             <Link href="/all-products" className="hover:text-[#C68FE6]">All Products</Link>
             <a href="https://wa.me/9710525069091" target="_blank" rel="noreferrer" className="hover:text-[#C68FE6]">Instant Quote</a>
-            <a href="mailto:sbfprintdesing@gmail.com" className="hover:text-[#C68FE6]">Email Support</a>
+            <a href="mailto:sbfprintdesign@gmail.com" className="hover:text-[#C68FE6]">Email Support</a>
           </div>
         </div>
 

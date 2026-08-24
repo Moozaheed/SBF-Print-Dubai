@@ -116,14 +116,19 @@ export default function ServiceDetailContent({ service }: Props) {
 
             {/* Review Stars & Social Share Bar */}
             <div className="flex items-center justify-between border-y border-zinc-100 py-3">
-              <div className="flex items-center gap-2">
+              <a href="#customer-reviews" className="flex items-center gap-2 group hover:opacity-85 transition-opacity">
                 <div className="flex text-amber-400">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} className="w-4 h-4 fill-amber-400" />
+                    <Star
+                      key={s}
+                      className={`w-4 h-4 ${parseFloat(avgRating) >= s ? "fill-amber-400 text-amber-400" : "fill-zinc-200 text-zinc-200"}`}
+                    />
                   ))}
                 </div>
-                <span className="text-xs font-semibold text-zinc-400">No reviews yet.</span>
-              </div>
+                <span className="text-xs font-bold text-zinc-700 group-hover:text-[#C68FE6] transition-colors">
+                  {avgRating} ({reviews.length} {reviews.length === 1 ? "review" : "verified reviews"})
+                </span>
+              </a>
 
               <div className="flex items-center gap-2 text-xs font-medium text-zinc-500">
                 <span>Share:</span>
@@ -429,14 +434,14 @@ export default function ServiceDetailContent({ service }: Props) {
             </ul>
 
             <p className="pt-2">
-              If you have any questions or need custom quotation assistance, contact our Dubai press team directly at <strong className="text-zinc-900">+971 052 506 9091</strong> or email <strong className="text-zinc-900">sbfprintdesing@gmail.com</strong>.
+              If you have any questions or need custom quotation assistance, contact our Dubai press team directly at <strong className="text-zinc-900">+971 052 506 9091</strong> or email <strong className="text-zinc-900">sbfprintdesign@gmail.com</strong>.
             </p>
           </div>
         </div>
 
 
         {/* SECTION 4: CUSTOMER REVIEWS */}
-        <div className="border-t border-zinc-200 pt-12 space-y-8">
+        <div id="customer-reviews" className="border-t border-zinc-200 pt-12 space-y-8 scroll-mt-36">
           <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-900 text-center tracking-tight uppercase">
             Customer Reviews
           </h2>

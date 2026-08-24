@@ -74,7 +74,7 @@ netlify deploy --prod --dir=out
 ## Contact
 
 - **WhatsApp:** +971 052 506 9091
-- **Email:** sbfprintdesing@gmail.com
+- **Email:** sbfprintdesign@gmail.com
 - **Instagram:** [@sbfprint](https://www.instagram.com/sbfprint)
 - **Facebook:** [SBF Print & Design](https://www.facebook.com/share/1EnXu9Zsbj/)
 - **Location:** Downtown Dubai, UAE

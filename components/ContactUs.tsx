@@ -95,7 +95,7 @@ export default function ContactUs() {
 
               {/* Email Address */}
               <a
-                href="mailto:sbfprintdesing@gmail.com"
+                href="mailto:sbfprintdesign@gmail.com"
                 className="flex items-start gap-4 p-4 rounded-xl bg-zinc-800/60 border border-zinc-700/80 hover:bg-zinc-800 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg bg-zinc-700 text-white flex items-center justify-center flex-shrink-0 shadow-md">
@@ -106,7 +106,7 @@ export default function ContactUs() {
                     Email Official Quotations
                   </span>
                   <span className="text-base font-extrabold text-white group-hover:text-orange-400 transition-colors">
-                    sbfprintdesing@gmail.com
+                    sbfprintdesign@gmail.com
                   </span>
                 </div>
               </a>

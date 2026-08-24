@@ -87,7 +87,7 @@ At SBF Print & Design, we believe every print is a brand touchpoint. Whether it'
 
 Visit our [All Products](/all-products) page, choose your product, set your specifications, and our team will take it from there — pre-flight checked, color calibrated, beautifully finished, and delivered to your door.
 
-**Call or WhatsApp: +971 052 506 9091 | Email: sbfprintdesing@gmail.com**
+**Call or WhatsApp: +971 052 506 9091 | Email: sbfprintdesign@gmail.com**
     `,
     comments: [
       {
@@ -206,7 +206,7 @@ Combined with Spot UV or velvet touch, rounded corners complete the luxury busin
 
 We produce luxury business cards with same-day and 24-hour turnaround, free artwork pre-flight check, and delivery across all 7 UAE Emirates. Visit our [Business Cards page](/services/business-cards) to configure your order, or contact us directly for a custom quote.
 
-**WhatsApp: +971 052 506 9091 | Email: sbfprintdesing@gmail.com**
+**WhatsApp: +971 052 506 9091 | Email: sbfprintdesign@gmail.com**
     `,
     comments: [
       {
@@ -343,7 +343,7 @@ SBF Print & Design in Downtown Dubai specializes in manufacturing and installing
 
 Visit our [Signage page](/services/outdoor-signboard-3d-letter) or contact us for a free site visit and quotation.
 
-**WhatsApp: +971 052 506 9091 | Email: sbfprintdesing@gmail.com**
+**WhatsApp: +971 052 506 9091 | Email: sbfprintdesign@gmail.com**
     `,
     comments: [
       {
