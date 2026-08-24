@@ -14,12 +14,13 @@ import {
 } from "lucide-react";
 import { MEGA_MENU_CATEGORIES } from "@/data/megaMenuData";
 import SubHeaderCategoryNav from "./SubHeaderCategoryNav";
+import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+  const { cartCount, openCart } = useCart();
 
   // Collect all searchable products from megaMenuData
   const allProducts = MEGA_MENU_CATEGORIES.flatMap((cat) =>
@@ -126,9 +127,11 @@ export default function Navbar() {
             </Link>
 
             {/* Shopping Cart Button with Counter */}
-            <Link
-              href="/all-products"
-              className="relative p-2.5 rounded-xl border border-zinc-200 hover:border-[#C68FE6] text-zinc-700 hover:text-[#C68FE6] transition-all bg-zinc-50"
+            <button
+              type="button"
+              onClick={openCart}
+              aria-label="Open Shopping Cart"
+              className="relative p-2.5 rounded-xl border border-zinc-200 hover:border-[#C68FE6] text-zinc-700 hover:text-[#C68FE6] transition-all bg-zinc-50 cursor-pointer"
             >
               <ShoppingCart className="w-5 h-5" />
               {cartCount > 0 && (
@@ -136,7 +139,7 @@ export default function Navbar() {
                   {cartCount}
                 </span>
               )}
-            </Link>
+            </button>
 
             {/* Mobile Menu Toggle Button */}
             <button

@@ -20,7 +20,7 @@ export default function ContactUs() {
       serviceCategory
     )}%0ADetails/Quantity: ${encodeURIComponent(message)}`;
 
-    const whatsappUrl = `https://wa.me/9710525069091?text=${formattedText}`;
+    const whatsappUrl = `https://wa.me/971568167269?text=${formattedText}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -57,7 +57,7 @@ export default function ContactUs() {
               
               {/* WhatsApp Direct */}
               <a
-                href="https://wa.me/9710525069091"
+                href="https://wa.me/971568167269"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 hover:bg-emerald-900/40 transition-colors group"
@@ -77,7 +77,7 @@ export default function ContactUs() {
 
               {/* Mobile Phone Call */}
               <a
-                href="tel:+9710525069091"
+                href="tel:+971568167269"
                 className="flex items-start gap-4 p-4 rounded-xl bg-zinc-800/60 border border-zinc-700/80 hover:bg-zinc-800 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg bg-orange-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">

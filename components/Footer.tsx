@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-3 text-xs text-zinc-600">
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C68FE6] flex-shrink-0" />
-                <a href="tel:+9710525069091" className="hover:text-[#C68FE6] font-mono font-bold text-zinc-900 transition-colors">
+                <a href="tel:+971568167269" className="hover:text-[#C68FE6] font-mono font-bold text-zinc-900 transition-colors">
                   +971 052 506 9091
                 </a>
               </li>
@@ -68,7 +68,7 @@ export default function Footer() {
               <li className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                 <a
-                  href="https://wa.me/9710525069091"
+                  href="https://wa.me/971568167269"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-emerald-700 font-mono font-bold text-emerald-600 transition-colors"

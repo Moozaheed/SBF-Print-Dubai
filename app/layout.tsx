@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+import CartDrawer from "@/components/CartDrawer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sbfprint.ae"),
@@ -112,7 +114,7 @@ export default function RootLayout({
           "https://sbfprint.ae/commercial-services/business-cards.jpg",
         ],
         "description": "SBF Print & Design is located at Nakheel Centre, Deira Dubai — a leading commercial printing press offering business cards, 3D signage, banners, stickers, packaging, and same-day printing across Dubai & UAE.",
-        "telephone": "+9710525069091",
+        "telephone": "+971568167269",
         "email": "sbfprintdesign@gmail.com",
         "currenciesAccepted": "AED",
         "paymentAccepted": "Cash, Visa, Mastercard, Tabby, Bank Transfer",
@@ -266,7 +268,10 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {children}
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
