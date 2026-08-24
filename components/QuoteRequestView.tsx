@@ -213,7 +213,7 @@ export default function QuoteRequestView() {
       return;
     }
     const msg = encodeURIComponent(buildWhatsAppMessage());
-    window.open(`https://wa.me/971568167269?text=${msg}`, "_blank");
+    window.open(`https://wa.me/971525069091?text=${msg}`, "_blank");
   };
 
   const handleEmailDirect = () => {
@@ -413,7 +413,7 @@ export default function QuoteRequestView() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Send to WhatsApp (+971 56 816 7269)</span>
+                <span>Send to WhatsApp (+971 052 506 9091)</span>
               </button>
 
               <button
@@ -835,7 +835,7 @@ export default function QuoteRequestView() {
             </div>
 
             <div className="text-center text-[11px] text-zinc-400">
-              Downtown Dubai Press • Direct Line: <strong className="text-zinc-600 font-mono">+971 56 816 7269</strong> • Email: <strong className="text-zinc-600 font-mono">sbfprintdesign@gmail.com</strong>
+              Downtown Dubai Press • Direct Line: <strong className="text-zinc-600 font-mono">+971 052 506 9091</strong> • Email: <strong className="text-zinc-600 font-mono">sbfprintdesign@gmail.com</strong>
             </div>
 
           </form>

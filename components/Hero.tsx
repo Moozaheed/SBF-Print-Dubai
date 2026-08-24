@@ -60,7 +60,7 @@ export default function Hero() {
           {/* WhatsApp Primary CTA Button */}
           <div className="pt-4 flex items-center justify-center">
             <a
-              href="https://wa.me/971568167269"
+              href="https://wa.me/971525069091"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-emerald-600/30 transition-all hover:scale-105 active:scale-95"

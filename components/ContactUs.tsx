@@ -85,7 +85,7 @@ export default function ContactUs() {
     if (!fullName.trim() || !isEmailValid || !isPhoneValid) return;
 
     const formattedText = `*NEW INQUIRY — SBF PRINT DUBAI*\n\n*Client:* ${fullName}\n*Email:* ${email}\n*Phone:* ${phone}\n*Service:* ${serviceCategory}\n*Details:* ${message || "General Inquiry"}`;
-    const whatsappUrl = `https://wa.me/971568167269?text=${encodeURIComponent(formattedText)}`;
+    const whatsappUrl = `https://wa.me/971525069091?text=${encodeURIComponent(formattedText)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -178,7 +178,7 @@ export default function ContactUs() {
               
               {/* WhatsApp Direct */}
               <a
-                href="https://wa.me/971568167269"
+                href="https://wa.me/971525069091"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 hover:bg-emerald-900/40 transition-colors group"
@@ -191,14 +191,14 @@ export default function ContactUs() {
                     Fastest Response (WhatsApp)
                   </span>
                   <span className="text-base font-extrabold text-white group-hover:text-emerald-300 transition-colors">
-                    +971 56 816 7269
+                    +971 052 506 9091
                   </span>
                 </div>
               </a>
 
               {/* Mobile Phone Call */}
               <a
-                href="tel:+971568167269"
+                href="tel:+971525069091"
                 className="flex items-start gap-4 p-4 rounded-xl bg-zinc-800/60 border border-zinc-700/80 hover:bg-zinc-800 transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg bg-orange-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
@@ -209,7 +209,7 @@ export default function ContactUs() {
                     Press Desk Direct Call
                   </span>
                   <span className="text-base font-extrabold text-white group-hover:text-orange-400 transition-colors">
-                    +971 56 816 7269
+                    +971 052 506 9091
                   </span>
                 </div>
               </a>

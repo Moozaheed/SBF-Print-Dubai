@@ -238,7 +238,7 @@ export default async function BlogPostPage({
             <div className="bg-[#C68FE6]/5 border border-[#C68FE6]/20 rounded-2xl p-6 space-y-3 text-center">
               <p className="text-sm font-bold text-zinc-700">Have a question or feedback about this article?</p>
               <a
-                href={`https://wa.me/971568167269?text=${encodeURIComponent(`Hi SBF Print! I read your blog article: "${post.title}" and wanted to ask...`)}`}
+                href={`https://wa.me/971525069091?text=${encodeURIComponent(`Hi SBF Print! I read your blog article: "${post.title}" and wanted to ask...`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white text-xs font-extrabold transition-colors shadow-sm"

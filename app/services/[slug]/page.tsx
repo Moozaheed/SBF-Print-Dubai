@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${service.title} | Same Day Printing Dubai | SBF Print`,
-    description: `${service.subtitle} Free artwork check. Same-day & 48-hour delivery across Dubai & all UAE Emirates. Call +971 56 816 7269.`,
+    description: `${service.subtitle} Free artwork check. Same-day & 48-hour delivery across Dubai & all UAE Emirates. Call +971 052 506 9091.`,
     keywords: [
       `${service.title.toLowerCase()}`,
       `${service.title.toLowerCase()} dubai`,

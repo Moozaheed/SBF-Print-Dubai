@@ -63,7 +63,7 @@ export default function CartDrawer() {
 
   const handleWhatsAppCheckout = () => {
     const message = encodeURIComponent(buildWhatsAppCartMessage());
-    window.open(`https://wa.me/971568167269?text=${message}`, "_blank");
+    window.open(`https://wa.me/971525069091?text=${message}`, "_blank");
   };
 
   const handleEmailCheckout = () => {

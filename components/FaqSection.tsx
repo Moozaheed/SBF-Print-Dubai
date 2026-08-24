@@ -104,15 +104,15 @@ export default function FaqSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
-              href="tel:+971568167269"
+              href="tel:+971525069091"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-zinc-900 font-extrabold text-sm hover:bg-zinc-100 transition-all"
             >
               <Phone className="w-4 h-4 text-orange-600" />
-              <span>Call +971 56 816 7269</span>
+              <span>Call +971 052 506 9091</span>
             </a>
 
             <a
-              href="https://wa.me/971568167269"
+              href="https://wa.me/971525069091"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm transition-all"

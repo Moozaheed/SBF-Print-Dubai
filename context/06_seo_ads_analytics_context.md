@@ -36,7 +36,7 @@ graph TD
 
 ### Key Conversion Events Tracked
 1. **`purchase`**: Fired upon successful order payment or B2B checkout completion. Transmits order value, currency (AED), transaction ID, and ordered print products.
-2. **`whatsapp_click`**: Fired when user taps any WhatsApp direct trigger (`+971 56 816 7269`).
+2. **`whatsapp_click`**: Fired when user taps any WhatsApp direct trigger (`+971 052 506 9091`).
 3. **`phone_call_click`**: Fired when user taps click-to-call link.
 4. **`sample_kit_request`**: Fired upon submission of 3-field paper sample kit lead magnet.
 5. **`calculator_price_generated`**: Fired when user interacts with real-time price calculator.
@@ -94,7 +94,7 @@ Embedded automatically in Next.js Server Component layouts:
       "@id": "https://sbfprint.ae/#organization",
       "name": "SBF Print And Design",
       "image": "https://sbfprint.ae/images/logo.png",
-      "telephone": "+971568167269",
+      "telephone": "+971525069091",
       "email": "sbfkarim@gmail.com",
       "hasMap": "https://www.google.com/maps?cid=4646316211352300491",
       "sameAs": [

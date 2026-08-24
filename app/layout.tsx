@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | SBF Print & Design Dubai",
   },
   description:
-    "SBF Print & Design — commercial printing press at Nakheel Centre, Deira Dubai. Business cards, signage, banners, stickers, 3D letters & custom packaging. Same-day printing & delivery across Dubai & UAE. Call +971 56 816 7269.",
+    "SBF Print & Design — commercial printing press at Nakheel Centre, Deira Dubai. Business cards, signage, banners, stickers, 3D letters & custom packaging. Same-day printing & delivery across Dubai & UAE. Call +971 052 506 9091.",
   keywords: [
     "printing press dubai",
     "printing company dubai",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Printing Press Dubai | SBF Print & Design — Same Day Printing",
     description:
-      "Dubai's leading commercial printing press — business cards, 3D signage, banners, stickers & custom packaging. Same-day printing & delivery. Free artwork check. Call +971 56 816 7269.",
+      "Dubai's leading commercial printing press — business cards, 3D signage, banners, stickers & custom packaging. Same-day printing & delivery. Free artwork check. Call +971 052 506 9091.",
     url: "https://sbfprint.ae",
     siteName: "SBF Print And Design",
     images: [
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Printing Press Dubai | SBF Print & Design",
-    description: "Same-day commercial printing at Nakheel Centre, Deira Dubai — business cards, signage, banners & more. +971 056 816 7269.",
+    description: "Same-day commercial printing at Nakheel Centre, Deira Dubai — business cards, signage, banners & more. +971 052 506 9091.",
     images: ["/portfolio/gold-foil-luxury-card.jpg"],
   },
   verification: {
@@ -114,7 +114,7 @@ export default function RootLayout({
           "https://sbfprint.ae/commercial-services/business-cards.jpg",
         ],
         "description": "SBF Print & Design is located at Nakheel Centre, Deira Dubai — a leading commercial printing press offering business cards, 3D signage, banners, stickers, packaging, and same-day printing across Dubai & UAE.",
-        "telephone": "+971568167269",
+        "telephone": "+971525069091",
         "email": "sbfprintdesign@gmail.com",
         "currenciesAccepted": "AED",
         "paymentAccepted": "Cash, Visa, Mastercard, Tabby, Bank Transfer",

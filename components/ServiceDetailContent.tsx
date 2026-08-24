@@ -358,7 +358,7 @@ export default function ServiceDetailContent({ service }: Props) {
               {/* Upload Artwork Button */}
               <div className="pt-2">
                 <a
-                  href={`https://wa.me/971568167269?text=${encodeURIComponent(
+                  href={`https://wa.me/971525069091?text=${encodeURIComponent(
                     `Hello SBF Print, I want to send my artwork file for ${service.title}`
                   )}`}
                   target="_blank"
@@ -425,7 +425,7 @@ export default function ServiceDetailContent({ service }: Props) {
 
               {/* Order on WhatsApp Button */}
               <a
-                href={`https://wa.me/971568167269?text=${orderMessage}`}
+                href={`https://wa.me/971525069091?text=${orderMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"

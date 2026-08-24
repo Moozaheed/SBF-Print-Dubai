@@ -104,7 +104,7 @@ export default function SampleKit() {
                         required
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+971 56 816 7269"
+                        placeholder="+971 052 506 9091"
                         className="w-full px-4 py-3 rounded-xl border border-zinc-300 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
                       />
                     </div>

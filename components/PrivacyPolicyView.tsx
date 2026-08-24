@@ -222,8 +222,8 @@ export default function PrivacyPolicyView() {
               </div>
               <div className="p-4 rounded-2xl bg-zinc-800/80 border border-zinc-700/80 space-y-1">
                 <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider block">Phone / WhatsApp</span>
-                <a href="tel:+971568167269" className="font-bold text-white hover:text-[#C68FE6] transition-colors font-mono">
-                  +971 56 816 7269
+                <a href="tel:+971525069091" className="font-bold text-white hover:text-[#C68FE6] transition-colors font-mono">
+                  +971 052 506 9091
                 </a>
               </div>
               <div className="p-4 rounded-2xl bg-zinc-800/80 border border-zinc-700/80 space-y-1">

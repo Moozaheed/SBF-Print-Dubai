@@ -69,7 +69,7 @@ export default function HowItWorks() {
         {/* CTA Banner */}
         <div className="mt-12 text-center">
           <a
-            href="https://wa.me/971568167269"
+            href="https://wa.me/971525069091"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base shadow-lg shadow-emerald-600/30 transition-all hover:scale-105"

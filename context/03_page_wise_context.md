@@ -91,14 +91,14 @@ This document provides the exhaustive specification for every user-facing page, 
 - **3-Field Form**: Name, Address, Mobile Number + `[ Get Free Sample Pack ]` action button.
 
 ### Section 9: Footer & Local SEO Schema
-- **Company Details**: SBF Print And Design, Downtown, Dubai, UAE, 0000. Phone & WhatsApp: +971 56 816 7269, Email: sbfkarim@gmail.com.
+- **Company Details**: SBF Print And Design, Downtown, Dubai, UAE, 0000. Phone & WhatsApp: +971 052 506 9091, Email: sbfkarim@gmail.com.
 - **Google Map Embed**: Interactive location viewer for physical press pick-up.
 - **SEO Keyword Navigation**: Direct clean links to print categories.
 - **Security & Payment Badges**: SSL Encryption, Visa, Mastercard, Apple Pay, Stripe, Cash / Bank Transfer on Pickup.
 
 ### Section 10: Persistent Mobile Conversion Overlays (Advanced Glassmorphism)
 - **Sticky Bottom Bar (Mobile Viewports Only)**: Fixed frosted glass bar (`backdrop-blur-lg bg-zinc-900/90 text-white border-t border-zinc-800 p-3 shadow-2xl`):
-  `[ <MessageSquare className="w-4 h-4 text-emerald-400 mr-2" /> WhatsApp Direct ]` (Deep link to `https://wa.me/971568167269`) | `[ <Zap className="w-4 h-4 text-amber-400 mr-2" /> Instant Quote ]` (Triggers quote modal).
+  `[ <MessageSquare className="w-4 h-4 text-emerald-400 mr-2" /> WhatsApp Direct ]` (Deep link to `https://wa.me/971525069091`) | `[ <Zap className="w-4 h-4 text-amber-400 mr-2" /> Instant Quote ]` (Triggers quote modal).
 - **Floating Back-to-Top Button**: Smooth scroll back to top navigation with `<ArrowUp className="w-5 h-5" />` icon and hover glass elevation.
 
 ---
@@ -126,7 +126,7 @@ This document provides the exhaustive specification for every user-facing page, 
   - Bleed & Margin Check: Validates 3mm bleed margin safety boundaries.
 - **Post-Purchase Artwork Selection**:
   - Option A: `"Upload Artwork Now"`
-  - Option B: `"Send Artwork Later via Email (sbfkarim@gmail.com) / WhatsApp (+971 56 816 7269)"`
+  - Option B: `"Send Artwork Later via Email (sbfkarim@gmail.com) / WhatsApp (+971 052 506 9091)"`
 - **Designer Help Request**: Checkbox `"I need a designer to create or fix my layout (+ AED 100 Fee)"`.
 
 ---
@@ -161,7 +161,7 @@ This document provides the exhaustive specification for every user-facing page, 
 ## 7. Contact & Physical Press Location (`/contact`)
 
 - **Interactive Map**: Google Maps embed for Downtown, Dubai, UAE location.
-- **Direct Contact Info**: Phone & WhatsApp (+971 56 816 7269), Email (sbfkarim@gmail.com).
+- **Direct Contact Info**: Phone & WhatsApp (+971 052 506 9091), Email (sbfkarim@gmail.com).
 - **Instant WhatsApp Chat Widget**: Floating responsive widget launching direct chat.
 
 ---
