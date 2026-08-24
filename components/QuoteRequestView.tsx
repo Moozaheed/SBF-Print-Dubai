@@ -251,29 +251,27 @@ export default function QuoteRequestView() {
 `;
     });
 
-    const web3formsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "e53d5a2d-b054-4752-bf6d-88f5a6b0c273";
-
     try {
-      // 1. Dispatch directly via Web3Forms API to sbfprintdesign@gmail.com
-      await fetch("https://api.web3forms.com/submit", {
+      // 1. Dispatch directly via FormSubmit.co to sbfprintdesign@gmail.com
+      await fetch("https://formsubmit.co/ajax/sbfprintdesign@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: web3formsAccessKey,
-          subject: `[New Quote #${generatedId}] from ${fullName} (${company || "Individual"})`,
-          from_name: "SBF Print Quote Desk",
-          to_email: "sbfprintdesign@gmail.com",
-          name: fullName,
-          email: email,
-          phone: phone,
-          company: company || "Not specified",
-          speed: SPEED_OPTIONS.find((s) => s.id === speed)?.title,
-          file_name: fileName || "No file attached",
-          products_summary: itemsEmailText,
-          notes: generalNotes || "None",
+          _subject: `New Quotation Request #${generatedId} — ${fullName}`,
+          _template: "table",
+          _captcha: "false",
+          "Quote Reference": generatedId,
+          "Full Name": fullName,
+          "Company / Brand": company || "Individual",
+          "Email Address": email,
+          "Phone / WhatsApp": phone,
+          "Turnaround Speed": SPEED_OPTIONS.find((s) => s.id === speed)?.title,
+          "Products & Quantities": itemsEmailText,
+          "Demo File / Artwork": fileName || "None attached",
+          "Project Notes": generalNotes || "None",
         }),
       });
 

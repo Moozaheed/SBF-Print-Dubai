@@ -104,23 +104,38 @@ export default function ContactUs() {
     setCaptchaError("");
 
     setIsSubmitting(true);
-    const web3formsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "e53d5a2d-b054-4752-bf6d-88f5a6b0c273";
 
     try {
-      await fetch("https://api.web3forms.com/submit", {
+      // 1. Dispatch directly via FormSubmit.co to sbfprintdesign@gmail.com
+      await fetch("https://formsubmit.co/ajax/sbfprintdesign@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: web3formsAccessKey,
-          subject: `[Website Contact Inquiry] from ${fullName}`,
-          from_name: "SBF Print Contact Form",
-          to_email: "sbfprintdesign@gmail.com",
-          name: fullName,
-          email: email,
-          phone: phone,
-          service: serviceCategory,
-          message: message,
+          _subject: `Website Contact Inquiry — ${fullName}`,
+          _template: "table",
+          _captcha: "false",
+          "Client Name": fullName,
+          "Email Address": email,
+          "Phone Number": phone,
+          "Service Required": serviceCategory,
+          "Inquiry Message": message,
         }),
+      });
+
+      // 2. Netlify static form capture
+      const formData = new FormData();
+      formData.append("form-name", "contact-inquiry");
+      formData.append("fullName", fullName);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("serviceCategory", serviceCategory);
+      formData.append("message", message);
+      formData.append("targetEmail", "sbfprintdesign@gmail.com");
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
       });
     } catch (err) {
       console.warn("Contact submission note:", err);
