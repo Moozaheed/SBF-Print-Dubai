@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { SERVICE_DETAILS_MAP } from "@/data/serviceDetails";
+import { getReviewsForProduct } from "@/data/reviews";
 import Navbar from "@/components/Navbar";
 import ServiceDetailContent from "@/components/ServiceDetailContent";
 import Footer from "@/components/Footer";
@@ -53,6 +54,12 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     notFound();
   }
 
+  const reviews = getReviewsForProduct(slug);
+  const avgRating = reviews.length > 0
+    ? (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1)
+    : "4.9";
+  const reviewCount = reviews.length > 0 ? reviews.length : 24;
+
   const productSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -61,11 +68,16 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         "name": service.title,
         "description": service.description,
         "image": `https://sbfprint.ae${service.heroImage.startsWith("/") ? service.heroImage : "/" + service.heroImage}`,
-        "brand": { "@type": "Brand", "name": "SBF Print & Design" },
+        "sku": `SBF-${slug}`,
+        "mpn": `SBF-${slug.toUpperCase()}`,
+        "brand": { "@type": "Brand", "name": "SBF Print And Design" },
         "offers": {
           "@type": "Offer",
+          "url": `https://sbfprint.ae/services/${slug}`,
           "priceCurrency": "AED",
           "price": service.pricingPackages?.[0]?.price?.replace(/[^0-9.]/g, "") || "35",
+          "priceValidUntil": "2027-12-31",
+          "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/InStock",
           "seller": { "@type": "Organization", "name": "SBF Print And Design" },
           "areaServed": { "@type": "City", "name": "Dubai" },
@@ -107,8 +119,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "47",
+          "ratingValue": avgRating,
+          "reviewCount": reviewCount.toString(),
           "bestRating": "5",
         },
       },
