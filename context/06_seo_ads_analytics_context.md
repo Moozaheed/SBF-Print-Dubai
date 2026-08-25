@@ -5,25 +5,21 @@
 To maximize ROI on Google Ads campaigns targeting Dubai and UAE print buyers, the platform implements **Server-Side & Client-Side Dual Conversion Tracking** integrated with Google Tag Manager.
 
 ### 1.1 Google Tag Manager Container
-- **Container ID**: `GTM-PR8GVW9C`
-- **Next.js 15 Implementation**: Implemented via `@next/third-parties/google` (`<GoogleTagManager gtmId="GTM-PR8GVW9C" />`) or inline in `app/layout.tsx`.
+- **Container ID**: `GTM-T9XCPM9P`
+- **Next.js 15 Implementation**: Implemented via `@next/third-parties/google` (`<GoogleTagManager gtmId="GTM-T9XCPM9P" />`) or inline in `app/layout.tsx`.
+- **Global Placement**:
+  ```html
+  <!-- Head Script -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T9XCPM9P');</script>
 
-```html
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PR8GVW9C');</script>
-<!-- End Google Tag Manager -->
-```
-
-```html
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR8GVW9C"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-```
+  <!-- Body NoScript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9XCPM9P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  ```
 
 ```mermaid
 graph TD
