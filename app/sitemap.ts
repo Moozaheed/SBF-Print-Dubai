@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { SERVICE_DETAILS_MAP } from "@/data/serviceDetails";
+import { ALL_PRODUCTS } from "@/data/productsCatalog";
 import { BLOG_POSTS } from "@/data/blogs";
 
 export const dynamic = "force-static";
@@ -8,8 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sbfprint.ae";
   const now = new Date();
 
-  const serviceUrls: MetadataRoute.Sitemap = Object.keys(SERVICE_DETAILS_MAP).map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
+  const serviceUrls: MetadataRoute.Sitemap = ALL_PRODUCTS.map((prod) => ({
+    url: `${baseUrl}/services/${prod.slug}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.85,
