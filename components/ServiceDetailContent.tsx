@@ -51,7 +51,7 @@ export default function ServiceDetailContent({ service }: Props) {
   const [selectedLamination, setSelectedLamination] = useState("None");
   const [selectedOrientation, setSelectedOrientation] = useState<"landscape" | "portrait">("portrait");
   const [comments, setComments] = useState("");
-  const [quantity, setQuantity] = useState(100);
+  const [quantity, setQuantity] = useState(1);
 
   // Active Tab State (Info, Delivery, Payment, Tips)
   const [activeTab, setActiveTab] = useState<"info" | "delivery" | "payment" | "tips">("info");
@@ -377,18 +377,38 @@ export default function ServiceDetailContent({ service }: Props) {
               
               {/* Quantity Input */}
               <div className="space-y-2">
-                <label className="text-xs font-bold text-zinc-700 uppercase tracking-wider">QUANTITY</label>
-                <input
-                  type="number"
-                  min={10}
-                  step={10}
-                  value={quantity}
-                  onChange={(e) => setQuantity(Math.max(10, parseInt(e.target.value) || 10))}
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-300 text-sm font-bold text-zinc-900 focus:outline-none focus:border-[#C68FE6]"
-                />
-                <span className="text-[11px] font-semibold text-[#C68FE6] cursor-pointer hover:underline block">
-                  Quantity and Savings Chart
-                </span>
+                <div className="flex items-center justify-between">
+                  <label className="text-xs font-bold text-zinc-700 uppercase tracking-wider">QUANTITY</label>
+                  <span className="text-[11px] text-zinc-400 font-medium">Min: 1 unit</span>
+                </div>
+                <div className="flex items-center border border-zinc-300 rounded-xl bg-white overflow-hidden focus-within:border-[#C68FE6] transition-colors">
+                  <button
+                    type="button"
+                    onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+                    className="px-4 py-3 text-zinc-600 hover:bg-zinc-100 transition-colors font-bold text-base cursor-pointer"
+                    aria-label="Decrease quantity"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    min={1}
+                    value={quantity}
+                    onChange={(e) => {
+                      const val = parseInt(e.target.value, 10);
+                      setQuantity(isNaN(val) || val < 1 ? 1 : val);
+                    }}
+                    className="w-full py-3 text-center text-sm font-bold text-zinc-900 focus:outline-none bg-transparent"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setQuantity((prev) => prev + 1)}
+                    className="px-4 py-3 text-zinc-600 hover:bg-zinc-100 transition-colors font-bold text-base cursor-pointer"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
 
               {/* Quote Information Box */}
@@ -396,11 +416,8 @@ export default function ServiceDetailContent({ service }: Props) {
                 <div className="text-xl sm:text-2xl font-black text-zinc-900">
                   Official Quote on Request
                 </div>
-                <span className="text-xs font-bold text-[#C68FE6] block">
-                  Volume Tier Pricing for {quantity} Units
-                </span>
                 <span className="text-[11px] text-zinc-500 block">
-                  Free artwork check • 30-min response • Dubai delivery
+                  Free artwork check • 30-min response • Dubai &amp; UAE delivery
                 </span>
               </div>
 

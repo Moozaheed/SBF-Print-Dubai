@@ -324,18 +324,27 @@ export default function CartDrawer() {
                         <div className="flex items-center border border-zinc-200 rounded-lg bg-white overflow-hidden">
                           <button
                             type="button"
-                            onClick={() => updateQuantity(item.id, Math.max(10, item.quantity - 10))}
-                            className="p-1 text-zinc-500 hover:bg-zinc-100 transition-colors cursor-pointer"
+                            onClick={() => updateQuantity(item.id, Math.max(1, item.quantity - 1))}
+                            className="p-1.5 text-zinc-500 hover:bg-zinc-100 transition-colors cursor-pointer"
+                            aria-label="Decrease quantity"
                           >
                             <Minus className="w-3 h-3" />
                           </button>
-                          <span className="px-2 text-xs font-bold text-zinc-800 min-w-[36px] text-center">
-                            {item.quantity}
-                          </span>
+                          <input
+                            type="number"
+                            min={1}
+                            value={item.quantity}
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value, 10);
+                              updateQuantity(item.id, isNaN(val) || val < 1 ? 1 : val);
+                            }}
+                            className="w-12 text-xs font-bold text-zinc-800 text-center focus:outline-none bg-transparent"
+                          />
                           <button
                             type="button"
-                            onClick={() => updateQuantity(item.id, item.quantity + 10)}
-                            className="p-1 text-zinc-500 hover:bg-zinc-100 transition-colors cursor-pointer"
+                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            className="p-1.5 text-zinc-500 hover:bg-zinc-100 transition-colors cursor-pointer"
+                            aria-label="Increase quantity"
                           >
                             <Plus className="w-3 h-3" />
                           </button>
