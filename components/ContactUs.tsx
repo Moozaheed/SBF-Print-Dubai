@@ -137,6 +137,26 @@ export default function ContactUs() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
+
+      // 3. Dispatch to Telegram Bot
+      try {
+        await fetch("/api/telegram-quote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            quoteId: `INQ-${Math.floor(100000 + Math.random() * 900000)}`,
+            fullName,
+            company: "General Contact Inquiry",
+            email,
+            phone,
+            speed: "Direct Contact",
+            items: `Service Category: ${serviceCategory}\nMessage: ${message}`,
+            notes: message,
+          }),
+        });
+      } catch (tgErr) {
+        console.warn("Telegram dispatch note:", tgErr);
+      }
     } catch (err) {
       console.warn("Contact submission note:", err);
     }

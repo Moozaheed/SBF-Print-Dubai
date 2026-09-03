@@ -299,6 +299,27 @@ export default function QuoteRequestView() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
+
+      // 3. Dispatch directly to Telegram Bot (@sbf_print_dubai_bot)
+      try {
+        await fetch("/api/telegram-quote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            quoteId: generatedId,
+            fullName,
+            company: company || "Individual",
+            email,
+            phone,
+            speed: SPEED_OPTIONS.find((s) => s.id === speed)?.title,
+            items: itemsEmailText,
+            notes: generalNotes,
+            fileName: fileName || "None attached",
+          }),
+        });
+      } catch (tgErr) {
+        console.warn("Telegram dispatch note:", tgErr);
+      }
     } catch (err) {
       console.warn("Form dispatch note:", err);
     }

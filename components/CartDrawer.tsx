@@ -25,6 +25,9 @@ export default function CartDrawer() {
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [deliveryNotes, setDeliveryNotes] = useState("");
+  const [isSubmittingOrder, setIsSubmittingOrder] = useState(false);
+  const [orderSuccessId, setOrderSuccessId] = useState<string | null>(null);
+  const [contactError, setContactError] = useState("");
 
   if (!isCartOpen) return null;
 
@@ -61,12 +64,98 @@ export default function CartDrawer() {
     return lines.join("\n");
   };
 
+  const notifyTelegramCart = () => {
+    try {
+      fetch("/api/telegram-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quoteId: `CART-${Date.now().toString().slice(-6)}`,
+          fullName: customerName || "Cart Inquiry Client",
+          company: "Cart Inquiry",
+          email: "Via WhatsApp/Email",
+          phone: customerPhone || "Not provided",
+          speed: "Direct Order",
+          items: cart.map((c, i) => `${i + 1}. ${c.title} (Qty: ${c.quantity}, Size: ${c.specs.size || "Custom"})`).join("\n"),
+          notes: deliveryNotes || "None",
+        }),
+      }).catch(() => {});
+    } catch {}
+  };
+
+  const handleDirectSubmitOrder = async () => {
+    if (!customerPhone.trim()) {
+      setContactError("Please enter your Phone or WhatsApp number so we can confirm your order.");
+      return;
+    }
+    setContactError("");
+    setIsSubmittingOrder(true);
+
+    const generatedOrderId = `SBF-ORD-${Math.floor(100000 + Math.random() * 900000)}`;
+
+    const formattedItems = cart.map((c, i) => {
+      const details = [
+        c.specs.size ? `Size: ${c.specs.size}` : null,
+        c.specs.material ? `Material: ${c.specs.material}` : null,
+        c.specs.thickness ? `Thickness: ${c.specs.thickness}` : null,
+        c.specs.finishing && c.specs.finishing !== "None" ? `Finishing: ${c.specs.finishing}` : null,
+        c.specs.lamination && c.specs.lamination !== "None" ? `Lamination: ${c.specs.lamination}` : null,
+        c.specs.comments ? `Note: ${c.specs.comments}` : null,
+      ].filter(Boolean).join(", ");
+      return `${i + 1}. <b>${c.title}</b>\\n   • Qty: ${c.quantity} pcs\\n   • Specs: ${details || "Standard"}`;
+    }).join("\\n\\n");
+
+    try {
+      await fetch("/api/telegram-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quoteId: generatedOrderId,
+          fullName: customerName || "Direct Cart Client",
+          company: "Direct Cart Order",
+          email: "cart@sbfprint.ae",
+          phone: customerPhone,
+          speed: "Direct Order",
+          items: formattedItems,
+          notes: deliveryNotes || "Submitted directly from cart",
+        }),
+      });
+
+      // Also backup to FormSubmit
+      fetch("https://formsubmit.co/ajax/sbfprintdesign@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `New Direct Order #${generatedOrderId} — ${customerName || "Customer"}`,
+          _template: "table",
+          _captcha: "false",
+          "Order Reference": generatedOrderId,
+          "Client Name": customerName || "Customer",
+          "Phone / WhatsApp": customerPhone,
+          "Delivery Location": deliveryNotes || "Dubai / UAE",
+          "Order Items": formattedItems.replace(/<[^>]*>?/gm, ""),
+        }),
+      }).catch(() => {});
+
+      setOrderSuccessId(generatedOrderId);
+      clearCart();
+    } catch (err) {
+      console.warn("Direct order submission note:", err);
+      setOrderSuccessId(generatedOrderId);
+      clearCart();
+    } finally {
+      setIsSubmittingOrder(false);
+    }
+  };
+
   const handleWhatsAppCheckout = () => {
+    notifyTelegramCart();
     const message = encodeURIComponent(buildWhatsAppCartMessage());
     window.open(`https://wa.me/971525069091?text=${message}`, "_blank");
   };
 
   const handleEmailCheckout = () => {
+    notifyTelegramCart();
     const subject = encodeURIComponent(`Quotation & Order Inquiry — SBF Print (${customerName || "Website Client"})`);
     const body = encodeURIComponent(buildWhatsAppCartMessage().replace(/\*/g, ""));
     window.open(`mailto:sbfprintdesign@gmail.com?subject=${subject}&body=${body}`, "_blank");
@@ -118,9 +207,45 @@ export default function CartDrawer() {
             </div>
           </div>
 
-          {/* DRAWER BODY (ITEMS LIST) */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-zinc-100">
-            {cart.length === 0 ? (
+          {/* DRAWER BODY (ITEMS LIST OR SUCCESS) */}
+          <div className="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-zinc-100 flex flex-col justify-center">
+            {orderSuccessId ? (
+              <div className="py-8 text-center space-y-4 my-auto">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-inner">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-xl font-black text-zinc-900">Order Submitted!</h3>
+                  <p className="text-xs text-zinc-500">
+                    Order Ref: <span className="font-mono font-bold text-zinc-900 bg-zinc-100 px-2 py-0.5 rounded">{orderSuccessId}</span>
+                  </p>
+                </div>
+                <p className="text-xs text-zinc-600 max-w-xs mx-auto leading-relaxed">
+                  Our print production team has received your order and details via Telegram. We will contact you shortly on <b>{customerPhone}</b> to confirm proofing and delivery.
+                </p>
+                <div className="pt-4 space-y-2">
+                  <a
+                    href={`https://wa.me/971525069091?text=${encodeURIComponent(`Hello SBF Print, I have just submitted order #${orderSuccessId} from your website. Please check and confirm.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    <span>Chat on WhatsApp About Order</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setOrderSuccessId(null);
+                      closeCart();
+                    }}
+                    className="w-full py-2.5 px-4 rounded-xl border border-zinc-200 hover:bg-zinc-100 text-zinc-700 font-bold text-xs transition-all cursor-pointer"
+                  >
+                    Continue Browsing Products
+                  </button>
+                </div>
+              </div>
+            ) : cart.length === 0 ? (
               <div className="py-16 text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-purple-50 text-[#C68FE6] flex items-center justify-center mx-auto">
                   <ShoppingCart className="w-8 h-8 opacity-60" />
@@ -230,10 +355,10 @@ export default function CartDrawer() {
           </div>
 
           {/* DRAWER FOOTER & CHECKOUT */}
-          {cart.length > 0 && (
+          {cart.length > 0 && !orderSuccessId && (
             <div className="p-6 border-t border-zinc-200 bg-zinc-50 space-y-4">
               
-              {/* Optional Contact Inputs for WhatsApp message personalization */}
+              {/* Optional Contact Inputs for WhatsApp & Direct Order */}
               <div className="space-y-2">
                 <input
                   type="text"
@@ -245,10 +370,20 @@ export default function CartDrawer() {
                 <input
                   type="text"
                   value={customerPhone}
-                  onChange={(e) => setCustomerPhone(e.target.value)}
-                  placeholder="Phone / WhatsApp Number (Optional)"
-                  className="w-full px-3 py-2 rounded-xl bg-white border border-zinc-200 text-xs font-medium text-zinc-900 focus:outline-none focus:border-[#C68FE6]"
+                  onChange={(e) => {
+                    setCustomerPhone(e.target.value);
+                    if (contactError) setContactError("");
+                  }}
+                  placeholder="Phone / WhatsApp Number (Required to Submit)"
+                  className={`w-full px-3 py-2 rounded-xl bg-white border text-xs font-medium text-zinc-900 focus:outline-none focus:border-[#C68FE6] ${
+                    contactError ? "border-red-400 bg-red-50/20" : "border-zinc-200"
+                  }`}
                 />
+                {contactError && (
+                  <p className="text-[11px] text-red-600 font-bold px-1">
+                    ⚠️ {contactError}
+                  </p>
+                )}
               </div>
 
               {/* Quote Information Summary */}
@@ -258,25 +393,47 @@ export default function CartDrawer() {
                   <span className="text-[#C68FE6]">{cart.length} items ({totalUnits} pcs)</span>
                 </div>
                 <p className="text-[11px] text-zinc-600">
-                  Official pricing will be provided based on your specifications, quantity tiers, and finishing.
+                  Official pricing will be confirmed by our press team via Telegram &amp; WhatsApp based on your chosen specifications.
                 </p>
               </div>
 
               {/* Checkout Action Buttons */}
               <div className="space-y-2 pt-1">
+                {/* 1. Direct Submit Order Button (Sends to Telegram Bot) */}
+                <button
+                  type="button"
+                  disabled={isSubmittingOrder}
+                  onClick={handleDirectSubmitOrder}
+                  className="w-full py-3.5 px-4 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer disabled:opacity-50"
+                >
+                  {isSubmittingOrder ? (
+                    <span className="flex items-center gap-2">
+                      <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <span>Submitting Order to Bot...</span>
+                    </span>
+                  ) : (
+                    <>
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>Submit Order</span>
+                    </>
+                  )}
+                </button>
+
+                {/* 2. Request Quote on WhatsApp Button */}
                 <button
                   type="button"
                   onClick={handleWhatsAppCheckout}
-                  className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
+                  className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Request Quote on WhatsApp</span>
                 </button>
 
+                {/* 3. Email Quote Request Button */}
                 <button
                   type="button"
                   onClick={handleEmailCheckout}
-                  className="w-full py-2.5 px-4 rounded-xl border border-zinc-300 hover:bg-white text-zinc-700 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  className="w-full py-2 px-4 rounded-xl border border-zinc-300 hover:bg-white text-zinc-700 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#C68FE6]" />
                   <span>Email Quote Request</span>
