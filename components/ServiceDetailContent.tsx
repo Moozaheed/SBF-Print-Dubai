@@ -534,9 +534,6 @@ export default function ServiceDetailContent({ service }: Props) {
                   <h3 className="text-sm font-bold text-zinc-900 group-hover:text-[#C68FE6] transition-colors line-clamp-1">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-zinc-500 font-semibold">
-                    Starting At <span className="text-[#C68FE6] font-extrabold">{item.startingPrice}</span>
-                  </p>
                 </div>
               </Link>
             ))}

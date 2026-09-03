@@ -52,12 +52,23 @@ export default function HomeMainView() {
   ];
 
   const bestSellerSlugs = [
-    // Signage
-    "outdoor-signboard-3d-letter", "safety-sign", "reception-letter", "banner-and-festoon", "flex-signboard",
-    // Printing and Display
-    "sticker-on-vehicles", "frosted-on-glass", "rollup-stand", "photo-frame", "sticker-on-wall",
-    // Marketing & Gift
-    "business-cards", "packaging", "menu", "print-and-cut-sticker", "mugs-print",
+    // Top 7 Requested by User
+    "reception-letter",
+    "frosted-on-glass",
+    "sticker-on-wall",
+    "office-name-plate",
+    "parking-signage",
+    "photo-frame",
+    "print-and-cut-sticker",
+    // Featured additions
+    "outdoor-signboard-3d-letter",
+    "business-cards",
+    "led-neon",
+    "laser-engraving",
+    "acrylic-display-stand",
+    "rollup-stand",
+    "mugs-print",
+    "packaging",
   ];
   const onSaleSlugs = ["flyers", "letterheads", "calendars", "sticker-on-forex-foam-board", "flag-print"];
   const bestSellers = bestSellerSlugs.map(s => ALL_PRODUCTS.find(p => p.slug === s)).filter(Boolean) as typeof ALL_PRODUCTS;
@@ -213,9 +224,6 @@ export default function HomeMainView() {
                   <h3 className="text-xs sm:text-sm font-bold text-zinc-900 group-hover:text-[#C68FE6] transition-colors line-clamp-1">
                     {p.title}
                   </h3>
-                  <p className="text-[11px] text-zinc-500 font-semibold">
-                    From <span className="text-[#C68FE6] font-extrabold">{p.startingPrice}</span>
-                  </p>
                 </div>
               </div>
               <div className="pt-2">
@@ -308,9 +316,6 @@ export default function HomeMainView() {
                 <h3 className="text-xs font-bold text-zinc-900 group-hover:text-[#C68FE6] transition-colors line-clamp-1">
                   {p.title}
                 </h3>
-                <p className="text-[11px] text-zinc-500 font-semibold">
-                  Starting At <span className="text-[#C68FE6] font-extrabold">{p.startingPrice}</span>
-                </p>
               </div>
             </Link>
           ))}
