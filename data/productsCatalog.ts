@@ -25,7 +25,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "outdoor-signboard-3d-letter",
     slug: "outdoor-signboard-3d-letter",
-    title: "Outdoor signboard 3D letter",
+    title: "Outdoor 3D Letter Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Heavy-duty weather-proof 3D acrylic & stainless steel illuminated building letters.",
@@ -37,7 +37,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "reception-letter",
     slug: "reception-letter",
-    title: "Reception Letter",
+    title: "Reception & Office Signage",
     category: "Signage",
     subcategory: "Signage",
     description: "Elegant brushed brass, chrome & acrylic office lobby backdrop letters.",
@@ -49,7 +49,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "office-name-plate",
     slug: "office-name-plate",
-    title: "Office name plate",
+    title: "Office Nameplates",
     category: "Signage",
     subcategory: "Signage",
     description: "Custom laser-etched aluminum, acrylic & wood door plates for executive cabins.",
@@ -61,7 +61,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "safety-sign",
     slug: "safety-sign",
-    title: "Safety sign",
+    title: "Safety & Warning Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Photoluminescent emergency exit signs, site safety warning boards & hazard signs.",
@@ -73,7 +73,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "banner-and-festoon",
     slug: "banner-and-festoon",
-    title: "Banner and feston",
+    title: "Banners & Festoons",
     category: "Signage",
     subcategory: "Signage",
     description: "Heavy PVC vinyl event banners with brass eyelets and festive hanging streamers.",
@@ -85,7 +85,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "flex-signboard",
     slug: "flex-signboard",
-    title: "Flex signboard",
+    title: "Flex Signboards",
     category: "Signage",
     subcategory: "Signage",
     description: "Backlit and frontlit flex face shopfront signboards with steel tube framing.",
@@ -97,7 +97,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "led-neon",
     slug: "led-neon",
-    title: "Led neon",
+    title: "LED Neon Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Vibrant silicone LED flex neon signs for cafes, retail shops, events & interior decor.",
@@ -109,7 +109,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "acrylic-3d-board",
     slug: "acrylic-3d-board",
-    title: "acrylic 3D board",
+    title: "3D Acrylic Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Clear acrylic floating glass panels with 3D raised letters & polished standoffs.",
@@ -121,7 +121,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "indoor-signage",
     slug: "indoor-signage",
-    title: "indoor signage",
+    title: "Indoor Signage",
     category: "Signage",
     subcategory: "Signage",
     description: "Directory boards, room numbers, elevator signs & floor directional markers.",
@@ -133,7 +133,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "pylon-totem-sign",
     slug: "pylon-totem-sign",
-    title: "Pylon/totem sign",
+    title: "Pylon & Totem Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Freestanding roadside pylon towers & LED illuminated entrance totem monuments.",
@@ -145,7 +145,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "stamp-making",
     slug: "stamp-making",
-    title: "Stamp making",
+    title: "Custom Rubber Stamps",
     category: "Signage",
     subcategory: "Signage",
     description: "Custom self-inking rubber & pre-inked stamps for office, accounts, and legal use. Logo, address, signature & date stamps.",
@@ -157,7 +157,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "parking-signage",
     slug: "parking-signage",
-    title: "Parking signage",
+    title: "Parking & Wayfinding Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Aluminum & reflective vinyl parking signs, reserved bays, no-parking boards, and directional arrows for car parks and buildings.",
@@ -169,7 +169,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "elevator-safety-sign",
     slug: "elevator-safety-sign",
-    title: "Elevator safety sign",
+    title: "Elevator Safety Signs",
     category: "Signage",
     subcategory: "Signage",
     description: "Photoluminescent & aluminum elevator floor indicators, capacity signs, emergency instructions, and safety compliance notices.",
@@ -182,7 +182,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "led-screen-display",
     slug: "led-screen-display",
-    title: "LED Screen Display",
+    title: "LED Screen Displays",
     category: "Signage",
     subcategory: "Signage",
     description: "High-brightness indoor & outdoor LED screen displays for retail, events, wayfinding and advertising.",
@@ -191,6 +191,30 @@ export const ALL_PRODUCTS: ProductItem[] = [
     turnaround: "3-5 Days",
     badge: "LED Digital",
   },
+  {
+    id: "laser-engraving",
+    slug: "laser-engraving",
+    title: "Laser Engraving",
+    category: "Signage",
+    subcategory: "Signage",
+    description: "Precision laser engraved acrylic LED lamps, wooden base night lights, corporate trophies & decorative illuminated custom signs.",
+    image: "/products/laser-engraving/image-1.jpg",
+    startingPrice: "AED 85 / unit",
+    turnaround: "24 Hours",
+    badge: "Custom LED",
+  },
+  {
+    id: "acrylic-display-stand",
+    slug: "acrylic-display-stand",
+    title: "Acrylic Display Stand",
+    category: "Signage",
+    subcategory: "Signage",
+    description: "Premium clear acrylic tabletop display stands, L-shaped menu holders, T-shape double-sided sign stands & desk information displays.",
+    image: "/products/acrylic-display-stand/image-1.jpg",
+    startingPrice: "AED 35 / unit",
+    turnaround: "Same Day",
+    badge: "Tabletop",
+  },
 
   // ==========================================
   // 2. PRINTING AND DISPLAY
@@ -198,7 +222,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "sticker-on-wall",
     slug: "sticker-on-wall",
-    title: "Sticker on wall",
+    title: "Wall Graphics & Stickers",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Custom self-adhesive wall vinyl graphics, corporate quotes & decorative decals.",
@@ -210,7 +234,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "wallpaper",
     slug: "wallpaper",
-    title: "wallpaper",
+    title: "Custom Wallpapers",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Textured canvas wall coverings & seamless custom pattern wallpaper for interior fit-outs.",
@@ -222,7 +246,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "sticker-on-forex-foam-board",
     slug: "sticker-on-forex-foam-board",
-    title: "sticker on forex and foam board",
+    title: "Forex & Foam Board Stickers",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "High-DPI vinyl mounted on 3mm/5mm rigid Forex PVC foam sheets for event displays.",
@@ -234,7 +258,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "sticker-on-vehicles",
     slug: "sticker-on-vehicles",
-    title: "sticker on vehicles",
+    title: "Vehicle Graphics & Branding",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "RTA-compliant commercial fleet car wrapping, door magnets & van vinyl graphics.",
@@ -246,7 +270,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "sticker-on-glass",
     slug: "sticker-on-glass",
-    title: "sticker on glass",
+    title: "Glass Stickers & Graphics",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Frosted privacy vinyl, transparent window decals & perforated one-way vision film.",
@@ -258,7 +282,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "rollup-stand",
     slug: "rollup-stand",
-    title: "Roollup stand",
+    title: "Roll Up Banner Stands",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Heavy-duty retractable aluminum rollup stand with anti-curl non-fade film.",
@@ -270,7 +294,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "photo-frame",
     slug: "photo-frame",
-    title: "photo frame",
+    title: "Photo Frames & Canvas Prints",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Gallery wrap canvas prints, acrylic floating frames & premium wooden photo frames.",
@@ -282,7 +306,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "flag-print",
     slug: "flag-print",
-    title: "Flag print",
+    title: "Custom Flag Printing",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Double-sided knitted polyester beach flags, country flags & corporate desk flags.",
@@ -294,7 +318,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "flag-stand",
     slug: "flag-stand",
-    title: "flag stand",
+    title: "Flag Banner Stands",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Outdoor feather & teardrop flag pole kits with heavy steel ground spikes & water bases.",
@@ -306,7 +330,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "banner-stand",
     slug: "banner-stand",
-    title: "Banner stand",
+    title: "Banner Stands",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Lightweight fiberglass X-banner stands & curved magnetic pop-up exhibition backdrops.",
@@ -318,7 +342,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "promotion-table",
     slug: "promotion-table",
-    title: "promotion Table",
+    title: "Promotional Tables & Counters",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Folding plastic & aluminum sampling counter tables with custom header print.",
@@ -330,7 +354,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "reception-stand",
     slug: "reception-stand",
-    title: "Reception stand",
+    title: "Reception Display Stands",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Stainless steel poster stands, brochure holders & lobby sign podiums.",
@@ -342,7 +366,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "shelf-d-board-stand",
     slug: "shelf-d-board-stand",
-    title: "shelf D-Board stand",
+    title: "D-Board Shelf Display Stands",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "100% recyclable honeycomb cardboard retail shelving display stands & POS furniture.",
@@ -354,7 +378,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "frosted-on-glass",
     slug: "frosted-on-glass",
-    title: "Frosted on glass",
+    title: "Frosted Glass Stickers",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Frosted acid-etched vinyl film for office partitions, shower screens & glass doors. Provides elegant privacy with a premium sandblasted look.",
@@ -366,7 +390,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "one-way-vision-on-glass",
     slug: "one-way-vision-on-glass",
-    title: "One way vision on glass",
+    title: "One Way Vision Film",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Perforated window vinyl film for shopfronts — full-color print visible from outside, clear visibility from inside. Ideal for retail branding.",
@@ -378,7 +402,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "window-privacy-film",
     slug: "window-privacy-film",
-    title: "Window privacy film",
+    title: "Window Privacy Films",
     category: "Printing and Display",
     subcategory: "Printing and Display",
     description: "Solar control, anti-glare & blackout privacy window films for offices, meeting rooms, and residential spaces in Dubai.",
@@ -394,7 +418,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "business-cards",
     slug: "business-cards",
-    title: "Business cards",
+    title: "Business Cards",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Luxury business cards with gold foil, spot UV, velvet touch & rounded corners.",
@@ -406,7 +430,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "print-and-cut-sticker",
     slug: "print-and-cut-sticker",
-    title: "print and cut sticker",
+    title: "Print & Cut Stickers",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Custom shape vinyl product labels, foil stickers & waterproof die-cut decals.",
@@ -418,7 +442,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "flyers",
     slug: "flyers",
-    title: "Flyers",
+    title: "Flyers & Leaflets",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "A4, A5 & DL promotional flyers on 150 GSM / 300 GSM glossy or matte art paper.",
@@ -430,7 +454,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "menu",
     slug: "menu",
-    title: "Menu",
+    title: "Menu Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Waterproof synthetic menus, hardcover leather restaurant menus & bi-fold table menus.",
@@ -454,7 +478,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "envelopes-print",
     slug: "envelopes-print",
-    title: "Envelopes print",
+    title: "Envelope Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "DL, C5 & C4 commercial window & non-window branded corporate envelopes.",
@@ -466,7 +490,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "bags-print",
     slug: "bags-print",
-    title: "Bags print",
+    title: "Custom Bag Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Eco-friendly craft paper bags with twisted rope handles & canvas tote bags.",
@@ -478,7 +502,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "t-shirt-print",
     slug: "t-shirt-print",
-    title: "T-shirt print",
+    title: "Custom T-Shirt Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Direct-to-Film (DTF) full color 100% cotton corporate staff uniforms & polo shirts.",
@@ -490,7 +514,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "bottle-print",
     slug: "bottle-print",
-    title: "Bottle print",
+    title: "Custom Bottle Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Laser engraved & UV printed stainless steel sports bottles & thermal flasks.",
@@ -502,7 +526,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "mugs-print",
     slug: "mugs-print",
-    title: "Mugs print",
+    title: "Custom Mug Printing",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "11oz ceramic white & color-changing magic coffee mugs with high-resolution prints.",
@@ -514,7 +538,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "packaging",
     slug: "packaging",
-    title: "packaging",
+    title: "Custom Packaging Boxes",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Heavy rigid product packaging boxes, food takeaway packaging & pastry gift boxes.",
@@ -526,7 +550,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "calendars",
     slug: "calendars",
-    title: "Calendars",
+    title: "Custom Calendars",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Desk tent calendars, wall calendars with wire-o binding & custom photos.",
@@ -538,7 +562,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "awards-making",
     slug: "awards-making",
-    title: "Awards making",
+    title: "Acrylic & Wooden Awards",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Crystal glass trophies, wooden plaques & custom cut 3D acrylic recognition awards.",
@@ -550,7 +574,7 @@ export const ALL_PRODUCTS: ProductItem[] = [
   {
     id: "diary-pen-print",
     slug: "diary-pen-print",
-    title: "Diary&pen print",
+    title: "Corporate Diaries & Pens",
     category: "Marketing & Gift Items",
     subcategory: "Marketing & Gift Items",
     description: "Leatherette organizer diaries, metallic executive pens & VIP corporate gift boxes.",
