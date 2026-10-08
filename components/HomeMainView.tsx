@@ -4,8 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ChevronLeft,
-  ChevronRight,
   Printer,
   Sparkles,
   Truck,
@@ -23,52 +21,42 @@ import {
   Tag,
   Star,
   BookOpen,
+  Wrench,
+  Clock,
+  Zap,
+  MessageSquare,
+  ShieldCheck,
+  MapPin,
 } from "lucide-react";
 import { ALL_PRODUCTS } from "@/data/productsCatalog";
 import { BLOG_POSTS } from "@/data/blogs";
 
 export default function HomeMainView() {
-  const [heroBannerIndex, setHeroBannerIndex] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-  const heroBanners = [
-    {
-      title: "High-Tech Printing Press Dubai",
-      image: "/hero/concept-1.jpg",
-      href: "/all-products",
-    },
-    {
-      title: "Luxury Print Showroom Dubai",
-      image: "/hero/concept-2.jpg",
-      href: "/all-products",
-    },
-  ];
-
-  const featuredTiles = [
-    { title: "CUSTOM PACKAGING", image: "/products/packaging/v2-image-1.jpg", href: "/services/packaging" },
-    { title: "JUTE & SHOPPING BAGS", image: "/products/bags-print/v2-image-1.jpg", href: "/services/bags-print" },
-    { title: "CANVAS & FRAMES", image: "/products/photo-frame/v2-image-1.jpg", href: "/services/photo-frame" },
-    { title: "STICKERS & LABELS", image: "/products/print-and-cut-sticker/v2-image-1.jpg", href: "/services/print-and-cut-sticker" },
-  ];
 
   const bestSellerSlugs = [
-    // Top 7 Requested by User
-    "reception-letter",
-    "frosted-on-glass",
-    "sticker-on-wall",
-    "office-name-plate",
-    "parking-signage",
-    "photo-frame",
-    "print-and-cut-sticker",
-    // Featured additions
-    "outdoor-signboard-3d-letter",
-    "business-cards",
-    "led-neon",
-    "laser-engraving",
-    "acrylic-display-stand",
-    "rollup-stand",
-    "mugs-print",
-    "packaging",
+    // Top 20 Requested by User in strict serial order:
+    "print-and-cut-sticker",        // 1. Print & Cut Stickers
+    "t-shirt-print",                // 2. Custom T-Shirt Printing
+    "safety-sign",                  // 3. Safety & Warning Signs
+    "sticker-on-wall",              // 4. Wall Graphics & Stickers
+    "frosted-on-glass",             // 5. Frosted Glass Stickers
+    "office-name-plate",            // 6. Office Nameplates
+    "sticker-on-glass",             // 7. Glass Stickers & Graphics
+    "awards-making",                // 8. Acrylic & Wooden Awards
+    "photo-frame",                  // 9. Photo Frames & Canvas Prints
+    "banner-stand",                 // 10. Banner Stands
+    "acrylic-display-stand",        // 11. Acrylic Display Stand
+    "laser-engraving",              // 12. Laser Engraving
+    "reception-letter",             // 13. Reception & Office Signage
+    "business-cards",               // 14. Business Cards
+    "outdoor-signboard-3d-letter",  // 15. Outdoor 3D Letter Signs
+    "one-way-vision-on-glass",      // 16. One Way Vision Film
+    "flatbed-uv-printing",          // 17. Flatbed UV Printing
+    "dtf-printing",                 // 18. DTF Printing
+    "screen-printing",              // 19. Screen Printing
+    "flag-print",                   // 20. Custom Flag Printing
   ];
   const onSaleSlugs = ["flyers", "letterheads", "calendars", "sticker-on-forex-foam-board", "flag-print"];
   const bestSellers = bestSellerSlugs.map(s => ALL_PRODUCTS.find(p => p.slug === s)).filter(Boolean) as typeof ALL_PRODUCTS;
@@ -108,85 +96,80 @@ export default function HomeMainView() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen pt-36 pb-20 selection:bg-[#C68FE6] selection:text-white">
       
-      {/* SECTION 1: TOP HERO FULL-IMAGE BANNER CAROUSEL */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        <div className="relative rounded-3xl overflow-hidden shadow-xl border border-zinc-200 bg-zinc-100 group aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/9]">
-          
-          {(() => {
-            const currentBanner = heroBanners[heroBannerIndex % heroBanners.length] || heroBanners[0];
-            return (
-              <Link href={currentBanner.href} className="block relative w-full h-full">
-                <Image
-                  src={currentBanner.image}
-                  alt={currentBanner.title}
-                  fill
-                  priority
-                  className="object-cover object-center transition-all duration-700"
-                />
-              </Link>
-            );
-          })()}
-
-          {/* Banner Prev Control */}
-          <button
-            type="button"
-            onClick={() => setHeroBannerIndex((prev) => (prev - 1 + heroBanners.length) % heroBanners.length)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all z-20"
-            aria-label="Previous Banner"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          {/* Banner Next Control */}
-          <button
-            type="button"
-            onClick={() => setHeroBannerIndex((prev) => (prev + 1) % heroBanners.length)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md transition-all z-20"
-            aria-label="Next Banner"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-        </div>
-
-        {/* Carousel Dots */}
-        <div className="flex justify-center gap-2 pt-4">
-          {heroBanners.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setHeroBannerIndex(idx)}
-              className={`h-2.5 rounded-full transition-all ${
-                heroBannerIndex === idx ? "w-8 bg-[#C68FE6]" : "w-2.5 bg-zinc-300"
-              }`}
-            />
-          ))}
-        </div>
+      {/* SECTION 1: WELCOME BANNER (SCREEN-FIT FULL WIDTH) */}
+      <div className="w-full">
+        <Link
+          href="/all-products"
+          className="block relative w-full h-[calc(100svh-144px)] max-h-[620px] min-h-[300px] sm:min-h-[420px] overflow-hidden bg-gradient-to-b from-white via-white to-[#FDEBFE] transition-opacity hover:opacity-95"
+        >
+          <Image
+            src="/welcome-banner@2x.webp"
+            alt="Welcome to SBF PRINT & DESIGN DUBAI - Your trusted partner for high-quality printing and design services in UAE."
+            fill
+            priority
+            className="object-contain object-center"
+          />
+        </Link>
       </div>
 
-
-      {/* SECTION 2: 4 FEATURED CATEGORY BANNER TILES */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredTiles.map((tile) => (
-            <Link
-              key={tile.title}
-              href={tile.href}
-              className="group relative aspect-[16/9] rounded-2xl overflow-hidden shadow-md border border-zinc-200"
-            >
-              <Image
-                src={tile.image}
-                alt={tile.title}
-                fill
-                priority
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-center justify-center p-4">
-                <h3 className="text-white text-base font-black tracking-wider text-center uppercase drop-shadow-md">
-                  {tile.title}
-                </h3>
+      {/* 4 Trust Badges Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
+        <div className="bg-[#FAF9FE] rounded-2xl border border-purple-100/80 p-4 sm:p-5 shadow-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 items-center">
+            
+            {/* Badge 1: Premium Quality */}
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3">
+              <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Premium
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Quality
+                </span>
               </div>
-            </Link>
-          ))}
+            </div>
+
+            {/* Badge 2: Fast Delivery */}
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
+              <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Fast
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Delivery
+                </span>
+              </div>
+            </div>
+
+            {/* Badge 3: UAE-Wide Service */}
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
+              <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  UAE-Wide
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Service
+                </span>
+              </div>
+            </div>
+
+            {/* Badge 4: Expert Support */}
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
+              <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Expert
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Support
+                </span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -323,7 +306,153 @@ export default function HomeMainView() {
       </div>
 
 
-      {/* SECTION 6: HOW TO MAKE AN ORDER (5-STEP PROCESS FLOW) */}
+      {/* SECTION 4: PRINTING PRESS & INSTALLATION SERVICES */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 space-y-6">
+        
+        {/* Header */}
+        <div className="text-center space-y-2">
+          <div className="flex items-center justify-center gap-2.5 text-[#C68FE6]">
+            <Printer className="w-6 h-6" />
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              Printing Press &amp; Installation Services
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm text-zinc-500 max-w-2xl mx-auto">
+            Precision manufacturing backed by a skilled team ensuring seamless installation across the UAE.
+          </p>
+          <div className="w-16 h-1 bg-[#C68FE6] rounded-full mx-auto" />
+        </div>
+
+        {/* 4 Service Cards Grid (Left: Naming, Right: Visual Image) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5">
+          {[
+            {
+              id: "installation",
+              title: "Expert Installation",
+              tag: "In-House Crew",
+              description: "Seamless on-site mounting and finishing across the UAE.",
+              image: "/installservice/installation-expert.webp",
+              icon: Wrench,
+              badgeBg: "bg-amber-500/10 text-amber-700 border-amber-300/60",
+              hoverBorder: "hover:border-amber-400 hover:shadow-amber-500/10",
+              link: "https://wa.me/971525069091?text=Hello%20SBF%20Print,%20I%20would%20like%20to%20request%20an%20on-site%20measurement%20and%20installation.",
+              action: "Book Site Setup",
+              isExternal: true,
+            },
+            {
+              id: "quality",
+              title: "Top Notch Quality",
+              tag: "1440 DPI HD",
+              description: "Precision prints with luxury coatings and fine finishing.",
+              image: "/installservice/top-quality.webp",
+              icon: Award,
+              badgeBg: "bg-purple-500/10 text-[#8b4cb0] border-purple-300/60",
+              hoverBorder: "hover:border-[#C68FE6] hover:shadow-purple-500/10",
+              link: "/all-products",
+              action: "Explore Quality",
+              isExternal: false,
+            },
+            {
+              id: "delivery",
+              title: "On Time Delivery",
+              tag: "Fast Response",
+              description: "Instant communication and guaranteed UAE delivery.",
+              image: "/installservice/on-time-delivery.webp",
+              icon: Clock,
+              badgeBg: "bg-blue-500/10 text-blue-700 border-blue-300/60",
+              hoverBorder: "hover:border-blue-400 hover:shadow-blue-500/10",
+              link: "https://wa.me/971525069091?text=Hello%20SBF%20Print,%20I%20would%20like%20to%20inquire%20about%20delivery%20and%20lead%20times.",
+              action: "Instant WhatsApp",
+              isExternal: true,
+            },
+            {
+              id: "urgent",
+              title: "Urgent Order Handling",
+              tag: "Same-Day Rush",
+              description: "Fast-track rush printing and express dispatch.",
+              image: "/installservice/urgent-delivery.webp",
+              icon: Zap,
+              badgeBg: "bg-rose-500/10 text-rose-700 border-rose-300/60",
+              hoverBorder: "hover:border-rose-400 hover:shadow-rose-500/10",
+              link: "https://wa.me/971525069091?text=Hello%20SBF%20Print,%20I%20have%20an%20urgent%20rush%20printing%20order.",
+              action: "Rush Order",
+              isExternal: true,
+            },
+          ].map((card) => {
+            const CardIcon = card.icon;
+            const content = (
+              <div
+                className={`group relative h-full bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/90 p-3.5 sm:p-4.5 lg:p-5 shadow-sm hover:shadow-md ${card.hoverBorder} transition-all duration-300 flex items-center justify-between gap-3 sm:gap-4 overflow-hidden`}
+              >
+                {/* Left Side: Naming & Concise Info */}
+                <div className="flex-1 space-y-1 sm:space-y-1.5 z-10 min-w-0">
+                  <div className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider border ${card.badgeBg}`}>
+                    <CardIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
+                    <span className="truncate">{card.tag}</span>
+                  </div>
+
+                  <h3 className="text-sm sm:text-base lg:text-lg font-black text-zinc-900 tracking-tight leading-snug group-hover:text-[#C68FE6] transition-colors">
+                    {card.title}
+                  </h3>
+
+                  <p className="text-[11px] sm:text-xs text-zinc-500 leading-snug sm:leading-relaxed font-medium line-clamp-2">
+                    {card.description}
+                  </p>
+
+                  <div className="pt-0.5">
+                    <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs font-bold text-zinc-800 group-hover:text-[#C68FE6] transition-colors">
+                      <span>{card.action}</span>
+                      <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right Side: 3D Visual Image from installservice */}
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="object-contain drop-shadow-sm group-hover:scale-105 group-hover:-translate-y-0.5 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            );
+
+            return card.isExternal ? (
+              <a
+                key={card.id}
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                {content}
+              </a>
+            ) : (
+              <Link key={card.id} href={card.link} className="block h-full">
+                {content}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Book Site Installation button at the bottom of the 4 cards */}
+        <div className="flex justify-center pt-2 sm:pt-4">
+          <a
+            href="https://wa.me/971525069091?text=Hello%20SBF%20Print,%20I%20would%20like%20to%20inquire%20about%20your%20expert%20on-site%20installation%20service."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#C68FE6] hover:bg-[#b078d6] text-white font-bold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Book Site Installation</span>
+          </a>
+        </div>
+      </div>
+
+
+      {/* SECTION 5: HOW TO MAKE AN ORDER (5-STEP PROCESS FLOW) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 space-y-10">
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2.5 text-[#C68FE6]">
