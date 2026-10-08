@@ -17,5 +17,5 @@ content/
 .env*.local
 *.tsbuildinfo
 .DS_Store
-Thumbs.db
 Custom Rigid Packaging & Gift Boxes/
+*.zip
