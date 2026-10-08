@@ -11,6 +11,8 @@ import {
   Printer,
   Sparkles,
   ArrowRight,
+  ChevronDown,
+  Layers,
 } from "lucide-react";
 import { MEGA_MENU_CATEGORIES } from "@/data/megaMenuData";
 import SubHeaderCategoryNav from "./SubHeaderCategoryNav";
@@ -20,6 +22,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHeaderHovered, setIsHeaderHovered] = useState(false);
   const { cartCount, openCart } = useCart();
 
   // Collect all searchable products from megaMenuData
@@ -40,23 +43,46 @@ export default function Navbar() {
       ).slice(0, 8);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-zinc-200 shadow-sm">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-zinc-200 shadow-sm"
+      onMouseEnter={() => setIsHeaderHovered(true)}
+      onMouseLeave={() => setIsHeaderHovered(false)}
+    >
       
       {/* TOP HEADER ROW matching screenshot */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
           
-          {/* BRAND LOGO on Left */}
-          <Link href="/" className="flex-shrink-0 group">
-            <Image
-              src="/logo.png"
-              alt="SBF Print & Design Dubai"
-              width={220}
-              height={64}
-              priority
-              className="h-7 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity"
-            />
-          </Link>
+          {/* BRAND LOGO on Left + Categories Dropdown Button */}
+          <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 group">
+              <Image
+                src="/logo.png"
+                alt="SBF Print & Design Dubai"
+                width={220}
+                height={64}
+                priority
+                className="h-7 md:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity"
+              />
+            </Link>
+
+            {/* Desktop Categories Dropdown Trigger */}
+            <div
+              className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all cursor-pointer select-none ${
+                isHeaderHovered
+                  ? "border-[#C68FE6] bg-purple-50 text-[#C68FE6] shadow-xs"
+                  : "border-zinc-200 bg-zinc-50/80 text-zinc-700 hover:border-purple-200 hover:text-[#C68FE6]"
+              }`}
+            >
+              <Layers className="w-3.5 h-3.5 text-[#C68FE6]" />
+              <span>Categories</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  isHeaderHovered ? "rotate-180 text-[#C68FE6]" : "text-zinc-400"
+                }`}
+              />
+            </div>
+          </div>
 
           {/* SEARCH BAR in Center matching screenshot */}
           <div className="hidden md:flex items-center flex-1 max-w-xl mx-8 relative">
@@ -154,7 +180,16 @@ export default function Navbar() {
       </div>
 
       {/* SUB-HEADER CATEGORY NAVIGATION SLIDER */}
-      <SubHeaderCategoryNav />
+      {/* Mobile: Always visible standard scrollbar. Desktop: Drops down when header is hovered */}
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          isHeaderHovered
+            ? "md:max-h-96 md:opacity-100 md:visible md:pointer-events-auto"
+            : "max-md:block md:max-h-0 md:opacity-0 md:invisible md:pointer-events-none md:overflow-hidden"
+        }`}
+      >
+        <SubHeaderCategoryNav />
+      </div>
 
       {/* MOBILE MENU DRAWER */}
       {isMobileMenuOpen && (

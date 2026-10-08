@@ -94,17 +94,17 @@ export default function HomeMainView() {
   ];
 
   return (
-    <div className="bg-white text-zinc-900 min-h-screen pt-36 pb-20 selection:bg-[#C68FE6] selection:text-white">
+    <div className="bg-white text-zinc-900 min-h-screen pt-32 sm:pt-36 md:pt-20 pb-20 selection:bg-[#C68FE6] selection:text-white">
       
-      {/* SECTION 1: HERO BANNER (SIGNAGE & ALL-IN-ONE PRINT SOLUTIONS) */}
+      {/* SECTION 1: HERO BANNER (WELCOME TO SIGNAGE & ALL-IN-ONE PRINT SOLUTIONS) */}
       <div className="w-full">
         <Link
           href="/all-products"
-          className="block relative w-full aspect-[2229/1081] overflow-hidden bg-white transition-opacity hover:opacity-95"
+          className="block relative w-full aspect-[3378/1501] overflow-hidden bg-white transition-opacity hover:opacity-95"
         >
           <Image
-            src="/hero-signage-solutions.webp"
-            alt="SBF Print - Signage & All-in-One Print Solutions Dubai"
+            src="/finalhome.webp"
+            alt="Welcome to SBF Print - Signage & All-in-One Print Solutions Dubai"
             fill
             priority
             className="object-cover object-center"
@@ -314,7 +314,7 @@ export default function HomeMainView() {
           <div className="flex items-center justify-center gap-2.5 text-[#C68FE6]">
             <Printer className="w-6 h-6" />
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              Printing Press &amp; Installation Services
+              Printing &amp; Installation
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-zinc-500 max-w-2xl mx-auto">
