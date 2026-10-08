@@ -31,7 +31,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Outdoor 3D Letter Signs Printing & Manufacturing in Dubai",
     subtitle: "Get premium outdoor 3D letter signs in Dubai from SBF Print & Design. Custom 3D signage for shops, offices, restaurants, hotels, and commercial buildings, designed with durable materials and professional finishes.",
     description: "Get premium outdoor 3D letter signs in Dubai from SBF Print & Design. Custom 3D signage for shops, offices, restaurants, hotels, and commercial buildings, designed with durable materials and professional finishes.",
-    heroImage: "/products/outdoor-signboard-3d-letter/image-1.jpg",
+    heroImage: "/products/outdoor-signboard-3d-letter/v2-image-1.jpg",
     badge: "Outdoor 3D",
     features: [
       "3-4 Days Fast Production Turnaround",
@@ -40,16 +40,16 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/outdoor-signboard-3d-letter/image-1.jpg",
-      "/products/outdoor-signboard-3d-letter/image-2.jpg",
-      "/products/outdoor-signboard-3d-letter/image-3.jpg",
-      "/products/outdoor-signboard-3d-letter/image-4.jpg",
-      "/products/outdoor-signboard-3d-letter/image-5.jpg",
-      "/products/outdoor-signboard-3d-letter/image-6.jpg",
-      "/products/outdoor-signboard-3d-letter/image-7.jpg",
-      "/products/outdoor-signboard-3d-letter/image-8.jpg",
-      "/products/outdoor-signboard-3d-letter/image-9.jpg",
-      "/products/outdoor-signboard-3d-letter/image-10.jpg"
+      "/products/outdoor-signboard-3d-letter/v2-image-1.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-2.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-3.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-4.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-5.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-6.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-7.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-8.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-9.jpg",
+      "/products/outdoor-signboard-3d-letter/v2-image-10.jpg"
     ],
     pricingPackages: [
       {
@@ -83,7 +83,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Reception & Office Signage Printing & Manufacturing in Dubai",
     subtitle: "Create a professional first impression with custom reception and office signage in Dubai. We provide stylish corporate signs for reception areas, offices, meeting rooms, departments, and commercial spaces.",
     description: "Create a professional first impression with custom reception and office signage in Dubai. We provide stylish corporate signs for reception areas, offices, meeting rooms, departments, and commercial spaces.",
-    heroImage: "/products/reception-letter/image-1.jpg",
+    heroImage: "/products/reception-letter/v2-image-1.jpg",
     badge: "Executive Lobby",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -92,14 +92,14 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/reception-letter/image-1.jpg",
-      "/products/reception-letter/image-2.jpg",
-      "/products/reception-letter/image-3.jpg",
-      "/products/reception-letter/image-4.jpg",
-      "/products/reception-letter/image-5.jpg",
-      "/products/reception-letter/image-6.jpg",
-      "/products/reception-letter/image-7.jpg",
-      "/products/reception-letter/image-8.jpg"
+      "/products/reception-letter/v2-image-1.jpg",
+      "/products/reception-letter/v2-image-2.jpg",
+      "/products/reception-letter/v2-image-3.jpg",
+      "/products/reception-letter/v2-image-4.jpg",
+      "/products/reception-letter/v2-image-5.jpg",
+      "/products/reception-letter/v2-image-6.jpg",
+      "/products/reception-letter/v2-image-7.jpg",
+      "/products/reception-letter/v2-image-8.jpg"
     ],
     pricingPackages: [
       {
@@ -133,7 +133,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Office Nameplates Printing & Manufacturing in Dubai",
     subtitle: "Order custom office nameplates in Dubai for professional and organized workspaces. Choose from a variety of materials, sizes, designs, and finishes to match your office branding.",
     description: "Order custom office nameplates in Dubai for professional and organized workspaces. Choose from a variety of materials, sizes, designs, and finishes to match your office branding.",
-    heroImage: "/products/office-name-plate/image-1.jpg",
+    heroImage: "/products/office-name-plate/v2-image-1.jpg",
     badge: "Laser Etched",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -142,14 +142,14 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/office-name-plate/image-1.jpg",
-      "/products/office-name-plate/image-2.jpg",
-      "/products/office-name-plate/image-3.jpg",
-      "/products/office-name-plate/image-4.jpg",
-      "/products/office-name-plate/image-5.jpg",
-      "/products/office-name-plate/image-6.jpg",
-      "/products/office-name-plate/image-7.jpg",
-      "/products/office-name-plate/image-8.jpg"
+      "/products/office-name-plate/v2-image-1.jpg",
+      "/products/office-name-plate/v2-image-2.jpg",
+      "/products/office-name-plate/v2-image-3.jpg",
+      "/products/office-name-plate/v2-image-4.jpg",
+      "/products/office-name-plate/v2-image-5.jpg",
+      "/products/office-name-plate/v2-image-6.jpg",
+      "/products/office-name-plate/v2-image-7.jpg",
+      "/products/office-name-plate/v2-image-8.jpg"
     ],
     pricingPackages: [
       {
@@ -183,7 +183,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Safety & Warning Signs Printing & Manufacturing in Dubai",
     subtitle: "Get durable safety and warning signs in Dubai for offices, warehouses, factories, construction sites, and commercial properties. Clear and professional signage designed for better visibility and workplace safety.",
     description: "Get durable safety and warning signs in Dubai for offices, warehouses, factories, construction sites, and commercial properties. Clear and professional signage designed for better visibility and workplace safety.",
-    heroImage: "/products/safety-sign/image-1.jpg",
+    heroImage: "/products/safety-sign/v2-image-1.jpg",
     badge: "OSHA Compliant",
     features: [
       "Same Day Fast Production Turnaround",
@@ -192,15 +192,15 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/safety-sign/image-1.jpg",
-      "/products/safety-sign/image-2.jpg",
-      "/products/safety-sign/image-3.jpg",
-      "/products/safety-sign/image-4.jpg",
-      "/products/safety-sign/image-5.jpg",
-      "/products/safety-sign/image-6.jpg",
-      "/products/safety-sign/image-7.jpg",
-      "/products/safety-sign/image-8.jpg",
-      "/products/safety-sign/image-9.jpg"
+      "/products/safety-sign/v2-image-1.jpg",
+      "/products/safety-sign/v2-image-2.jpg",
+      "/products/safety-sign/v2-image-3.jpg",
+      "/products/safety-sign/v2-image-4.jpg",
+      "/products/safety-sign/v2-image-5.jpg",
+      "/products/safety-sign/v2-image-6.jpg",
+      "/products/safety-sign/v2-image-7.jpg",
+      "/products/safety-sign/v2-image-8.jpg",
+      "/products/safety-sign/v2-image-9.jpg"
     ],
     pricingPackages: [
       {
@@ -234,7 +234,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Banners & Festoons Printing & Manufacturing in Dubai",
     subtitle: "Promote your business, events, offers, and special occasions with custom banners and festoons in Dubai. Available in different sizes and designs with high-quality printing for indoor and outdoor use.",
     description: "Promote your business, events, offers, and special occasions with custom banners and festoons in Dubai. Available in different sizes and designs with high-quality printing for indoor and outdoor use.",
-    heroImage: "/products/banner-and-festoon/image-1.jpg",
+    heroImage: "/products/banner-and-festoon/v2-image-1.jpg",
     badge: "Outdoor Festoon",
     features: [
       "Same Day Fast Production Turnaround",
@@ -243,16 +243,16 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/banner-and-festoon/image-1.jpg",
-      "/products/banner-and-festoon/image-2.jpg",
-      "/products/banner-and-festoon/image-3.jpg",
-      "/products/banner-and-festoon/image-4.jpg",
-      "/products/banner-and-festoon/image-5.jpg",
-      "/products/banner-and-festoon/image-6.jpg",
-      "/products/banner-and-festoon/image-7.jpg",
-      "/products/banner-and-festoon/image-8.jpg",
-      "/products/banner-and-festoon/image-9.jpg",
-      "/products/banner-and-festoon/image-10.jpg"
+      "/products/banner-and-festoon/v2-image-1.jpg",
+      "/products/banner-and-festoon/v2-image-2.jpg",
+      "/products/banner-and-festoon/v2-image-3.jpg",
+      "/products/banner-and-festoon/v2-image-4.jpg",
+      "/products/banner-and-festoon/v2-image-5.jpg",
+      "/products/banner-and-festoon/v2-image-6.jpg",
+      "/products/banner-and-festoon/v2-image-7.jpg",
+      "/products/banner-and-festoon/v2-image-8.jpg",
+      "/products/banner-and-festoon/v2-image-9.jpg",
+      "/products/banner-and-festoon/v2-image-10.jpg"
     ],
     pricingPackages: [
       {
@@ -286,7 +286,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Flex Signboards Printing & Manufacturing in Dubai",
     subtitle: "Get affordable and professional flex signboards in Dubai for shops, businesses, promotions, events, and outdoor advertising. Custom-designed flex signage to suit your branding and advertising needs.",
     description: "Get affordable and professional flex signboards in Dubai for shops, businesses, promotions, events, and outdoor advertising. Custom-designed flex signage to suit your branding and advertising needs.",
-    heroImage: "/products/flex-signboard/image-1.jpg",
+    heroImage: "/products/flex-signboard/v2-image-1.jpg",
     badge: "Backlit Shopfront",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -295,13 +295,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/flex-signboard/image-1.jpg",
-      "/products/flex-signboard/image-2.jpg",
-      "/products/flex-signboard/image-3.jpg",
-      "/products/flex-signboard/image-4.jpg",
-      "/products/flex-signboard/image-5.jpg",
-      "/products/flex-signboard/image-6.jpg",
-      "/products/flex-signboard/image-7.jpg"
+      "/products/flex-signboard/v2-image-1.jpg",
+      "/products/flex-signboard/v2-image-2.jpg",
+      "/products/flex-signboard/v2-image-3.jpg",
+      "/products/flex-signboard/v2-image-4.jpg",
+      "/products/flex-signboard/v2-image-5.jpg",
+      "/products/flex-signboard/v2-image-6.jpg",
+      "/products/flex-signboard/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -335,7 +335,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "LED Neon Signs Printing & Manufacturing in Dubai",
     subtitle: "Make your business stand out with custom LED neon signs in Dubai. Perfect for restaurants, cafés, salons, retail stores, offices, events, and interior décor with modern and eye-catching designs.",
     description: "Make your business stand out with custom LED neon signs in Dubai. Perfect for restaurants, cafés, salons, retail stores, offices, events, and interior décor with modern and eye-catching designs.",
-    heroImage: "/products/led-neon/image-1.jpg",
+    heroImage: "/products/led-neon/v2-image-1.jpg",
     badge: "Vibrant Neon",
     features: [
       "3-4 Days Fast Production Turnaround",
@@ -344,13 +344,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/led-neon/image-1.jpg",
-      "/products/led-neon/image-2.jpg",
-      "/products/led-neon/image-3.jpg",
-      "/products/led-neon/image-4.jpg",
-      "/products/led-neon/image-5.jpg",
-      "/products/led-neon/image-6.jpg",
-      "/products/led-neon/image-7.jpg"
+      "/products/led-neon/v2-image-1.jpg",
+      "/products/led-neon/v2-image-2.jpg",
+      "/products/led-neon/v2-image-3.jpg",
+      "/products/led-neon/v2-image-4.jpg",
+      "/products/led-neon/v2-image-5.jpg",
+      "/products/led-neon/v2-image-6.jpg",
+      "/products/led-neon/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -384,7 +384,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "3D Acrylic Signs Printing & Manufacturing in Dubai",
     subtitle: "Upgrade your business branding with premium 3D acrylic signs in Dubai. Ideal for offices, reception areas, retail stores, clinics, restaurants, hotels, and commercial spaces.",
     description: "Upgrade your business branding with premium 3D acrylic signs in Dubai. Ideal for offices, reception areas, retail stores, clinics, restaurants, hotels, and commercial spaces.",
-    heroImage: "/products/acrylic-3d-board/image-1.jpg",
+    heroImage: "/products/acrylic-3d-board/v2-image-1.jpg",
     badge: "Polished Acrylic",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -393,13 +393,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/acrylic-3d-board/image-1.jpg",
-      "/products/acrylic-3d-board/image-2.jpg",
-      "/products/acrylic-3d-board/image-3.jpg",
-      "/products/acrylic-3d-board/image-4.jpg",
-      "/products/acrylic-3d-board/image-5.jpg",
-      "/products/acrylic-3d-board/image-6.jpg",
-      "/products/acrylic-3d-board/image-7.jpg"
+      "/products/acrylic-3d-board/v2-image-1.jpg",
+      "/products/acrylic-3d-board/v2-image-2.jpg",
+      "/products/acrylic-3d-board/v2-image-3.jpg",
+      "/products/acrylic-3d-board/v2-image-4.jpg",
+      "/products/acrylic-3d-board/v2-image-5.jpg",
+      "/products/acrylic-3d-board/v2-image-6.jpg",
+      "/products/acrylic-3d-board/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -433,7 +433,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Indoor Signage Printing & Manufacturing in Dubai",
     subtitle: "Get professional indoor signage in Dubai for offices, hotels, restaurants, clinics, retail stores, malls, and commercial buildings. Custom signs for branding, information, identification, and wayfinding.",
     description: "Get professional indoor signage in Dubai for offices, hotels, restaurants, clinics, retail stores, malls, and commercial buildings. Custom signs for branding, information, identification, and wayfinding.",
-    heroImage: "/products/indoor-signage/image-1.jpg",
+    heroImage: "/products/indoor-signage/v2-image-1.jpg",
     badge: "Wayfinding",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -442,16 +442,16 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/indoor-signage/image-1.jpg",
-      "/products/indoor-signage/image-2.jpg",
-      "/products/indoor-signage/image-3.jpg",
-      "/products/indoor-signage/image-4.jpg",
-      "/products/indoor-signage/image-5.jpg",
-      "/products/indoor-signage/image-6.jpg",
-      "/products/indoor-signage/image-7.jpg",
-      "/products/indoor-signage/image-8.jpg",
-      "/products/indoor-signage/image-9.jpg",
-      "/products/indoor-signage/image-10.jpg"
+      "/products/indoor-signage/v2-image-1.jpg",
+      "/products/indoor-signage/v2-image-2.jpg",
+      "/products/indoor-signage/v2-image-3.jpg",
+      "/products/indoor-signage/v2-image-4.jpg",
+      "/products/indoor-signage/v2-image-5.jpg",
+      "/products/indoor-signage/v2-image-6.jpg",
+      "/products/indoor-signage/v2-image-7.jpg",
+      "/products/indoor-signage/v2-image-8.jpg",
+      "/products/indoor-signage/v2-image-9.jpg",
+      "/products/indoor-signage/v2-image-10.jpg"
     ],
     pricingPackages: [
       {
@@ -485,7 +485,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Pylon & Totem Signs Printing & Manufacturing in Dubai",
     subtitle: "Increase your business visibility with custom pylon and totem signs in Dubai. Ideal for commercial properties, hotels, shopping areas, offices, business entrances, and large outdoor spaces.",
     description: "Increase your business visibility with custom pylon and totem signs in Dubai. Ideal for commercial properties, hotels, shopping areas, offices, business entrances, and large outdoor spaces.",
-    heroImage: "/products/pylon-totem-sign/image-1.jpg",
+    heroImage: "/products/pylon-totem-sign/v2-image-1.jpg",
     badge: "Heavy Monument",
     features: [
       "5-7 Days Fast Production Turnaround",
@@ -494,13 +494,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/pylon-totem-sign/image-1.jpg",
-      "/products/pylon-totem-sign/image-2.jpg",
-      "/products/pylon-totem-sign/image-3.jpg",
-      "/products/pylon-totem-sign/image-4.jpg",
-      "/products/pylon-totem-sign/image-5.jpg",
-      "/products/pylon-totem-sign/image-6.jpg",
-      "/products/pylon-totem-sign/image-7.jpg"
+      "/products/pylon-totem-sign/v2-image-1.jpg",
+      "/products/pylon-totem-sign/v2-image-2.jpg",
+      "/products/pylon-totem-sign/v2-image-3.jpg",
+      "/products/pylon-totem-sign/v2-image-4.jpg",
+      "/products/pylon-totem-sign/v2-image-5.jpg",
+      "/products/pylon-totem-sign/v2-image-6.jpg",
+      "/products/pylon-totem-sign/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -534,7 +534,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Rubber Stamps Printing & Manufacturing in Dubai",
     subtitle: "Order custom rubber stamps in Dubai for businesses, offices, documents, approvals, signatures, addresses, and official use. Professionally customized stamps made to your requirements.",
     description: "Order custom rubber stamps in Dubai for businesses, offices, documents, approvals, signatures, addresses, and official use. Professionally customized stamps made to your requirements.",
-    heroImage: "/products/stamp-making/image-1.jpg",
+    heroImage: "/products/stamp-making/v2-image-1.jpg",
     badge: "Same Day",
     features: [
       "Same-Day Production & Pickup Available",
@@ -543,12 +543,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Logo, Signature, Address & Date Stamps"
     ],
     samples: [
-      "/products/stamp-making/image-1.jpg",
-      "/products/stamp-making/image-2.jpg",
-      "/products/stamp-making/image-3.jpg",
-      "/products/stamp-making/image-4.jpg",
-      "/products/stamp-making/image-5.jpg",
-      "/products/stamp-making/image-6.jpg"
+      "/products/stamp-making/v2-image-1.jpg",
+      "/products/stamp-making/v2-image-2.jpg",
+      "/products/stamp-making/v2-image-3.jpg",
+      "/products/stamp-making/v2-image-4.jpg",
+      "/products/stamp-making/v2-image-5.jpg",
+      "/products/stamp-making/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -593,7 +593,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Parking & Wayfinding Signs Printing & Manufacturing in Dubai",
     subtitle: "Improve navigation with professional parking and wayfinding signs in Dubai. Custom directional, parking, and information signs for offices, hotels, malls, residential buildings, warehouses, and commercial properties.",
     description: "Improve navigation with professional parking and wayfinding signs in Dubai. Custom directional, parking, and information signs for offices, hotels, malls, residential buildings, warehouses, and commercial properties.",
-    heroImage: "/products/parking-signage/image-1.jpg",
+    heroImage: "/products/parking-signage/v2-image-1.jpg",
     badge: "Reflective",
     features: [
       "3M-Grade Reflective Vinyl for Night Visibility",
@@ -602,12 +602,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Custom Text, Numbering & Logo Possible"
     ],
     samples: [
-      "/products/parking-signage/image-1.jpg",
-      "/products/parking-signage/image-2.jpg",
-      "/products/parking-signage/image-3.jpg",
-      "/products/parking-signage/image-4.jpg",
-      "/products/parking-signage/image-5.jpg",
-      "/products/parking-signage/image-6.jpg"
+      "/products/parking-signage/v2-image-1.jpg",
+      "/products/parking-signage/v2-image-2.jpg",
+      "/products/parking-signage/v2-image-3.jpg",
+      "/products/parking-signage/v2-image-4.jpg",
+      "/products/parking-signage/v2-image-5.jpg",
+      "/products/parking-signage/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -641,7 +641,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Elevator Safety Signs Printing & Manufacturing in Dubai",
     subtitle: "Get clear and durable elevator safety signs in Dubai for residential and commercial buildings. Professionally designed signs for displaying important elevator safety information and instructions.",
     description: "Get clear and durable elevator safety signs in Dubai for residential and commercial buildings. Professionally designed signs for displaying important elevator safety information and instructions.",
-    heroImage: "/products/elevator-safety-sign/image-1.jpg",
+    heroImage: "/products/elevator-safety-sign/v2-image-1.jpg",
     badge: "Safety Compliant",
     features: [
       "Dubai Civil Defense & DM Compliant",
@@ -650,12 +650,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Arabic & English Bilingual Available"
     ],
     samples: [
-      "/products/elevator-safety-sign/image-1.jpg",
-      "/products/elevator-safety-sign/image-2.jpg",
-      "/products/elevator-safety-sign/image-3.jpg",
-      "/products/elevator-safety-sign/image-4.jpg",
-      "/products/elevator-safety-sign/image-5.jpg",
-      "/products/elevator-safety-sign/image-6.jpg"
+      "/products/elevator-safety-sign/v2-image-1.jpg",
+      "/products/elevator-safety-sign/v2-image-2.jpg",
+      "/products/elevator-safety-sign/v2-image-3.jpg",
+      "/products/elevator-safety-sign/v2-image-4.jpg",
+      "/products/elevator-safety-sign/v2-image-5.jpg",
+      "/products/elevator-safety-sign/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -689,7 +689,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "LED Screen Displays Printing & Manufacturing in Dubai",
     subtitle: "Enhance your advertising and promotions with LED screen displays in Dubai. Ideal for businesses, retail stores, malls, events, exhibitions, announcements, and digital advertising.",
     description: "Enhance your advertising and promotions with LED screen displays in Dubai. Ideal for businesses, retail stores, malls, events, exhibitions, announcements, and digital advertising.",
-    heroImage: "/products/led-screen-display/image-1.jpg",
+    heroImage: "/products/led-screen-display/v2-image-1.jpg",
     badge: "LED Digital",
     features: [
       "Indoor P2.5 / P3 & Outdoor P6 / P8 LED Panels",
@@ -698,11 +698,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day Consultation & Express Delivery Dubai"
     ],
     samples: [
-      "/products/led-screen-display/image-1.jpg",
-      "/products/led-screen-display/image-2.jpg",
-      "/products/led-screen-display/image-3.jpg",
-      "/products/led-screen-display/image-4.jpg",
-      "/products/led-screen-display/image-5.jpg"
+      "/products/led-screen-display/v2-image-1.jpg",
+      "/products/led-screen-display/v2-image-2.jpg",
+      "/products/led-screen-display/v2-image-3.jpg",
+      "/products/led-screen-display/v2-image-4.jpg",
+      "/products/led-screen-display/v2-image-5.jpg"
     ],
     pricingPackages: [
       {
@@ -736,7 +736,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Laser Engraving Printing & Manufacturing in Dubai",
     subtitle: "Get professional laser engraving services in Dubai for acrylic, wood, metal, glass, leather, gifts, awards, nameplates, and corporate products. Precise and customized engraving with premium finishing.",
     description: "Get professional laser engraving services in Dubai for acrylic, wood, metal, glass, leather, gifts, awards, nameplates, and corporate products. Precise and customized engraving with premium finishing.",
-    heroImage: "/products/laser-engraving/image-1.jpg",
+    heroImage: "/products/laser-engraving/v2-image-1.jpg",
     badge: "Custom LED",
     features: [
       "Precision CNC & CO2 Laser Engraving Quality",
@@ -745,12 +745,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day Production & Express Delivery Dubai & UAE"
     ],
     samples: [
-      "/products/laser-engraving/image-1.jpg",
-      "/products/laser-engraving/image-2.jpg",
-      "/products/laser-engraving/image-3.jpg",
-      "/products/laser-engraving/image-4.jpg",
-      "/products/laser-engraving/image-5.jpg",
-      "/products/laser-engraving/image-6.jpg"
+      "/products/laser-engraving/v2-image-1.jpg",
+      "/products/laser-engraving/v2-image-2.jpg",
+      "/products/laser-engraving/v2-image-3.jpg",
+      "/products/laser-engraving/v2-image-4.jpg",
+      "/products/laser-engraving/v2-image-5.jpg",
+      "/products/laser-engraving/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -784,7 +784,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Acrylic Display Stand Printing & Manufacturing in Dubai",
     subtitle: "Showcase your products, menus, brochures, and promotional materials with custom acrylic display stands in Dubai. Stylish, durable, and professionally designed for retail and business displays.",
     description: "Showcase your products, menus, brochures, and promotional materials with custom acrylic display stands in Dubai. Stylish, durable, and professionally designed for retail and business displays.",
-    heroImage: "/products/acrylic-display-stand/image-1.jpg",
+    heroImage: "/products/acrylic-display-stand/v2-image-1.jpg",
     badge: "Tabletop",
     features: [
       "Crystal Clear High-Impact Cast Acrylic",
@@ -793,11 +793,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day Dispatch & Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/acrylic-display-stand/image-1.jpg",
-      "/products/acrylic-display-stand/image-2.jpg",
-      "/products/acrylic-display-stand/image-3.jpg",
-      "/products/acrylic-display-stand/image-4.jpg",
-      "/products/acrylic-display-stand/image-5.jpg"
+      "/products/acrylic-display-stand/v2-image-1.jpg",
+      "/products/acrylic-display-stand/v2-image-2.jpg",
+      "/products/acrylic-display-stand/v2-image-3.jpg",
+      "/products/acrylic-display-stand/v2-image-4.jpg",
+      "/products/acrylic-display-stand/v2-image-5.jpg"
     ],
     pricingPackages: [
       {
@@ -831,7 +831,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Wall Graphics & Stickers Printing & Manufacturing in Dubai",
     subtitle: "Transform your walls with custom wall graphics and stickers in Dubai. Ideal for offices, shops, restaurants, retail stores, exhibitions, and commercial spaces with high-quality custom printing.",
     description: "Transform your walls with custom wall graphics and stickers in Dubai. Ideal for offices, shops, restaurants, retail stores, exhibitions, and commercial spaces with high-quality custom printing.",
-    heroImage: "/products/sticker-on-wall/image-1.jpg",
+    heroImage: "/products/sticker-on-wall/v2-image-1.jpg",
     badge: "Wall Murals",
     features: [
       "Same Day Fast Production Turnaround",
@@ -840,13 +840,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/sticker-on-wall/image-1.jpg",
-      "/products/sticker-on-wall/image-2.jpg",
-      "/products/sticker-on-wall/image-3.jpg",
-      "/products/sticker-on-wall/image-4.jpg",
-      "/products/sticker-on-wall/image-5.jpg",
-      "/products/sticker-on-wall/image-6.jpg",
-      "/products/sticker-on-wall/image-7.jpg"
+      "/products/sticker-on-wall/v2-image-1.jpg",
+      "/products/sticker-on-wall/v2-image-2.jpg",
+      "/products/sticker-on-wall/v2-image-3.jpg",
+      "/products/sticker-on-wall/v2-image-4.jpg",
+      "/products/sticker-on-wall/v2-image-5.jpg",
+      "/products/sticker-on-wall/v2-image-6.jpg",
+      "/products/sticker-on-wall/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -880,7 +880,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Wallpapers Printing & Manufacturing in Dubai",
     subtitle: "Create a unique interior with custom wallpapers in Dubai. Get professionally printed wallpapers for homes, offices, restaurants, hotels, retail stores, and commercial spaces in customized designs.",
     description: "Create a unique interior with custom wallpapers in Dubai. Get professionally printed wallpapers for homes, offices, restaurants, hotels, retail stores, and commercial spaces in customized designs.",
-    heroImage: "/products/wallpaper/image-1.jpg",
+    heroImage: "/products/wallpaper/v2-image-1.jpg",
     badge: "Custom Interior",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -889,12 +889,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/wallpaper/image-1.jpg",
-      "/products/wallpaper/image-2.jpg",
-      "/products/wallpaper/image-3.jpg",
-      "/products/wallpaper/image-4.jpg",
-      "/products/wallpaper/image-5.jpg",
-      "/products/wallpaper/image-6.jpg"
+      "/products/wallpaper/v2-image-1.jpg",
+      "/products/wallpaper/v2-image-2.jpg",
+      "/products/wallpaper/v2-image-3.jpg",
+      "/products/wallpaper/v2-image-4.jpg",
+      "/products/wallpaper/v2-image-5.jpg",
+      "/products/wallpaper/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -928,7 +928,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Forex & Foam Board Stickers Printing & Manufacturing in Dubai",
     subtitle: "Get high-quality forex and foam board stickers in Dubai for advertising, displays, exhibitions, retail promotions, events, and business branding. Custom sizes and professional printing available.",
     description: "Get high-quality forex and foam board stickers in Dubai for advertising, displays, exhibitions, retail promotions, events, and business branding. Custom sizes and professional printing available.",
-    heroImage: "/products/sticker-on-forex-foam-board/image-1.jpg",
+    heroImage: "/products/sticker-on-forex-foam-board/v2-image-1.jpg",
     badge: "Rigid Foam Board",
     features: [
       "Same Day Fast Production Turnaround",
@@ -937,12 +937,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/sticker-on-forex-foam-board/image-1.jpg",
-      "/products/sticker-on-forex-foam-board/image-2.jpg",
-      "/products/sticker-on-forex-foam-board/image-3.jpg",
-      "/products/sticker-on-forex-foam-board/image-4.jpg",
-      "/products/sticker-on-forex-foam-board/image-5.jpg",
-      "/products/sticker-on-forex-foam-board/image-6.jpg"
+      "/products/sticker-on-forex-foam-board/v2-image-1.jpg",
+      "/products/sticker-on-forex-foam-board/v2-image-2.jpg",
+      "/products/sticker-on-forex-foam-board/v2-image-3.jpg",
+      "/products/sticker-on-forex-foam-board/v2-image-4.jpg",
+      "/products/sticker-on-forex-foam-board/v2-image-5.jpg",
+      "/products/sticker-on-forex-foam-board/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -976,7 +976,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Vehicle Graphics & Branding Printing & Manufacturing in Dubai",
     subtitle: "Promote your business on the move with professional vehicle graphics and branding in Dubai. Custom vehicle stickers, logos, graphics, and full branding solutions for cars, vans, trucks, and commercial vehicles.",
     description: "Promote your business on the move with professional vehicle graphics and branding in Dubai. Custom vehicle stickers, logos, graphics, and full branding solutions for cars, vans, trucks, and commercial vehicles.",
-    heroImage: "/products/sticker-on-vehicles/image-1.jpg",
+    heroImage: "/products/sticker-on-vehicles/v2-image-1.jpg",
     badge: "RTA Approved",
     features: [
       "1-2 Days Fast Production Turnaround",
@@ -985,15 +985,15 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/sticker-on-vehicles/image-1.jpg",
-      "/products/sticker-on-vehicles/image-2.jpg",
-      "/products/sticker-on-vehicles/image-3.jpg",
-      "/products/sticker-on-vehicles/image-4.jpg",
-      "/products/sticker-on-vehicles/image-5.jpg",
-      "/products/sticker-on-vehicles/image-6.jpg",
-      "/products/sticker-on-vehicles/image-7.jpg",
-      "/products/sticker-on-vehicles/image-8.jpg",
-      "/products/sticker-on-vehicles/image-9.jpg"
+      "/products/sticker-on-vehicles/v2-image-1.jpg",
+      "/products/sticker-on-vehicles/v2-image-2.jpg",
+      "/products/sticker-on-vehicles/v2-image-3.jpg",
+      "/products/sticker-on-vehicles/v2-image-4.jpg",
+      "/products/sticker-on-vehicles/v2-image-5.jpg",
+      "/products/sticker-on-vehicles/v2-image-6.jpg",
+      "/products/sticker-on-vehicles/v2-image-7.jpg",
+      "/products/sticker-on-vehicles/v2-image-8.jpg",
+      "/products/sticker-on-vehicles/v2-image-9.jpg"
     ],
     pricingPackages: [
       {
@@ -1027,7 +1027,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Glass Stickers & Graphics Printing & Manufacturing in Dubai",
     subtitle: "Enhance your glass surfaces with custom glass stickers and graphics in Dubai. Ideal for offices, shops, restaurants, malls, clinics, and commercial spaces for branding, decoration, and information.",
     description: "Enhance your glass surfaces with custom glass stickers and graphics in Dubai. Ideal for offices, shops, restaurants, malls, clinics, and commercial spaces for branding, decoration, and information.",
-    heroImage: "/products/sticker-on-glass/image-1.jpg",
+    heroImage: "/products/sticker-on-glass/v2-image-1.jpg",
     badge: "Glass Decals",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1036,12 +1036,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/sticker-on-glass/image-1.jpg",
-      "/products/sticker-on-glass/image-2.jpg",
-      "/products/sticker-on-glass/image-3.jpg",
-      "/products/sticker-on-glass/image-4.jpg",
-      "/products/sticker-on-glass/image-5.jpg",
-      "/products/sticker-on-glass/image-6.jpg"
+      "/products/sticker-on-glass/v2-image-1.jpg",
+      "/products/sticker-on-glass/v2-image-2.jpg",
+      "/products/sticker-on-glass/v2-image-3.jpg",
+      "/products/sticker-on-glass/v2-image-4.jpg",
+      "/products/sticker-on-glass/v2-image-5.jpg",
+      "/products/sticker-on-glass/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -1075,7 +1075,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Roll Up Banner Stands Printing & Manufacturing in Dubai",
     subtitle: "Promote your business at events and exhibitions with professional roll up banner stands in Dubai. Portable, easy to set up, and ideal for advertising, branding, promotions, and presentations.",
     description: "Promote your business at events and exhibitions with professional roll up banner stands in Dubai. Portable, easy to set up, and ideal for advertising, branding, promotions, and presentations.",
-    heroImage: "/products/rollup-stand/image-1.jpg",
+    heroImage: "/products/rollup-stand/v2-image-1.jpg",
     badge: "Express 2-Hour",
     features: [
       "Same Day Fast Production Turnaround",
@@ -1084,12 +1084,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/rollup-stand/image-1.jpg",
-      "/products/rollup-stand/image-2.jpg",
-      "/products/rollup-stand/image-3.jpg",
-      "/products/rollup-stand/image-4.jpg",
-      "/products/rollup-stand/image-5.jpg",
-      "/products/rollup-stand/image-6.jpg"
+      "/products/rollup-stand/v2-image-1.jpg",
+      "/products/rollup-stand/v2-image-2.jpg",
+      "/products/rollup-stand/v2-image-3.jpg",
+      "/products/rollup-stand/v2-image-4.jpg",
+      "/products/rollup-stand/v2-image-5.jpg",
+      "/products/rollup-stand/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -1123,7 +1123,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Photo Frames & Canvas Prints Printing & Manufacturing in Dubai",
     subtitle: "Preserve your favorite memories and showcase your artwork with custom photo frames and canvas prints in Dubai. High-quality printing suitable for homes, offices, gifts, décor, and commercial displays.",
     description: "Preserve your favorite memories and showcase your artwork with custom photo frames and canvas prints in Dubai. High-quality printing suitable for homes, offices, gifts, décor, and commercial displays.",
-    heroImage: "/products/photo-frame/image-1.jpg",
+    heroImage: "/products/photo-frame/v2-image-1.jpg",
     badge: "Canvas Wrap",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1132,13 +1132,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/photo-frame/image-1.jpg",
-      "/products/photo-frame/image-2.jpg",
-      "/products/photo-frame/image-3.jpg",
-      "/products/photo-frame/image-4.jpg",
-      "/products/photo-frame/image-5.jpg",
-      "/products/photo-frame/image-6.jpg",
-      "/products/photo-frame/image-7.jpg"
+      "/products/photo-frame/v2-image-1.jpg",
+      "/products/photo-frame/v2-image-2.jpg",
+      "/products/photo-frame/v2-image-3.jpg",
+      "/products/photo-frame/v2-image-4.jpg",
+      "/products/photo-frame/v2-image-5.jpg",
+      "/products/photo-frame/v2-image-6.jpg",
+      "/products/photo-frame/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1172,7 +1172,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Flag Printing Printing & Manufacturing in Dubai",
     subtitle: "Get custom flag printing in Dubai for businesses, events, exhibitions, promotions, hotels, schools, and corporate branding. Professional-quality flags customized with your logo, colors, and design.",
     description: "Get custom flag printing in Dubai for businesses, events, exhibitions, promotions, hotels, schools, and corporate branding. Professional-quality flags customized with your logo, colors, and design.",
-    heroImage: "/products/flag-print/image-1.jpg",
+    heroImage: "/products/flag-print/v2-image-1.jpg",
     badge: "Wind Resistant",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1181,13 +1181,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/flag-print/image-1.jpg",
-      "/products/flag-print/image-2.jpg",
-      "/products/flag-print/image-3.jpg",
-      "/products/flag-print/image-4.jpg",
-      "/products/flag-print/image-5.jpg",
-      "/products/flag-print/image-6.jpg",
-      "/products/flag-print/image-7.jpg"
+      "/products/flag-print/v2-image-1.jpg",
+      "/products/flag-print/v2-image-2.jpg",
+      "/products/flag-print/v2-image-3.jpg",
+      "/products/flag-print/v2-image-4.jpg",
+      "/products/flag-print/v2-image-5.jpg",
+      "/products/flag-print/v2-image-6.jpg",
+      "/products/flag-print/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1221,7 +1221,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Flag Banner Stands Printing & Manufacturing in Dubai",
     subtitle: "Increase brand visibility with professional flag banner stands in Dubai. Ideal for outdoor promotions, exhibitions, events, shops, entrances, and corporate advertising.",
     description: "Increase brand visibility with professional flag banner stands in Dubai. Ideal for outdoor promotions, exhibitions, events, shops, entrances, and corporate advertising.",
-    heroImage: "/products/flag-stand/image-1.jpg",
+    heroImage: "/products/flag-stand/v2-image-1.jpg",
     badge: "Outdoor Flag",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1230,13 +1230,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/flag-stand/image-1.jpg",
-      "/products/flag-stand/image-2.jpg",
-      "/products/flag-stand/image-3.jpg",
-      "/products/flag-stand/image-4.jpg",
-      "/products/flag-stand/image-5.jpg",
-      "/products/flag-stand/image-6.jpg",
-      "/products/flag-stand/image-7.jpg"
+      "/products/flag-stand/v2-image-1.jpg",
+      "/products/flag-stand/v2-image-2.jpg",
+      "/products/flag-stand/v2-image-3.jpg",
+      "/products/flag-stand/v2-image-4.jpg",
+      "/products/flag-stand/v2-image-5.jpg",
+      "/products/flag-stand/v2-image-6.jpg",
+      "/products/flag-stand/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1270,7 +1270,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Banner Stands Printing & Manufacturing in Dubai",
     subtitle: "Get portable and professional banner stands in Dubai for exhibitions, events, promotions, retail stores, and business presentations. Custom printed banners designed for maximum visibility.",
     description: "Get portable and professional banner stands in Dubai for exhibitions, events, promotions, retail stores, and business presentations. Custom printed banners designed for maximum visibility.",
-    heroImage: "/products/banner-stand/image-1.jpg",
+    heroImage: "/products/banner-stand/v2-image-1.jpg",
     badge: "Portable",
     features: [
       "Same Day Fast Production Turnaround",
@@ -1279,12 +1279,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/banner-stand/image-1.jpg",
-      "/products/banner-stand/image-2.jpg",
-      "/products/banner-stand/image-3.jpg",
-      "/products/banner-stand/image-4.jpg",
-      "/products/banner-stand/image-5.jpg",
-      "/products/banner-stand/image-6.jpg"
+      "/products/banner-stand/v2-image-1.jpg",
+      "/products/banner-stand/v2-image-2.jpg",
+      "/products/banner-stand/v2-image-3.jpg",
+      "/products/banner-stand/v2-image-4.jpg",
+      "/products/banner-stand/v2-image-5.jpg",
+      "/products/banner-stand/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -1318,7 +1318,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Promotional Tables & Counters Printing & Manufacturing in Dubai",
     subtitle: "Create an attractive promotional setup with custom promotional tables and counters in Dubai. Ideal for exhibitions, events, product launches, retail promotions, and brand activations.",
     description: "Create an attractive promotional setup with custom promotional tables and counters in Dubai. Ideal for exhibitions, events, product launches, retail promotions, and brand activations.",
-    heroImage: "/products/promotion-table/image-1.jpg",
+    heroImage: "/products/promotion-table/v2-image-1.jpg",
     badge: "Sampling Table",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -1327,12 +1327,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/promotion-table/image-1.jpg",
-      "/products/promotion-table/image-2.jpg",
-      "/products/promotion-table/image-3.jpg",
-      "/products/promotion-table/image-4.jpg",
-      "/products/promotion-table/image-5.jpg",
-      "/products/promotion-table/image-6.jpg"
+      "/products/promotion-table/v2-image-1.jpg",
+      "/products/promotion-table/v2-image-2.jpg",
+      "/products/promotion-table/v2-image-3.jpg",
+      "/products/promotion-table/v2-image-4.jpg",
+      "/products/promotion-table/v2-image-5.jpg",
+      "/products/promotion-table/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -1366,7 +1366,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Reception Display Stands Printing & Manufacturing in Dubai",
     subtitle: "Enhance your reception area with professional display stands in Dubai. Perfect for brochures, company information, promotional materials, products, and branded displays.",
     description: "Enhance your reception area with professional display stands in Dubai. Perfect for brochures, company information, promotional materials, products, and branded displays.",
-    heroImage: "/products/reception-stand/image-1.jpg",
+    heroImage: "/products/reception-stand/v2-image-1.jpg",
     badge: "Lobby Stand",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1375,11 +1375,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/reception-stand/image-1.jpg",
-      "/products/reception-stand/image-2.jpg",
-      "/products/reception-stand/image-3.jpg",
-      "/products/reception-stand/image-4.jpg",
-      "/products/reception-stand/image-5.jpg"
+      "/products/reception-stand/v2-image-1.jpg",
+      "/products/reception-stand/v2-image-2.jpg",
+      "/products/reception-stand/v2-image-3.jpg",
+      "/products/reception-stand/v2-image-4.jpg",
+      "/products/reception-stand/v2-image-5.jpg"
     ],
     pricingPackages: [
       {
@@ -1413,7 +1413,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "D-Board Shelf Display Stands Printing & Manufacturing in Dubai",
     subtitle: "Display your products professionally with custom D-Board shelf display stands in Dubai. Lightweight and practical display solutions for retail stores, exhibitions, promotions, and product presentations.",
     description: "Display your products professionally with custom D-Board shelf display stands in Dubai. Lightweight and practical display solutions for retail stores, exhibitions, promotions, and product presentations.",
-    heroImage: "/products/shelf-d-board-stand/image-1.jpg",
+    heroImage: "/products/shelf-d-board-stand/v2-image-1.jpg",
     badge: "Eco Honeycomb",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -1422,11 +1422,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/shelf-d-board-stand/image-1.jpg",
-      "/products/shelf-d-board-stand/image-2.jpg",
-      "/products/shelf-d-board-stand/image-3.jpg",
-      "/products/shelf-d-board-stand/image-4.jpg",
-      "/products/shelf-d-board-stand/image-5.jpg"
+      "/products/shelf-d-board-stand/v2-image-1.jpg",
+      "/products/shelf-d-board-stand/v2-image-2.jpg",
+      "/products/shelf-d-board-stand/v2-image-3.jpg",
+      "/products/shelf-d-board-stand/v2-image-4.jpg",
+      "/products/shelf-d-board-stand/v2-image-5.jpg"
     ],
     pricingPackages: [
       {
@@ -1460,7 +1460,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Frosted Glass Stickers Printing & Manufacturing in Dubai",
     subtitle: "Add privacy and style with custom frosted glass stickers in Dubai. Perfect for office partitions, meeting rooms, glass doors, windows, clinics, salons, and commercial spaces.",
     description: "Add privacy and style with custom frosted glass stickers in Dubai. Perfect for office partitions, meeting rooms, glass doors, windows, clinics, salons, and commercial spaces.",
-    heroImage: "/products/frosted-on-glass/image-1.jpg",
+    heroImage: "/products/frosted-on-glass/v2-image-1.jpg",
     badge: "Privacy Film",
     features: [
       "Same-Day Supply & Installation Available",
@@ -1469,13 +1469,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Removable Without Damage to Glass"
     ],
     samples: [
-      "/products/frosted-on-glass/image-1.jpg",
-      "/products/frosted-on-glass/image-2.jpg",
-      "/products/frosted-on-glass/image-3.jpg",
-      "/products/frosted-on-glass/image-4.jpg",
-      "/products/frosted-on-glass/image-5.jpg",
-      "/products/frosted-on-glass/image-6.jpg",
-      "/products/frosted-on-glass/image-7.jpg"
+      "/products/frosted-on-glass/v2-image-1.jpg",
+      "/products/frosted-on-glass/v2-image-2.jpg",
+      "/products/frosted-on-glass/v2-image-3.jpg",
+      "/products/frosted-on-glass/v2-image-4.jpg",
+      "/products/frosted-on-glass/v2-image-5.jpg",
+      "/products/frosted-on-glass/v2-image-6.jpg",
+      "/products/frosted-on-glass/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1509,7 +1509,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "One Way Vision Film Printing & Manufacturing in Dubai",
     subtitle: "Get professional one way vision film in Dubai for shop windows, office glass, vehicle windows, and commercial spaces. Perfect for advertising while maintaining visibility from the inside.",
     description: "Get professional one way vision film in Dubai for shop windows, office glass, vehicle windows, and commercial spaces. Perfect for advertising while maintaining visibility from the inside.",
-    heroImage: "/products/one-way-vision-on-glass/image-1.jpg",
+    heroImage: "/products/one-way-vision-on-glass/v2-image-1.jpg",
     badge: "Shopfront",
     features: [
       "Full-Color UV-Resistant Outdoor Print",
@@ -1518,13 +1518,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Custom Size for Any Window or Shopfront"
     ],
     samples: [
-      "/products/one-way-vision-on-glass/image-1.jpg",
-      "/products/one-way-vision-on-glass/image-2.jpg",
-      "/products/one-way-vision-on-glass/image-3.jpg",
-      "/products/one-way-vision-on-glass/image-4.jpg",
-      "/products/one-way-vision-on-glass/image-5.jpg",
-      "/products/one-way-vision-on-glass/image-6.jpg",
-      "/products/one-way-vision-on-glass/image-7.jpg"
+      "/products/one-way-vision-on-glass/v2-image-1.jpg",
+      "/products/one-way-vision-on-glass/v2-image-2.jpg",
+      "/products/one-way-vision-on-glass/v2-image-3.jpg",
+      "/products/one-way-vision-on-glass/v2-image-4.jpg",
+      "/products/one-way-vision-on-glass/v2-image-5.jpg",
+      "/products/one-way-vision-on-glass/v2-image-6.jpg",
+      "/products/one-way-vision-on-glass/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1558,7 +1558,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Window Privacy Films Printing & Manufacturing in Dubai",
     subtitle: "Improve privacy and appearance with custom window privacy films in Dubai. Suitable for offices, homes, clinics, restaurants, meeting rooms, glass doors, and commercial properties.",
     description: "Improve privacy and appearance with custom window privacy films in Dubai. Suitable for offices, homes, clinics, restaurants, meeting rooms, glass doors, and commercial properties.",
-    heroImage: "/products/window-privacy-film/image-1.jpg",
+    heroImage: "/products/window-privacy-film/v2-image-1.jpg",
     badge: "Solar Control",
     features: [
       "Solar Heat Reduction up to 79%",
@@ -1567,13 +1567,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Professional Supply & Installation Team"
     ],
     samples: [
-      "/products/window-privacy-film/image-1.jpg",
-      "/products/window-privacy-film/image-2.jpg",
-      "/products/window-privacy-film/image-3.jpg",
-      "/products/window-privacy-film/image-4.jpg",
-      "/products/window-privacy-film/image-5.jpg",
-      "/products/window-privacy-film/image-6.jpg",
-      "/products/window-privacy-film/image-7.jpg"
+      "/products/window-privacy-film/v2-image-1.jpg",
+      "/products/window-privacy-film/v2-image-2.jpg",
+      "/products/window-privacy-film/v2-image-3.jpg",
+      "/products/window-privacy-film/v2-image-4.jpg",
+      "/products/window-privacy-film/v2-image-5.jpg",
+      "/products/window-privacy-film/v2-image-6.jpg",
+      "/products/window-privacy-film/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1607,7 +1607,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Business Cards Printing & Manufacturing in Dubai",
     subtitle: "Get professionally printed business cards in Dubai to promote your brand and create a strong first impression. Custom business cards available in different sizes, finishes, and designs.",
     description: "Get professionally printed business cards in Dubai to promote your brand and create a strong first impression. Custom business cards available in different sizes, finishes, and designs.",
-    heroImage: "/products/business-cards/image-1.jpg",
+    heroImage: "/products/business-cards/v2-image-1.jpg",
     badge: "Top Seller",
     features: [
       "Same Day (2 Hours) Fast Production Turnaround",
@@ -1616,13 +1616,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/business-cards/image-1.jpg",
-      "/products/business-cards/image-2.jpg",
-      "/products/business-cards/image-3.jpg",
-      "/products/business-cards/image-4.jpg",
-      "/products/business-cards/image-5.jpg",
-      "/products/business-cards/image-6.jpg",
-      "/products/business-cards/image-7.jpg"
+      "/products/business-cards/v2-image-1.jpg",
+      "/products/business-cards/v2-image-2.jpg",
+      "/products/business-cards/v2-image-3.jpg",
+      "/products/business-cards/v2-image-4.jpg",
+      "/products/business-cards/v2-image-5.jpg",
+      "/products/business-cards/v2-image-6.jpg",
+      "/products/business-cards/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1656,7 +1656,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Print & Cut Stickers Printing & Manufacturing in Dubai",
     subtitle: "Get custom print and cut stickers in Dubai for product labels, packaging, branding, promotions, vehicles, windows, and marketing materials. High-quality printing with precise custom cutting.",
     description: "Get custom print and cut stickers in Dubai for product labels, packaging, branding, promotions, vehicles, windows, and marketing materials. High-quality printing with precise custom cutting.",
-    heroImage: "/products/print-and-cut-sticker/image-1.jpg",
+    heroImage: "/products/print-and-cut-sticker/v2-image-1.jpg",
     badge: "Precision Cut",
     features: [
       "Same Day Fast Production Turnaround",
@@ -1665,15 +1665,15 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/print-and-cut-sticker/image-1.jpg",
-      "/products/print-and-cut-sticker/image-2.jpg",
-      "/products/print-and-cut-sticker/image-3.jpg",
-      "/products/print-and-cut-sticker/image-4.jpg",
-      "/products/print-and-cut-sticker/image-5.jpg",
-      "/products/print-and-cut-sticker/image-6.jpg",
-      "/products/print-and-cut-sticker/image-7.jpg",
-      "/products/print-and-cut-sticker/image-8.jpg",
-      "/products/print-and-cut-sticker/image-9.jpg"
+      "/products/print-and-cut-sticker/v2-image-1.jpg",
+      "/products/print-and-cut-sticker/v2-image-2.jpg",
+      "/products/print-and-cut-sticker/v2-image-3.jpg",
+      "/products/print-and-cut-sticker/v2-image-4.jpg",
+      "/products/print-and-cut-sticker/v2-image-5.jpg",
+      "/products/print-and-cut-sticker/v2-image-6.jpg",
+      "/products/print-and-cut-sticker/v2-image-7.jpg",
+      "/products/print-and-cut-sticker/v2-image-8.jpg",
+      "/products/print-and-cut-sticker/v2-image-9.jpg"
     ],
     pricingPackages: [
       {
@@ -1707,7 +1707,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Flyers & Leaflets Printing & Manufacturing in Dubai",
     subtitle: "Promote your business with high-quality flyers and leaflets printing in Dubai. Perfect for marketing campaigns, promotions, events, restaurants, real estate, retail businesses, and corporate advertising.",
     description: "Promote your business with high-quality flyers and leaflets printing in Dubai. Perfect for marketing campaigns, promotions, events, restaurants, real estate, retail businesses, and corporate advertising.",
-    heroImage: "/products/flyers/image-1.jpg",
+    heroImage: "/products/flyers/v2-image-1.jpg",
     badge: "Fast Delivery",
     features: [
       "Same Day Fast Production Turnaround",
@@ -1716,14 +1716,14 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/flyers/image-1.jpg",
-      "/products/flyers/image-2.jpg",
-      "/products/flyers/image-3.jpg",
-      "/products/flyers/image-4.jpg",
-      "/products/flyers/image-5.jpg",
-      "/products/flyers/image-6.jpg",
-      "/products/flyers/image-7.jpg",
-      "/products/flyers/image-8.jpg"
+      "/products/flyers/v2-image-1.jpg",
+      "/products/flyers/v2-image-2.jpg",
+      "/products/flyers/v2-image-3.jpg",
+      "/products/flyers/v2-image-4.jpg",
+      "/products/flyers/v2-image-5.jpg",
+      "/products/flyers/v2-image-6.jpg",
+      "/products/flyers/v2-image-7.jpg",
+      "/products/flyers/v2-image-8.jpg"
     ],
     pricingPackages: [
       {
@@ -1757,7 +1757,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Menu Printing Printing & Manufacturing in Dubai",
     subtitle: "Get professional menu printing in Dubai for restaurants, cafés, hotels, catering businesses, and food outlets. Custom menu designs with high-quality printing and a variety of finishing options.",
     description: "Get professional menu printing in Dubai for restaurants, cafés, hotels, catering businesses, and food outlets. Custom menu designs with high-quality printing and a variety of finishing options.",
-    heroImage: "/products/menu/image-1.jpg",
+    heroImage: "/products/menu/v2-image-1.jpg",
     badge: "Waterproof Menu",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1766,15 +1766,15 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/menu/image-1.jpg",
-      "/products/menu/image-2.jpg",
-      "/products/menu/image-3.jpg",
-      "/products/menu/image-4.jpg",
-      "/products/menu/image-5.jpg",
-      "/products/menu/image-6.jpg",
-      "/products/menu/image-7.jpg",
-      "/products/menu/image-8.jpg",
-      "/products/menu/image-9.jpg"
+      "/products/menu/v2-image-1.jpg",
+      "/products/menu/v2-image-2.jpg",
+      "/products/menu/v2-image-3.jpg",
+      "/products/menu/v2-image-4.jpg",
+      "/products/menu/v2-image-5.jpg",
+      "/products/menu/v2-image-6.jpg",
+      "/products/menu/v2-image-7.jpg",
+      "/products/menu/v2-image-8.jpg",
+      "/products/menu/v2-image-9.jpg"
     ],
     pricingPackages: [
       {
@@ -1808,7 +1808,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Letterheads Printing & Manufacturing in Dubai",
     subtitle: "Create a professional corporate identity with custom letterhead printing in Dubai. Personalized with your company logo, contact details, branding, and business information.",
     description: "Create a professional corporate identity with custom letterhead printing in Dubai. Personalized with your company logo, contact details, branding, and business information.",
-    heroImage: "/products/letterheads/image-1.jpg",
+    heroImage: "/products/letterheads/v2-image-1.jpg",
     badge: "Laser Friendly",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1817,11 +1817,11 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/letterheads/image-1.jpg",
-      "/products/letterheads/image-2.jpg",
-      "/products/letterheads/image-3.jpg",
-      "/products/letterheads/image-4.jpg",
-      "/products/letterheads/image-5.jpg"
+      "/products/letterheads/v2-image-1.jpg",
+      "/products/letterheads/v2-image-2.jpg",
+      "/products/letterheads/v2-image-3.jpg",
+      "/products/letterheads/v2-image-4.jpg",
+      "/products/letterheads/v2-image-5.jpg"
     ],
     pricingPackages: [
       {
@@ -1855,7 +1855,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Envelope Printing Printing & Manufacturing in Dubai",
     subtitle: "Get custom printed envelopes in Dubai for businesses, offices, invitations, marketing campaigns, and corporate communication. Professional envelope printing with your logo and brand identity.",
     description: "Get custom printed envelopes in Dubai for businesses, offices, invitations, marketing campaigns, and corporate communication. Professional envelope printing with your logo and brand identity.",
-    heroImage: "/products/envelopes-print/image-1.jpg",
+    heroImage: "/products/envelopes-print/v2-image-1.jpg",
     badge: "Branded Envelopes",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -1864,13 +1864,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/envelopes-print/image-1.jpg",
-      "/products/envelopes-print/image-2.jpg",
-      "/products/envelopes-print/image-3.jpg",
-      "/products/envelopes-print/image-4.jpg",
-      "/products/envelopes-print/image-5.jpg",
-      "/products/envelopes-print/image-6.jpg",
-      "/products/envelopes-print/image-7.jpg"
+      "/products/envelopes-print/v2-image-1.jpg",
+      "/products/envelopes-print/v2-image-2.jpg",
+      "/products/envelopes-print/v2-image-3.jpg",
+      "/products/envelopes-print/v2-image-4.jpg",
+      "/products/envelopes-print/v2-image-5.jpg",
+      "/products/envelopes-print/v2-image-6.jpg",
+      "/products/envelopes-print/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -1904,7 +1904,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Bag Printing Printing & Manufacturing in Dubai",
     subtitle: "Promote your brand with custom printed bags in Dubai. Ideal for retail stores, restaurants, events, exhibitions, corporate promotions, and business giveaways with customized branding.",
     description: "Promote your brand with custom printed bags in Dubai. Ideal for retail stores, restaurants, events, exhibitions, corporate promotions, and business giveaways with customized branding.",
-    heroImage: "/products/bags-print/image-1.jpg",
+    heroImage: "/products/bags-print/v2-image-1.jpg",
     badge: "Eco Paper & Tote",
     features: [
       "48 Hours Fast Production Turnaround",
@@ -1913,16 +1913,16 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/bags-print/image-1.jpg",
-      "/products/bags-print/image-2.jpg",
-      "/products/bags-print/image-3.jpg",
-      "/products/bags-print/image-4.jpg",
-      "/products/bags-print/image-5.jpg",
-      "/products/bags-print/image-6.jpg",
-      "/products/bags-print/image-7.jpg",
-      "/products/bags-print/image-8.jpg",
-      "/products/bags-print/image-9.jpg",
-      "/products/bags-print/image-10.jpg"
+      "/products/bags-print/v2-image-1.jpg",
+      "/products/bags-print/v2-image-2.jpg",
+      "/products/bags-print/v2-image-3.jpg",
+      "/products/bags-print/v2-image-4.jpg",
+      "/products/bags-print/v2-image-5.jpg",
+      "/products/bags-print/v2-image-6.jpg",
+      "/products/bags-print/v2-image-7.jpg",
+      "/products/bags-print/v2-image-8.jpg",
+      "/products/bags-print/v2-image-9.jpg",
+      "/products/bags-print/v2-image-10.jpg"
     ],
     pricingPackages: [
       {
@@ -1956,7 +1956,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom T-Shirt Printing Printing & Manufacturing in Dubai",
     subtitle: "Get high-quality custom T-shirt printing in Dubai for businesses, events, teams, promotions, uniforms, gifts, and personal use. Customize T-shirts with logos, graphics, names, and designs.",
     description: "Get high-quality custom T-shirt printing in Dubai for businesses, events, teams, promotions, uniforms, gifts, and personal use. Customize T-shirts with logos, graphics, names, and designs.",
-    heroImage: "/products/t-shirt-print/image-1.jpg",
+    heroImage: "/products/t-shirt-print/v2-image-1.jpg",
     badge: "DTF Cotton",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -1965,14 +1965,14 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/t-shirt-print/image-1.jpg",
-      "/products/t-shirt-print/image-2.jpg",
-      "/products/t-shirt-print/image-3.jpg",
-      "/products/t-shirt-print/image-4.jpg",
-      "/products/t-shirt-print/image-5.jpg",
-      "/products/t-shirt-print/image-6.jpg",
-      "/products/t-shirt-print/image-7.jpg",
-      "/products/t-shirt-print/image-8.jpg"
+      "/products/t-shirt-print/v2-image-1.jpg",
+      "/products/t-shirt-print/v2-image-2.jpg",
+      "/products/t-shirt-print/v2-image-3.jpg",
+      "/products/t-shirt-print/v2-image-4.jpg",
+      "/products/t-shirt-print/v2-image-5.jpg",
+      "/products/t-shirt-print/v2-image-6.jpg",
+      "/products/t-shirt-print/v2-image-7.jpg",
+      "/products/t-shirt-print/v2-image-8.jpg"
     ],
     pricingPackages: [
       {
@@ -2006,7 +2006,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Bottle Printing Printing & Manufacturing in Dubai",
     subtitle: "Create branded and personalized bottles with custom bottle printing in Dubai. Ideal for corporate gifts, events, promotions, restaurants, gyms, schools, and business branding.",
     description: "Create branded and personalized bottles with custom bottle printing in Dubai. Ideal for corporate gifts, events, promotions, restaurants, gyms, schools, and business branding.",
-    heroImage: "/products/bottle-print/image-1.jpg",
+    heroImage: "/products/bottle-print/v2-image-1.jpg",
     badge: "Laser Engraved",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -2015,13 +2015,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/bottle-print/image-1.jpg",
-      "/products/bottle-print/image-2.jpg",
-      "/products/bottle-print/image-3.jpg",
-      "/products/bottle-print/image-4.jpg",
-      "/products/bottle-print/image-5.jpg",
-      "/products/bottle-print/image-6.jpg",
-      "/products/bottle-print/image-7.jpg"
+      "/products/bottle-print/v2-image-1.jpg",
+      "/products/bottle-print/v2-image-2.jpg",
+      "/products/bottle-print/v2-image-3.jpg",
+      "/products/bottle-print/v2-image-4.jpg",
+      "/products/bottle-print/v2-image-5.jpg",
+      "/products/bottle-print/v2-image-6.jpg",
+      "/products/bottle-print/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -2055,7 +2055,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Mug Printing Printing & Manufacturing in Dubai",
     subtitle: "Order custom mug printing in Dubai for corporate gifts, promotional campaigns, events, personal gifts, and business branding. Customize mugs with logos, photos, names, messages, and creative designs.",
     description: "Order custom mug printing in Dubai for corporate gifts, promotional campaigns, events, personal gifts, and business branding. Customize mugs with logos, photos, names, messages, and creative designs.",
-    heroImage: "/products/mugs-print/image-1.jpg",
+    heroImage: "/products/mugs-print/v2-image-1.jpg",
     badge: "Microwave Safe",
     features: [
       "24 Hours Fast Production Turnaround",
@@ -2064,12 +2064,12 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/mugs-print/image-1.jpg",
-      "/products/mugs-print/image-2.jpg",
-      "/products/mugs-print/image-3.jpg",
-      "/products/mugs-print/image-4.jpg",
-      "/products/mugs-print/image-5.jpg",
-      "/products/mugs-print/image-6.jpg"
+      "/products/mugs-print/v2-image-1.jpg",
+      "/products/mugs-print/v2-image-2.jpg",
+      "/products/mugs-print/v2-image-3.jpg",
+      "/products/mugs-print/v2-image-4.jpg",
+      "/products/mugs-print/v2-image-5.jpg",
+      "/products/mugs-print/v2-image-6.jpg"
     ],
     pricingPackages: [
       {
@@ -2103,7 +2103,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Packaging Boxes Printing & Manufacturing in Dubai",
     subtitle: "Get custom packaging boxes in Dubai designed to showcase and protect your products. Professional packaging solutions for retail, e-commerce, food, gifts, cosmetics, and corporate products.",
     description: "Get custom packaging boxes in Dubai designed to showcase and protect your products. Professional packaging solutions for retail, e-commerce, food, gifts, cosmetics, and corporate products.",
-    heroImage: "/products/packaging/image-1.jpg",
+    heroImage: "/products/packaging/v2-image-1.jpg",
     badge: "Rigid Boxes",
     features: [
       "48 Hours Fast Production Turnaround",
@@ -2112,16 +2112,16 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/packaging/image-1.jpg",
-      "/products/packaging/image-2.jpg",
-      "/products/packaging/image-3.jpg",
-      "/products/packaging/image-4.jpg",
-      "/products/packaging/image-5.jpg",
-      "/products/packaging/image-6.jpg",
-      "/products/packaging/image-7.jpg",
-      "/products/packaging/image-8.jpg",
-      "/products/packaging/image-9.jpg",
-      "/products/packaging/image-10.jpg"
+      "/products/packaging/v2-image-1.jpg",
+      "/products/packaging/v2-image-2.jpg",
+      "/products/packaging/v2-image-3.jpg",
+      "/products/packaging/v2-image-4.jpg",
+      "/products/packaging/v2-image-5.jpg",
+      "/products/packaging/v2-image-6.jpg",
+      "/products/packaging/v2-image-7.jpg",
+      "/products/packaging/v2-image-8.jpg",
+      "/products/packaging/v2-image-9.jpg",
+      "/products/packaging/v2-image-10.jpg"
     ],
     pricingPackages: [
       {
@@ -2155,7 +2155,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom Calendars Printing & Manufacturing in Dubai",
     subtitle: "Promote your brand throughout the year with custom calendar printing in Dubai. Personalized calendars are ideal for corporate gifts, offices, promotional campaigns, and business branding.",
     description: "Promote your brand throughout the year with custom calendar printing in Dubai. Personalized calendars are ideal for corporate gifts, offices, promotional campaigns, and business branding.",
-    heroImage: "/products/calendars/image-1.jpg",
+    heroImage: "/products/calendars/v2-image-1.jpg",
     badge: "Wire-O Bound",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -2164,13 +2164,13 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/calendars/image-1.jpg",
-      "/products/calendars/image-2.jpg",
-      "/products/calendars/image-3.jpg",
-      "/products/calendars/image-4.jpg",
-      "/products/calendars/image-5.jpg",
-      "/products/calendars/image-6.jpg",
-      "/products/calendars/image-7.jpg"
+      "/products/calendars/v2-image-1.jpg",
+      "/products/calendars/v2-image-2.jpg",
+      "/products/calendars/v2-image-3.jpg",
+      "/products/calendars/v2-image-4.jpg",
+      "/products/calendars/v2-image-5.jpg",
+      "/products/calendars/v2-image-6.jpg",
+      "/products/calendars/v2-image-7.jpg"
     ],
     pricingPackages: [
       {
@@ -2204,7 +2204,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Acrylic & Wooden Awards Printing & Manufacturing in Dubai",
     subtitle: "Celebrate achievements with custom acrylic and wooden awards in Dubai. Perfect for corporate recognition, employee awards, sports events, competitions, schools, and special occasions.",
     description: "Celebrate achievements with custom acrylic and wooden awards in Dubai. Perfect for corporate recognition, employee awards, sports events, competitions, schools, and special occasions.",
-    heroImage: "/products/awards-making/image-1.jpg",
+    heroImage: "/products/awards-making/v2-image-1.jpg",
     badge: "Crystal & Wood",
     features: [
       "2-3 Days Fast Production Turnaround",
@@ -2213,15 +2213,15 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/awards-making/image-1.jpg",
-      "/products/awards-making/image-2.jpg",
-      "/products/awards-making/image-3.jpg",
-      "/products/awards-making/image-4.jpg",
-      "/products/awards-making/image-5.jpg",
-      "/products/awards-making/image-6.jpg",
-      "/products/awards-making/image-7.jpg",
-      "/products/awards-making/image-8.jpg",
-      "/products/awards-making/image-9.jpg"
+      "/products/awards-making/v2-image-1.jpg",
+      "/products/awards-making/v2-image-2.jpg",
+      "/products/awards-making/v2-image-3.jpg",
+      "/products/awards-making/v2-image-4.jpg",
+      "/products/awards-making/v2-image-5.jpg",
+      "/products/awards-making/v2-image-6.jpg",
+      "/products/awards-making/v2-image-7.jpg",
+      "/products/awards-making/v2-image-8.jpg",
+      "/products/awards-making/v2-image-9.jpg"
     ],
     pricingPackages: [
       {
@@ -2255,7 +2255,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Corporate Diaries & Pens Printing & Manufacturing in Dubai",
     subtitle: "Promote your business with customized corporate diaries and pens in Dubai. Ideal for corporate gifts, employee gifts, conferences, exhibitions, events, and professional branding.",
     description: "Promote your business with customized corporate diaries and pens in Dubai. Ideal for corporate gifts, employee gifts, conferences, exhibitions, events, and professional branding.",
-    heroImage: "/products/diary-pen-print/image-1.jpg",
+    heroImage: "/products/diary-pen-print/v2-image-1.jpg",
     badge: "VIP Gift Set",
     features: [
       "24-48 Hours Fast Production Turnaround",
@@ -2264,14 +2264,14 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day & Express Delivery Across Dubai & UAE"
     ],
     samples: [
-      "/products/diary-pen-print/image-1.jpg",
-      "/products/diary-pen-print/image-2.jpg",
-      "/products/diary-pen-print/image-3.jpg",
-      "/products/diary-pen-print/image-4.jpg",
-      "/products/diary-pen-print/image-5.jpg",
-      "/products/diary-pen-print/image-6.jpg",
-      "/products/diary-pen-print/image-7.jpg",
-      "/products/diary-pen-print/image-8.jpg"
+      "/products/diary-pen-print/v2-image-1.jpg",
+      "/products/diary-pen-print/v2-image-2.jpg",
+      "/products/diary-pen-print/v2-image-3.jpg",
+      "/products/diary-pen-print/v2-image-4.jpg",
+      "/products/diary-pen-print/v2-image-5.jpg",
+      "/products/diary-pen-print/v2-image-6.jpg",
+      "/products/diary-pen-print/v2-image-7.jpg",
+      "/products/diary-pen-print/v2-image-8.jpg"
     ],
     pricingPackages: [
       {
@@ -2306,7 +2306,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Event Solutions & Corporate Branding in Dubai",
     subtitle: "Get comprehensive event solutions and branding in Dubai from SBF Print & Design. Complete stage branding, backdrops, rollups, event signage, registration counters, and promotional displays tailored for corporate events, exhibitions, and conferences.",
     description: "Get comprehensive event solutions and branding in Dubai from SBF Print & Design. Complete stage branding, backdrops, rollups, event signage, registration counters, and promotional displays tailored for corporate events, exhibitions, and conferences.",
-    heroImage: "/products/event-solutions/image-1.jpg",
+    heroImage: "/products/event-solutions/v2-image-1.jpg",
     badge: "Exhibitions & Events",
     features: [
       "Custom Stage & Backdrop Fabrication",
@@ -2315,7 +2315,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "On-Site Installation Across Dubai & All UAE Emirates"
     ],
     samples: [
-      "/products/event-solutions/image-1.jpg"
+      "/products/event-solutions/v2-image-1.jpg"
     ],
     pricingPackages: [
       {
@@ -2349,7 +2349,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "Custom DTF Printing Services in Dubai",
     subtitle: "Get premium Direct-to-Film (DTF) printing in Dubai for textiles, apparel, leather, diaries, and promotional merchandise. Vibrant full-color transfers with high stretchability, durability, and wash resistance for custom branding.",
     description: "Get premium Direct-to-Film (DTF) printing in Dubai for textiles, apparel, leather, diaries, and promotional merchandise. Vibrant full-color transfers with high stretchability, durability, and wash resistance for custom branding.",
-    heroImage: "/products/dtf-printing/image-1.jpg",
+    heroImage: "/products/dtf-printing/v2-image-1.jpg",
     badge: "High Stretch DTF",
     features: [
       "High Resolution 1440 DPI Full-Color Transfers",
@@ -2358,8 +2358,8 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Urgent Same-Day Turnaround in Deira, Dubai"
     ],
     samples: [
-      "/products/dtf-printing/image-1.jpg",
-      "/products/dtf-printing/image-2.jpg"
+      "/products/dtf-printing/v2-image-1.jpg",
+      "/products/dtf-printing/v2-image-2.jpg"
     ],
     pricingPackages: [
       {
@@ -2393,7 +2393,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "High-Precision Flatbed UV Printing in Dubai",
     subtitle: "High-precision flatbed UV printing in Dubai on acrylic, wood, glass, metal, leather, promotional gifts, and rigid materials. Instant UV LED curing, vivid color accuracy, and textured tactile finishes for premium corporate products.",
     description: "High-precision flatbed UV printing in Dubai on acrylic, wood, glass, metal, leather, promotional gifts, and rigid materials. Instant UV LED curing, vivid color accuracy, and textured tactile finishes for premium corporate products.",
-    heroImage: "/products/flatbed-uv-printing/image-1.jpg",
+    heroImage: "/products/flatbed-uv-printing/v2-image-1.jpg",
     badge: "Direct-to-Substrate",
     features: [
       "Prints on Acrylic, Wood, Metal, Glass & Leather",
@@ -2402,8 +2402,8 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Same-Day Production in Deira, Dubai"
     ],
     samples: [
-      "/products/flatbed-uv-printing/image-1.jpg",
-      "/products/flatbed-uv-printing/image-2.jpg"
+      "/products/flatbed-uv-printing/v2-image-1.jpg",
+      "/products/flatbed-uv-printing/v2-image-2.jpg"
     ],
     pricingPackages: [
       {
@@ -2437,7 +2437,7 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
     headline: "High-Volume Screen Printing Services in Dubai",
     subtitle: "Professional screen printing in Dubai for custom bags, T-shirts, hoodies, uniforms, stationery, and bulk promotional items. Cost-effective high-volume printing with rich, long-lasting inks and sharp detail.",
     description: "Professional screen printing in Dubai for custom bags, T-shirts, hoodies, uniforms, stationery, and bulk promotional items. Cost-effective high-volume printing with rich, long-lasting inks and sharp detail.",
-    heroImage: "/products/screen-printing/image-1.jpg",
+    heroImage: "/products/screen-printing/v2-image-1.jpg",
     badge: "Bulk Commercial Screen",
     features: [
       "Vibrant Plastisol, Water-Based & Discharge Inks",
@@ -2446,9 +2446,9 @@ export const SERVICE_DETAILS_MAP: Record<string, ServiceDetail> = {
       "Express High-Capacity Workshop in Dubai"
     ],
     samples: [
-      "/products/screen-printing/image-1.jpg",
-      "/products/screen-printing/image-2.jpg",
-      "/products/screen-printing/image-3.jpg"
+      "/products/screen-printing/v2-image-1.jpg",
+      "/products/screen-printing/v2-image-2.jpg",
+      "/products/screen-printing/v2-image-3.jpg"
     ],
     pricingPackages: [
       {

@@ -109,9 +109,9 @@ export default function RootLayout({
         "url": "https://sbfprint.ae",
         "logo": "https://sbfprint.ae/icon.svg",
         "image": [
-          "https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg",
-          "https://sbfprint.ae/commercial-services/3d-signage.jpg",
-          "https://sbfprint.ae/commercial-services/business-cards.jpg",
+          "https://sbfprint.ae/products/outdoor-signboard-3d-letter/v2-image-1.jpg",
+          "https://sbfprint.ae/products/business-cards/v2-image-1.jpg",
+          "https://sbfprint.ae/products/reception-letter/v2-image-1.jpg",
         ],
         "description": "SBF Print & Design is located at Nakheel Centre, Deira Dubai — a leading commercial printing press offering business cards, 3D signage, banners, stickers, packaging, and same-day printing across Dubai & UAE.",
         "telephone": "+971525069091",

@@ -11,7 +11,7 @@ export async function GET() {
       <g:title>${p.name} Printing</g:title>
       <g:description>Premium ${p.name} printed in Downtown Dubai with 48-hour delivery across UAE.</g:description>
       <g:link>https://sbfprint.ae</g:link>
-      <g:image_link>https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg</g:image_link>
+      <g:image_link>https://sbfprint.ae/products/business-cards/v2-image-1.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>${p.minPressFee.toFixed(2)} AED</g:price>

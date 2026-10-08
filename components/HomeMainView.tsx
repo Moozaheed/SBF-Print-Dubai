@@ -45,10 +45,10 @@ export default function HomeMainView() {
   ];
 
   const featuredTiles = [
-    { title: "PHOTOBOOKS", image: "/featured/photobooks.jpg", href: "/services/hardcover-photo-books" },
-    { title: "JUTE & COTTON BAGS", image: "/featured/jute-bags.jpg", href: "/services/bags-print" },
-    { title: "CANVAS", image: "/featured/canvas.jpg", href: "/services/photo-frame" },
-    { title: "STICKERS & LABELS", image: "/featured/stickers.jpg", href: "/services/print-and-cut-sticker" },
+    { title: "CUSTOM PACKAGING", image: "/products/packaging/v2-image-1.jpg", href: "/services/packaging" },
+    { title: "JUTE & SHOPPING BAGS", image: "/products/bags-print/v2-image-1.jpg", href: "/services/bags-print" },
+    { title: "CANVAS & FRAMES", image: "/products/photo-frame/v2-image-1.jpg", href: "/services/photo-frame" },
+    { title: "STICKERS & LABELS", image: "/products/print-and-cut-sticker/v2-image-1.jpg", href: "/services/print-and-cut-sticker" },
   ];
 
   const bestSellerSlugs = [
