@@ -112,14 +112,14 @@ export default function HomeMainView() {
         </Link>
       </div>
 
-      {/* 4 Trust Badges Bar */}
+      {/* 6 Trust Badges Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <div className="bg-[#FAF9FE] rounded-2xl border border-purple-100/80 p-4 sm:p-5 shadow-sm">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 md:gap-5 items-center">
             
             {/* Badge 1: Premium Quality */}
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3">
-              <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5">
+              <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
               <div className="text-left">
                 <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
                   Premium
@@ -131,8 +131,8 @@ export default function HomeMainView() {
             </div>
 
             {/* Badge 2: Fast Delivery */}
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
-              <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5 lg:border-l lg:border-purple-200/60 lg:pl-3 xl:pl-4">
+              <Truck className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
               <div className="text-left">
                 <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
                   Fast
@@ -143,9 +143,22 @@ export default function HomeMainView() {
               </div>
             </div>
 
-            {/* Badge 3: UAE-Wide Service */}
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
-              <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+            {/* Badge 3: Urgent Order */}
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5 lg:border-l lg:border-purple-200/60 lg:pl-3 xl:pl-4">
+              <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Urgent
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Order
+                </span>
+              </div>
+            </div>
+
+            {/* Badge 4: UAE-Wide Service */}
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5 lg:border-l lg:border-purple-200/60 lg:pl-3 xl:pl-4">
+              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
               <div className="text-left">
                 <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
                   UAE-Wide
@@ -156,9 +169,22 @@ export default function HomeMainView() {
               </div>
             </div>
 
-            {/* Badge 4: Expert Support */}
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:border-l md:border-purple-200/60 md:pl-6">
-              <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-[#8E44EB] flex-shrink-0" />
+            {/* Badge 5: Expert Installation */}
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5 lg:border-l lg:border-purple-200/60 lg:pl-3 xl:pl-4">
+              <Wrench className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
+              <div className="text-left">
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Expert
+                </span>
+                <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
+                  Installation
+                </span>
+              </div>
+            </div>
+
+            {/* Badge 6: Expert Support */}
+            <div className="flex items-center justify-center sm:justify-start lg:justify-center gap-2 sm:gap-2.5 lg:border-l lg:border-purple-200/60 lg:pl-3 xl:pl-4">
+              <Headphones className="w-5 h-5 sm:w-6 sm:h-6 text-[#8E44EB] flex-shrink-0" />
               <div className="text-left">
                 <span className="block text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
                   Expert
