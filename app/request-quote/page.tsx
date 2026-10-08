@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://sbfprint.ae/quote",
     images: [
       {
-        url: "https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg",
+        url: "https://sbfprint.ae/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "SBF Print & Design — Request a Quotation Dubai",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Request a Quotation | SBF Print & Design Dubai",
     description:
       "Get a fast official quote for commercial printing & 3D signage in Dubai within 30 minutes.",
-    images: ["https://sbfprint.ae/portfolio/gold-foil-luxury-card.jpg"],
+    images: ["https://sbfprint.ae/og-image.jpg"],
   },
 };
 

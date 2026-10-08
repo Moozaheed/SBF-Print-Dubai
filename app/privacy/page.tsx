@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     title: "Privacy Policy & Terms | SBF Print & Design Dubai",
     description:
       "Privacy Policy, Delivery Terms & Quality Guarantee for SBF Print & Design Dubai.",
-    url: "https://sbfprint.ae/privacy-policy",
+    url: "https://sbfprint.ae/privacy",
+    images: [{ url: "https://sbfprint.ae/og-image.jpg", width: 1200, height: 630, alt: "SBF Print & Design Dubai" }],
     type: "website",
     siteName: "SBF Print And Design",
   },

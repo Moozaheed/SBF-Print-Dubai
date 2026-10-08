@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: "Printing & Signage Blog Dubai | SBF Print & Design",
     description: "Expert printing tips, signage guides, and design insights from Downtown Dubai's leading commercial printing press.",
     url: "https://sbfprint.ae/blog",
-    images: [{ url: "/portfolio/gold-foil-luxury-card.jpg", width: 1200, height: 630, alt: "SBF Print & Design Blog Dubai" }],
+    images: [{ url: "https://sbfprint.ae/og-image.jpg", width: 1200, height: 630, alt: "SBF Print & Design Blog Dubai" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Printing & Signage Blog Dubai | SBF Print",
     description: "Expert printing tips and signage guides from SBF Print & Design Dubai.",
-    images: ["/portfolio/gold-foil-luxury-card.jpg"],
+    images: ["https://sbfprint.ae/og-image.jpg"],
   },
 };
 

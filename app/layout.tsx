@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "SBF Print And Design",
     images: [
       {
-        url: "/portfolio/gold-foil-luxury-card.jpg",
+        url: "https://sbfprint.ae/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "SBF Print And Design — Commercial Printing Press Dubai",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Printing Press Dubai | SBF Print & Design",
     description: "Same-day commercial printing at Nakheel Centre, Deira Dubai — business cards, signage, banners & more. +971 052 506 9091.",
-    images: ["/portfolio/gold-foil-luxury-card.jpg"],
+    images: ["https://sbfprint.ae/og-image.jpg"],
   },
   verification: {
     google: "rcjqTmsiEMzrBvmhymV_wrDy8u17WPkiUWLJ4r-N_gk",
