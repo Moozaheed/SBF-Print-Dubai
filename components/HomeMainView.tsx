@@ -96,18 +96,18 @@ export default function HomeMainView() {
   return (
     <div className="bg-white text-zinc-900 min-h-screen pt-36 pb-20 selection:bg-[#C68FE6] selection:text-white">
       
-      {/* SECTION 1: WELCOME BANNER (SCREEN-FIT FULL WIDTH) */}
+      {/* SECTION 1: HERO BANNER (SIGNAGE & ALL-IN-ONE PRINT SOLUTIONS) */}
       <div className="w-full">
         <Link
           href="/all-products"
-          className="block relative w-full h-[calc(100svh-144px)] max-h-[620px] min-h-[300px] sm:min-h-[420px] overflow-hidden bg-gradient-to-b from-white via-white to-[#FDEBFE] transition-opacity hover:opacity-95"
+          className="block relative w-full aspect-[2229/1081] overflow-hidden bg-white transition-opacity hover:opacity-95"
         >
           <Image
-            src="/welcome-banner@2x.webp"
-            alt="Welcome to SBF PRINT & DESIGN DUBAI - Your trusted partner for high-quality printing and design services in UAE."
+            src="/hero-signage-solutions.webp"
+            alt="SBF Print - Signage & All-in-One Print Solutions Dubai"
             fill
             priority
-            className="object-contain object-center"
+            className="object-cover object-center"
           />
         </Link>
       </div>
